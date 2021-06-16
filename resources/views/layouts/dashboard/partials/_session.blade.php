@@ -91,7 +91,7 @@ $(document).ready(function(){
             , killer: true
             , buttons: [
                 Noty.button("نعم ", 'btn btn-success btn-space m-2', function() {
-                    window.location.href = $(that).attr("href");
+                    that.closest('form').submit();
 
                 })
 

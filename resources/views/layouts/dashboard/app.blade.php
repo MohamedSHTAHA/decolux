@@ -19,8 +19,10 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
+    
     <link rel="stylesheet" href="{{ asset('dashboard')}}/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
+  
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/daterangepicker/daterangepicker.css">
@@ -29,7 +31,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha256-p+PhKJEDqN9f5n04H+wNtGonV2pTXGmB4Zr7PZ3lJ/w=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js" integrity="sha256-xzc5zu2WQtJgvCwRGTXiHny3T+KQZa6tQF24RVDRlL0=" crossorigin="anonymous"></script>
- 
+
+
 
 
 </head>
@@ -105,12 +108,27 @@
     <script src="{{ asset('dashboard')}}/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('dashboard')}}/dist/js/adminlte.js"></script>
+    {{--ckeditor standard--}}
+<script src="{{ asset('dashboard/plugins/ckeditor/ckeditor.js') }}"></script>
+
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dashboard')}}/dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('dashboard')}}/dist/js/pages/dashboard.js"></script>
     @include('layouts.dashboard.partials._session')
 
+
+
+
+
+
+
+
+
+
+
+
+    
 </body>
 
 </html>

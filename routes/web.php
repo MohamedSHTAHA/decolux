@@ -28,3 +28,17 @@ Route::get('comments', 'NewsController@comments')->name('comments');
 Route::resource('services', 'ServicesController')->except(['show']);
 //services servicesdetails
 Route::resource('servicesdetails', 'ServicesDetailsController')->except(['show']);
+
+
+
+
+
+
+
+
+
+Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(function () {
+
+
+    Route::resource('projects', 'ProjectController');
+});

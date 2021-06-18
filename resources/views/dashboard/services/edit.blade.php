@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="content-wrapper">
+
 
         <section class="content-header">
 
@@ -10,7 +10,7 @@
 
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="{{ route('services.index') }}"> services</a></li>
+                <li><a href="{{ route('dashboard.services.index') }}"> services</a></li>
                 <li class="active">Edit</li>
             </ol>
         </section>
@@ -27,18 +27,18 @@
 
                     @include('partials._errors')
 
-                    <form action="{{ route('services.update', $services->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('dashboard.services.update', $services->id) }}" method="post" enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
-                  
+
                             <div class="form-group">
                                 <label>title</label>
                                 <input type="text" name="name" class="form-control" value="{{ $services->name }}">
                             </div>
-                         
-                       
+
+
                         <div class="form-group">
                             <label>@lang('site.image')</label>
                             <input type="file" name="image" class="form-control image">
@@ -58,6 +58,6 @@
 
         </section><!-- end of content -->
 
-    </div><!-- end of content wrapper -->
+    
 
 @endsection

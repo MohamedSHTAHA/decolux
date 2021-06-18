@@ -20,14 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//news routes
-Route::resource('news', 'NewsController')->except(['show']);
-Route::get('newscomments/{id}', 'NewsController@newscomments')->name('newscomments');
-Route::get('comments', 'NewsController@comments')->name('comments');
-//services routes
-Route::resource('services', 'ServicesController')->except(['show']);
-//services servicesdetails
-Route::resource('servicesdetails', 'ServicesDetailsController')->except(['show']);
 
 
 
@@ -41,4 +33,14 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
 
 
     Route::resource('projects', 'ProjectController');
+
+    //news routes
+Route::resource('news', 'NewsController')->except(['show']);
+Route::get('newscomments/{id}', 'NewsController@newscomments')->name('newscomments');
+Route::get('comments', 'NewsController@comments')->name('comments');
+//services routes
+Route::resource('services', 'ServicesController')->except(['show']);
+//services servicesdetails
+Route::resource('servicesdetails', 'ServicesDetailsController')->except(['show']);
+
 });

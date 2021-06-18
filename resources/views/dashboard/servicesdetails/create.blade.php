@@ -2,13 +2,13 @@
 
 @section('content')
 
-    <div class="content-wrapper">
+
         <section class="content-header">
             <h1>Services Details</h1>
 
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="{{ route('servicesdetails.index') }}"> Services Details</a></li>
+                <li><a href="{{ route('dashboard.servicesdetails.index') }}"> Services Details</a></li>
                 <li class="active">Add </li>
             </ol>
         </section>
@@ -17,12 +17,12 @@
 
             <div class="box box-primary">
 
-            
+
                 <div class="box-body">
 
                     @include('partials._errors')
 
-                    <form action="{{ route('servicesdetails.store') }}" method="post"  enctype="multipart/form-data">
+                    <form action="{{ route('dashboard.servicesdetails.store') }}" method="post"  enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                         {{ method_field('post') }}
@@ -57,6 +57,6 @@
 
         </section><!-- end of content -->
 
-    </div><!-- end of content wrapper -->
+  
 
 @endsection

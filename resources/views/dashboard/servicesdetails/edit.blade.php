@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="content-wrapper">
+    
 
         <section class="content-header">
 
@@ -10,7 +10,7 @@
 
             <ol class="breadcrumb">
                 <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="{{ route('servicesdetails.index') }}"> Services Details</a></li>
+                <li><a href="{{ route('dashboard.servicesdetails.index') }}"> Services Details</a></li>
                 <li class="active">Edit</li>
             </ol>
         </section>
@@ -27,12 +27,12 @@
 
                     @include('partials._errors')
 
-                    <form action="{{ route('servicesdetails.update', $servicesdetails->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('dashboard.servicesdetails.update', $servicesdetails->id) }}" method="post" enctype="multipart/form-data">
 
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
-                  
+
                         <div class="form-group">
                             <label>services</label>
                             <select name="services_id" class="form-control">
@@ -42,7 +42,7 @@
                                 @endforeach
                             </select>
                         </div>
-                         
+
                         <div class="form-group ">
                             <label>Description</label>
                             <textarea name="description" class="form-control ckeditor">{{ $servicesdetails->description }}</textarea>
@@ -66,6 +66,6 @@
 
         </section><!-- end of content -->
 
-    </div><!-- end of content wrapper -->
+
 
 @endsection

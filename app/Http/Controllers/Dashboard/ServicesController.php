@@ -1,7 +1,8 @@
 <?php
 
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
+use App\Http\Controllers\Controller;
 use App\Services;
 use App\ServicesDetails;
 use Illuminate\Http\Request;
@@ -13,7 +14,7 @@ class ServicesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -51,7 +52,7 @@ class ServicesController extends Controller
     {
         $rules = [
             'name' => 'required',
-            
+
         ];
         $request->validate($rules);
         $request_data = $request->all();
@@ -100,10 +101,10 @@ class ServicesController extends Controller
      */
     public function update(Request $request,$id)
     {
-        
+
         $rules = [
             'name' => 'required',
-            
+
         ];
         $services=Services::where('id',$id)->first();
         $request->validate($rules);
@@ -151,7 +152,7 @@ class ServicesController extends Controller
         return redirect()->route('services.index');
     }
     public function comments(Request $request){
-       
+
         $comments = NewsComments::with('news')->when($request->search, function ($q) use ($request) {
             return $q->where('comment', '%' . $request->search . '%')
                      ->orWhere('name', 'like', '%' . $request->search . '%')
@@ -160,7 +161,7 @@ class ServicesController extends Controller
                 return $q->where('news_id', $request->news_id);
             })->latest()->paginate(5);
     return view('dashboard.news.comments', compact('comments'));
-        
+
     }
 
     public function newscomments($id,Request $request){
@@ -173,5 +174,5 @@ class ServicesController extends Controller
             })->latest()->paginate(5);
     return view('dashboard.news.comments', compact('comments'));
     }
-    
+
 }

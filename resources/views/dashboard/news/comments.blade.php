@@ -21,7 +21,7 @@
 @endsection
 
 @section('content')
-<div class="content-wrapper">
+
 
     <section class="content">
 
@@ -31,7 +31,7 @@
 
                 <h3 class="box-title" style="margin-bottom: 15px">Comments <small>{{ $comments->total() }}</small></h3>
 
-         
+
 
             </div><!-- end of box header -->
 
@@ -48,7 +48,7 @@
                             <th>Email</th>
                             <th>Comment</th>
                             <th>News Title</th>
-        
+
                         </tr>
                         </thead>
 
@@ -60,7 +60,7 @@
                                 <td>{{ $comment->email }}</td>
                                 <td>{{ $comment->comment }}</td>
                                 <td>{{ $comment->news->title }}</td>
-                            
+
                             </tr>
 
                         @endforeach
@@ -83,5 +83,4 @@
 
     </section><!-- end of content -->
 
-</div><!-- end of content wrapper -->
 @endsection

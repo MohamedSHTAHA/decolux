@@ -1,7 +1,7 @@
 <?php
 
-
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
+use App\Http\Controllers\Controller;
 use App\Services;
 use App\ServicesDetails;
 use Illuminate\Http\Request;
@@ -13,7 +13,7 @@ class ServicesDetailsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
     /**
@@ -29,7 +29,7 @@ class ServicesDetailsController extends Controller
                     return $q->where('services_id', $request->services_id);
                 })->latest()->paginate(5);
                 $services = Services::all();
-              
+
         return view('dashboard.servicesdetails.index', compact('servicesdetails','services'));
     }
 
@@ -69,7 +69,7 @@ class ServicesDetailsController extends Controller
             $request_data['image'] = $request->image->hashName();
 
         }//end of if
-       
+
         ServicesDetails::create($request_data);
         session()->flash('success','added successfully');
         return redirect()->route('servicesdetails.index');
@@ -104,11 +104,11 @@ class ServicesDetailsController extends Controller
      */
     public function update(Request $request,$id)
     {
-        
+
         $rules = [
             'services_id' => 'required',
             'description' => 'required',
-            
+
         ];
         $services=ServicesDetails::where('id',$id)->first();
         $request->validate($rules);
@@ -130,7 +130,7 @@ class ServicesDetailsController extends Controller
             $request_data['image'] = $request->image->hashName();
 
         }//end of if
-      
+
         ServicesDetails::where('id',$id)->update($request_data);
         session()->flash('success','updated successfully');
         return redirect()->route('servicesdetails.index');
@@ -155,8 +155,8 @@ class ServicesDetailsController extends Controller
         session()->flash('success','deleted successfully');
         return redirect()->route('servicesdetails.index');
     }
- 
 
-  
-    
+
+
+
 }

@@ -21,7 +21,7 @@
 @endsection
 
 @section('content')
-<div class="content-wrapper">
+
 
     <section class="content">
 
@@ -31,7 +31,7 @@
 
                 <h3 class="box-title" style="margin-bottom: 15px">Services Details <small>{{ $servicesdetails->total() }}</small></h3>
 
-                <form action="{{ route('servicesdetails.index') }}" method="get">
+                <form action="{{ route('dashboard.servicesdetails.index') }}" method="get">
 
                     <div class="row">
 
@@ -41,9 +41,9 @@
 
                         <div class="col-md-4">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
-                           
-                                <a href="{{ route('servicesdetails.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a>
-                        
+
+                                <a href="{{ route('dashboard.servicesdetails.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a>
+
                         </div>
 
                     </div>
@@ -73,19 +73,19 @@
                                 <td>{{ $index + 1 }}</td>
                                 <td>{{ $service->services->name }}</td>
                                 <td>{!! $service->description !!}</td>
-                           
+
                                 <td><img src="{{ asset('uploads/servicesdetails_images/'.$service->image) }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
                                 <td>
-                                   
-                                        <a href="{{ route('servicesdetails.edit', $service->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
-                                
-                                    
-                                        <form action="{{ route('servicesdetails.destroy', $service->id) }}" method="post" style="display: inline-block">
+
+                                        <a href="{{ route('dashboard.servicesdetails.edit', $service->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
+
+
+                                        <form action="{{ route('dashboard.servicesdetails.destroy', $service->id) }}" method="post" style="display: inline-block">
                                             {{ csrf_field() }}
                                             {{ method_field('delete') }}
                                             <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> Delete</button>
                                         </form><!-- end of form -->
-                                 
+
                                 </td>
                             </tr>
 
@@ -109,5 +109,4 @@
 
     </section><!-- end of content -->
 
-</div><!-- end of content wrapper -->
 @endsection

@@ -1,7 +1,6 @@
 <?php
-
-
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Dashboard;
+use App\Http\Controllers\Controller;
 use App\News;
 use App\NewsComments;
 use Illuminate\Http\Request;
@@ -13,7 +12,7 @@ class NewsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+      //  $this->middleware('auth');
     }
 
     /**
@@ -70,7 +69,7 @@ class NewsController extends Controller
         $request_data['user_id'] =auth()->user()->id;
         News::create($request_data);
         session()->flash('success','added successfully');
-        return redirect()->route('news.index');
+        return redirect()->route('dashboard.news.index');
     }
 
     /**
@@ -126,7 +125,7 @@ class NewsController extends Controller
         $request_data['user_id'] =auth()->user()->id;
         $news->update($request_data);
         session()->flash('success','updated successfully');
-        return redirect()->route('news.index');
+        return redirect()->route('dashboard.news.index');
     }
 
     /**
@@ -137,7 +136,7 @@ class NewsController extends Controller
      */
     public function destroy(News  $news)
     {
-        
+
         if ($news->image != 'default.png') {
 
             Storage::disk('public_uploads')->delete('/news_images/' . $news->image);
@@ -146,10 +145,10 @@ class NewsController extends Controller
 
         $news->delete();
         session()->flash('success','deleted successfully');
-        return redirect()->route('news.index');
+        return redirect()->route('dashboard.news.index');
     }
     public function comments(Request $request){
-       
+
         $comments = NewsComments::with('news')->when($request->search, function ($q) use ($request) {
             return $q->where('comment', '%' . $request->search . '%')
                      ->orWhere('name', 'like', '%' . $request->search . '%')
@@ -158,7 +157,7 @@ class NewsController extends Controller
                 return $q->where('news_id', $request->news_id);
             })->latest()->paginate(5);
     return view('dashboard.news.comments', compact('comments'));
-        
+
     }
 
     public function newscomments($id,Request $request){
@@ -171,5 +170,5 @@ class NewsController extends Controller
             })->latest()->paginate(5);
     return view('dashboard.news.comments', compact('comments'));
     }
-    
+
 }

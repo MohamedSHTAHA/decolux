@@ -23,64 +23,88 @@
 @section('content')
 
 
-    <section class="content">
-
-        <div class="box box-primary">
-
-            <div class="box-header with-border">
-
-                <h3 class="box-title" style="margin-bottom: 15px">Comments <small>{{ $comments->total() }}</small></h3>
+<section class="content">
 
 
 
-            </div><!-- end of box header -->
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">News comments</h3>
 
-            <div class="box-body">
-
-                @if ($comments->count() > 0)
-
-                    <table class="table table-hover">
-
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Comment</th>
-                            <th>News Title</th>
-
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        @foreach ($comments as $index=>$comment)
-                            <tr>
-                                <td>{{ $index + 1 }}</td>
-                                <td>{{ $comment->name }}</td>
-                                <td>{{ $comment->email }}</td>
-                                <td>{{ $comment->comment }}</td>
-                                <td>{{ $comment->news->title }}</td>
-
-                            </tr>
-
-                        @endforeach
-                        </tbody>
-
-                    </table><!-- end of table -->
-
-                    {{ $comments->appends(request()->query())->links() }}
-
-                @else
-
-                    <h2>No Data Found</h2>
-
-                @endif
-
-            </div><!-- end of box body -->
+            <div class="card-tools">
 
 
-        </div><!-- end of box -->
+                <span class="badge badge-info right">{{$comments->total()}}</span>
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
 
-    </section><!-- end of content -->
+        <div class="card-body p-0">
+            @if ($comments->count() > 0)
+
+
+
+            <table class="table table-striped">
+
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Comment</th>
+                    <th>News Title</th>
+
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach ($comments as $index=>$comment)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $comment->name }}</td>
+                        <td>{{ $comment->email }}</td>
+                        <td>{{ $comment->comment }}</td>
+                        <td>{{ $comment->news->title }}</td>
+
+                    </tr>
+
+                @endforeach
+                </tbody>
+
+            </table><!-- end of table -->
+            {{$comments->appends(request()->query())->links()}}
+            @else
+            <h2>No Comments </h2>
+            @endif
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</section>
+
+<div class="modal fade" id="modal-image">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 @endsection

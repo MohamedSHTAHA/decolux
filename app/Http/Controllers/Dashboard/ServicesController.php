@@ -25,7 +25,7 @@ class ServicesController extends Controller
     public function index(Request $request)
     {
         $services = Services::with('users')->when($request->search, function ($q) use ($request) {
-                return $q->where('name', '%' . $request->search . '%');
+                return $q->where('name', 'like','%' . $request->search . '%');
                 })->when($request->user_id, function ($q) use ($request) {
                     return $q->where('user_id', $request->user_id);
                 })->latest()->paginate(5);
@@ -70,7 +70,7 @@ class ServicesController extends Controller
         $request_data['user_id'] =auth()->user()->id;
         Services::create($request_data);
         session()->flash('success','added successfully');
-        return redirect()->route('services.index');
+        return redirect()->route('dashboard.services.index');
     }
 
     /**
@@ -129,7 +129,7 @@ class ServicesController extends Controller
         $request_data['user_id'] =auth()->user()->id;
         Services::where('id',$id)->update($request_data);
         session()->flash('success','updated successfully');
-        return redirect()->route('services.index');
+        return redirect()->route('dashboard.services.index');
     }
 
     /**
@@ -149,7 +149,7 @@ class ServicesController extends Controller
 
         Services::where('id',$id)->delete();
         session()->flash('success','deleted successfully');
-        return redirect()->route('services.index');
+        return redirect()->route('dashboard.services.index');
     }
     public function comments(Request $request){
 

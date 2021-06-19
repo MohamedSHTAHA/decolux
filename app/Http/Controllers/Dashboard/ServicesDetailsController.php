@@ -24,7 +24,7 @@ class ServicesDetailsController extends Controller
     public function index(Request $request)
     {
         $servicesdetails = ServicesDetails::with('services')->when($request->search, function ($q) use ($request) {
-                return $q->where('description', '%' . $request->search . '%');
+                return $q->where('description', 'like', '%' . $request->search . '%');
                 })->when($request->services_id, function ($q) use ($request) {
                     return $q->where('services_id', $request->services_id);
                 })->latest()->paginate(5);
@@ -72,7 +72,7 @@ class ServicesDetailsController extends Controller
 
         ServicesDetails::create($request_data);
         session()->flash('success','added successfully');
-        return redirect()->route('servicesdetails.index');
+        return redirect()->route('dashboard.servicesdetails.index');
     }
 
     /**
@@ -133,7 +133,7 @@ class ServicesDetailsController extends Controller
 
         ServicesDetails::where('id',$id)->update($request_data);
         session()->flash('success','updated successfully');
-        return redirect()->route('servicesdetails.index');
+        return redirect()->route('dashboard.servicesdetails.index');
     }
 
     /**
@@ -153,7 +153,7 @@ class ServicesDetailsController extends Controller
 
         ServicesDetails::where('id',$id)->delete();
         session()->flash('success','deleted successfully');
-        return redirect()->route('servicesdetails.index');
+        return redirect()->route('dashboard.servicesdetails.index');
     }
 
 

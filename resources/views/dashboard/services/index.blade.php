@@ -7,12 +7,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">services</h1>
+                <h1 class="m-0">Services</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item active">services</li>
+                    <li class="breadcrumb-item active">Services</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -23,91 +23,113 @@
 @section('content')
 
 
-    <section class="content">
-
-        <div class="box box-primary">
-
-            <div class="box-header with-border">
-
-                <h3 class="box-title" style="margin-bottom: 15px">services <small>{{ $services->total() }}</small></h3>
-
-                <form action="{{ route('dashboard.services.index') }}" method="get">
-
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <input type="text" name="search" class="form-control" placeholder="Search" value="{{ request()->search }}">
-                        </div>
-
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
-
-                                <a href="{{ route('dashboard.services.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a>
-
-                        </div>
-
-                    </div>
-                </form><!-- end of form -->
-
-            </div><!-- end of box header -->
-
-            <div class="box-body">
-
-                @if ($services->count() > 0)
-
-                    <table class="table table-hover">
-
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>user</th>
-                            <th>Name</th>
-                            <th>Image</th>
-                            <th>action</th>
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                        @foreach ($services as $index=>$service)
-                            <tr>
-                                <td>{{ $index + 1 }}</td>
-                                <td>{{ $service->users->name }}</td>
-                                <td>{{ $service->name }}</td>
-
-                                <td><img src="{{ asset('uploads/services_images/'.$service->image) }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
-                                <td>
-
-                                        <a href="{{ route('dashboard.services.edit', $service->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
 
 
-                                        <form action="{{ route('dashboard.services.destroy', $service->id) }}" method="post" style="display: inline-block">
-                                            {{ csrf_field() }}
-                                            {{ method_field('delete') }}
-                                            <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> Delete</button>
-                                        </form><!-- end of form -->
+<section class="content">
 
-                                </td>
-                            </tr>
+    <form action="{{route('dashboard.services.index')}}" method="get">
 
-                        @endforeach
-                        </tbody>
+        <div class="form-group">
+            <div class="input-group input-group-lg">
+                <input type="search" name="search" class="form-control form-control-lg" placeholder="Type your keywords here" value="{{ request()->search }}">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-lg btn-default">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
 
-                    </table><!-- end of table -->
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Services</h3>
 
-                    {{ $services->appends(request()->query())->links() }}
+            <div class="card-tools">
 
-                @else
+                    <a href="{{ route('dashboard.services.create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Add Services</a>
 
-                    <h2>No Data Found</h2>
+                <span class="badge badge-info right">{{$services->total()}}</span>
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
 
-                @endif
+        <div class="card-body p-0">
+            @if ($services->count() > 0)
 
-            </div><!-- end of box body -->
+
+            <table class="table table-striped">
+
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>user</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>action</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach ($services as $index=>$service)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $service->users->name }}</td>
+                        <td>{{ $service->name }}</td>
+
+                        <td><img src="{{ asset('uploads/services_images/'.$service->image) }}" style="width: 100px"  class="img-thumbnail" alt=""></td>
+                        <td>
+
+                                <a href="{{ route('dashboard.services.edit', $service->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
 
 
-        </div><!-- end of box -->
+                                <form action="{{ route('dashboard.services.destroy', $service->id) }}" method="post" style="display: inline-block">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> Delete</button>
+                                </form><!-- end of form -->
 
-    </section><!-- end of content -->
+                        </td>
+                    </tr>
+
+                @endforeach
+                </tbody>
+
+            </table><!-- end of table -->
+            {{$services->appends(request()->query())->links()}}
+            @else
+            <h2>No Services </h2>
+            @endif
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+
+</section>
+
+<div class="modal fade" id="modal-image">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
 
 
 @endsection

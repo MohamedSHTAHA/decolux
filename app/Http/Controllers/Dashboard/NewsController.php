@@ -23,10 +23,9 @@ class NewsController extends Controller
     public function index(Request $request)
     {
         $news = News::with('users')->when($request->search, function ($q) use ($request) {
-            return $q->where('title', '%' . $request->search . '%')
+            return $q->where('title', 'like','%' . $request->search . '%')
                          ->orWhere('description', 'like', '%' . $request->search . '%');
-        })->when($request->user_id, function ($q) use ($request) {
-                    return $q->where('user_id', $request->user_id);
+
                 })->latest()->paginate(5);
         return view('dashboard.news.index', compact('news'));
     }

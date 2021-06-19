@@ -1,55 +1,72 @@
 @extends('layouts.dashboard.app')
+@section('title', 'Decolux')
 
+@section('content-header')
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Create Services</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="/services">Services</a></li>
+                    <li class="breadcrumb-item active">Create Services</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+@endsection
 @section('content')
 
 
-        <section class="content-header">
-            <h1>services</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Create Services</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form action="{{route('dashboard.services.store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    @method('POST')
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}" id="name">
+                        </div>
 
-            <ol class="breadcrumb">
-                <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-                <li><a href="{{ route('dashboard.services.index') }}"> services</a></li>
-                <li class="active">Add </li>
-            </ol>
-        </section>
-
-        <section class="content">
-
-            <div class="box box-primary">
 
 
-                <div class="box-body">
 
-                    @include('partials._errors')
+                        <div class="form-group">
+                            <label for="images">Images</label>
+                            <div class="input-group">
 
-                    <form action="{{ route('dashboard.services.store') }}" method="post"  enctype="multipart/form-data">
+                                    <input type="file" name="image" class="form-control">
 
-                        {{ csrf_field() }}
-                        {{ method_field('post') }}
 
-                            <div class="form-group">
-                                <label>name</label>
-                                <input type="text" name="name" class="form-control" value="{{ old('name') }}">
                             </div>
-
-
-
-                        <div class="form-group">
-                            <label>@lang('site.image')</label>
-                            <input type="file" name="image" class="form-control image">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i>Create</button>
                         </div>
 
-                    </form><!-- end of form -->
+                    </div>
+                    <!-- /.card-body -->
 
-                </div><!-- end of box body -->
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.card -->
 
-            </div><!-- end of box -->
 
-        </section><!-- end of content -->
-
-
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
 
 @endsection

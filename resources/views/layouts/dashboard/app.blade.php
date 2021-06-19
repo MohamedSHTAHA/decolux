@@ -19,15 +19,20 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    
+
     <link rel="stylesheet" href="{{ asset('dashboard')}}/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
-  
+
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/summernote/summernote-bs4.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="{{ asset('dashboard')}}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha256-p+PhKJEDqN9f5n04H+wNtGonV2pTXGmB4Zr7PZ3lJ/w=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js" integrity="sha256-xzc5zu2WQtJgvCwRGTXiHny3T+KQZa6tQF24RVDRlL0=" crossorigin="anonymous"></script>
@@ -56,7 +61,7 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            
+
             @yield('content-header')
             <!-- /.content-header -->
 
@@ -109,7 +114,10 @@
     <!-- AdminLTE App -->
     <script src="{{ asset('dashboard')}}/dist/js/adminlte.js"></script>
     {{--ckeditor standard--}}
-<script src="{{ asset('dashboard/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('dashboard/plugins/ckeditor/ckeditor.js') }}"></script>
+
+    <!-- Select2 -->
+    <script src="{{ asset('dashboard/plugins/select2/js/select2.full.min.js') }}"></script>
 
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('dashboard')}}/dist/js/demo.js"></script>
@@ -122,13 +130,27 @@
 
 
 
+    <!-- Page specific script -->
+    <script>
+        $(function() {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+
+        })
+       
+    </script>
 
 
 
 
 
 
-    
 </body>
 
 </html>

@@ -34,6 +34,9 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
 
     Route::resource('projects', 'ProjectController');
     Route::resource('galleries', 'GalleryController');
+    Route::resource('countries', 'CountryController');
+    Route::resource('types', 'TypeController');
+    Route::resource('jops', 'JopController');
 
     //news routes
     Route::resource('news', 'NewsController')->except(['show']);

@@ -446,6 +446,85 @@
 
                     </ul>
                 </li>
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.countries.index' || request()->route()->getName()== 'dashboard.countries.create')  menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.countries.index' || request()->route()->getName()== 'dashboard.countries.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                        countries
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.countries.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.countries.index') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>countries</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.countries.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.countries.create') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add country</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.types.index' || request()->route()->getName()== 'dashboard.types.create')  menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.types.index' || request()->route()->getName()== 'dashboard.types.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                        types
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.types.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.types.index') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>types</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.types.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.types.create') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add type</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                        jops
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.jops.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>jops</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.jops.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.jops.create') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add jop</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

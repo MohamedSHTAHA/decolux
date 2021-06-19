@@ -13,7 +13,7 @@ class GalleryController extends Controller
     public function index(Request $request)
     {
         $galleries = Gallery::when($request->search, function ($q) use ($request) {
-            return $q->where('name', '%' . $request->search . '%');
+            return $q->where('title', '%' . $request->search . '%');
         })->latest()->paginate(3);
         return view('dashboard.galleries.index', compact(['galleries']));
     }

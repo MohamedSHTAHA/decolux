@@ -34,7 +34,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               {{-- <li class="nav-item menu-open">
+                {{-- <li class="nav-item menu-open">
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -354,15 +354,15 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                         <li class="nav-item  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create')  menu-open @endif">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create')  menu-open @endif">
                             <a href="{{ route('dashboard.news.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create')  active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add News</p>
                             </a>
                         </li>
 
-                                <li class="nav-item  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  menu-open @endif">
-                                    <a href="{{ route('dashboard.comments') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  menu-open @endif">
+                            <a href="{{ route('dashboard.comments') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Comments</p>
                             </a>
@@ -405,7 +405,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                        <a href="{{ route('dashboard.projects.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.projects.index') active @endif">
+                            <a href="{{ route('dashboard.projects.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.projects.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Projects</p>
                             </a>
@@ -421,7 +421,31 @@
                     </ul>
                 </li>
 
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.galleries.index' || request()->route()->getName()== 'dashboard.galleries.create')  menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.galleries.index' || request()->route()->getName()== 'dashboard.galleries.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            galleries
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.galleries.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.galleries.index') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>galleries</p>
+                            </a>
+                        </li>
 
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.galleries.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.galleries.create') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add gallery</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

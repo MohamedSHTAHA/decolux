@@ -75,12 +75,33 @@
                             <label for="images">Images</label>
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input multiple type="file"  name="images[]" class="custom-file-input" id="images">
+                                    <input multiple type="file" name="images[]" class="custom-file-input" id="images">
                                     <label class="custom-file-label" for="images">Choose file</label>
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="form-group">
+
+                            <table>
+                                <tr style="width:50%">
+                                    <th >Image</th>
+                                    <th>Remove</th>
+                                </tr>
+                                @if(!empty($project->getMedia('projects')))
+                                @foreach ($project->getMedia('projects') as $media )
+
+                                <tr>
+                                    <td ><img onclick="openImage(this)" width="150px" height="45px" class="table-avatar" src="{{$media->getFullUrl()}}">
+                                    <input type="hidden" name="old_images[]" value="{{$media->id}}"/>
+                                    </td>
+                                    <td><button class="btn btn-danger btn-sm" onclick="$(this).closest('tr').remove();"><i class="fa fa-trash"></i></button></td>
+                                </tr>
+                                @endforeach
+                                @endif
+
+
+                            </table>
+                        </div>
                     </div>
                     <!-- /.card-body -->
 
@@ -96,4 +117,34 @@
     </div>
     <!-- /.row -->
 </div>
+
+
+
+
+
+<div class="modal fade" id="modal-image">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<script>
+    function openImage(th) {
+        $('#modal-image .modal-body').html('<img id="image-zoom" width="100%" height="100%" src="' + $(th).attr("src") + '" />');
+        $('#modal-image').modal('toggle');
+    }
+</script>
 @endsection

@@ -80,7 +80,8 @@ class ProjectController extends Controller
             'from' => 'required|date',
             'to' => 'required|date|after_or_equal:from',
             'scope_work' => 'required|min:3',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'old_images' => 'exists:media,id',
         ];
         $validator = Validator::make($request->all(), $rules);
 
@@ -90,7 +91,7 @@ class ProjectController extends Controller
         }
 
         $project->update($request->all());
-
+        $project->getMedia('projects')->whereNotIn('id',$request->old_images)->each->delete();
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $project->addMedia($image)->toMediaCollection('projects');

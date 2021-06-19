@@ -33,14 +33,14 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
 
 
     Route::resource('projects', 'ProjectController');
+    Route::resource('galleries', 'GalleryController');
 
     //news routes
-Route::resource('news', 'NewsController')->except(['show']);
-Route::get('newscomments/{id}', 'NewsController@newscomments')->name('newscomments');
-Route::get('comments', 'NewsController@comments')->name('comments');
-//services routes
-Route::resource('services', 'ServicesController')->except(['show']);
-//services servicesdetails
-Route::resource('servicesdetails', 'ServicesDetailsController')->except(['show']);
-
+    Route::resource('news', 'NewsController')->except(['show']);
+    Route::get('newscomments/{id}', 'NewsController@newscomments')->name('newscomments');
+    Route::get('comments', 'NewsController@comments')->name('comments');
+    //services routes
+    Route::resource('services', 'ServicesController')->except(['show']);
+    //services servicesdetails
+    Route::resource('servicesdetails', 'ServicesDetailsController')->except(['show']);
 });

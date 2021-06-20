@@ -3,6 +3,24 @@
 
 
 @section('content')
+<section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('front')}}/images/WHAT-WE-OFFER.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>About Us</h1>
+                </div>
+                <ul id="breadcrumbs" class="crumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="active">About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="wpb_row vc_row-fluid side-bg no-padding vc_custom_1474447018555 vc_row-has-fill no-padding">
     <div class="row">

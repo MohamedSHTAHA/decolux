@@ -40,7 +40,7 @@
                 <nav>
                     <ul id="mainmenu">
                         <li class="menu-item current-menu-ancestor ">
-                            <a title="Home" href="index.html">Home</a>
+                            <a title="Home" href="/">Home</a>
                         </li>
 
                         <li class="menu-item">

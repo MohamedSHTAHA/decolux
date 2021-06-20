@@ -7,7 +7,7 @@
      <title>Home</title>
      <meta name="description" content=" " />
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="shortcut icon" type="image/x-icon" href="images/decolux-O.png">
+     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('front')}}/images/decolux-O.png">
      <link rel='stylesheet' href='{{ asset("front")}}/plugins/css/layerslider.css' type='text/css' media='all' />
      <link crossorigin="anonymous" rel='stylesheet' id='ls-google-fonts-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900%7CPlayfair+Display:regular,italic,700,900&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
      <link rel='stylesheet' href='{{ asset("front")}}/css/dist/style.min.css' type='text/css' media='all' />

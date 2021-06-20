@@ -46,10 +46,6 @@
                         </div>
 
 
-                        <div class="form-group">
-                            <img src="{{ asset('uploads/news_images/'.$news->image) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
-
-                        </div>
                     </div>
                     <!-- /.card-body -->
 

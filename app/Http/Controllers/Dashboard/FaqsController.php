@@ -95,7 +95,8 @@ class FaqsController extends Controller
             'answer' => 'required',
         ];
         $request->validate($rules);
-        $request_data = $request->all();
+        $request_data = $request->except(['_token', '_method']);
+
 
         Faqs::where('id',$id)->update($request_data);
         session()->flash('success','updated successfully');

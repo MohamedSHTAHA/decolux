@@ -504,7 +504,7 @@
                     <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                        jops
+                        jobs
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -512,22 +512,86 @@
                         <li class="nav-item ">
                             <a href="{{ route('dashboard.jops.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>jops</p>
+                                <p>jobs</p>
                             </a>
                         </li>
 
                         <li class="nav-item ">
                             <a href="{{ route('dashboard.jops.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.jops.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add jop</p>
+                                <p>Add job</p>
                             </a>
                         </li>
 
                     </ul>
                 </li>
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Contact Us
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  menu-open @endif">
+                            <a href="{{ route('dashboard.contactUs.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Contact Us</p>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+
+
+
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Faqs
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  menu-open @endif">
+                            <a href="{{ route('dashboard.faqs.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add faqs</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                  <li class="nav-item @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            Settings
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
+                            <a href="{{ route('dashboard.settings.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Settings</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
 </aside>
+
+
+

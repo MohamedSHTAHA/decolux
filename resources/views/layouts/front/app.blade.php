@@ -71,6 +71,7 @@
 
          <!-- footer begin -->
          @include('layouts.front.footer')
+         <!-- footer close -->
 
 
      </div>

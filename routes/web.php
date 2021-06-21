@@ -1,5 +1,7 @@
 <?php
 
+use App\Jop;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,17 +24,23 @@ Route::get('about-us', function () {
     return view('front.about');
 });
 
+
+
+
+
+
+
+Route::name('front.')->namespace('Front')->group(function () {
+    Route::resource('job-openings', 'JopController');
+});
+
+
+///////////////////////////////////////////////////////////////////////
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-
-
-
-
-
-
-
 
 Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(function () {
 

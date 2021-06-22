@@ -65,7 +65,7 @@
                                 </li>
 
                                 <li class="menu-item ">
-                                    <a title="News" href="blog.html">News</a>
+                                    <a title="News" href="/blog">News</a>
                                 </li>
                             </ul>
                         </li>

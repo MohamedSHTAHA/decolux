@@ -32,6 +32,8 @@ Route::get('about-us', function () {
 
 Route::name('front.')->namespace('Front')->group(function () {
     Route::resource('job-openings', 'JopController');
+    Route::resource('blog', 'NewsController');
+    Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
 });
 
 

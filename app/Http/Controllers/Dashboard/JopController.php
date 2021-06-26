@@ -33,8 +33,10 @@ class JopController extends Controller
         $rules = [
             'title' => 'required|min:3',
             'description' => 'required|min:3',
+            'featured' => 'in:0,1',
             'country_id' => 'required|exists:countries,id',
             'type_id.*' => 'required|min:1|exists:types,id',
+            
         ];
         $jop_date = $request->validate($rules);
         $jop_date['user_id'] = auth()->user()->id;
@@ -66,11 +68,13 @@ class JopController extends Controller
         $rules = [
             'title' => 'required|min:3',
             'description' => 'required|min:3',
+            'featured' => 'in:0,1',
             'country_id' => 'required|exists:countries,id',
             'type_id.*' => 'required|min:1|exists:types,id',
         ];
         $jop_date = $request->validate($rules);
         $jop_date['user_id'] = auth()->user()->id;
+        $jop_date['featured'] =   $request->featured ?? 0 ;
         $jop->types()->sync($request->type_id);
         $jop->update($jop_date);
 

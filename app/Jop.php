@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Jop extends Model
 {
-    protected $fillable = ['title','description','user_id','country_id'];
+    protected $fillable = ['title','description','user_id','country_id','featured'];
 
     public function user()
     {

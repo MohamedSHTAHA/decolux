@@ -43,33 +43,39 @@
                             </div>
 
                             <div class="date-box">
-                                <div class="day">15</div>
-                                <div class="month">Sep</div>
+                                <div class="day"> {{Carbon\Carbon::parse($jop->created_at)->format('d')}}</div>
+                                <div class="month">{{Carbon\Carbon::parse($jop->created_at)->format('M')}}</div>
                             </div>
 
                             <div class="post-text page-content entry-content">
-                                <h3 class="single-title">Drivers</h3>
+                                <h3 class="single-title">{{$jop->title}}</h3>
                                 <div class="thjmf-job-list-single-tags">
                                     <div class="thjmf-inline-tags">
                                         <span class="dashicons dashicons-clock thjmf-dashicons"></span>
-                                        9 months ago
+                                        {{Carbon\Carbon::parse($jop->created_at)->diffInMonths(Carbon\Carbon::parse(now()), false)}} months ago
+
                                     </div>
                                     <div class="thjmf-inline-tags">
-                                        <span class="dashicons dashicons-location thjmf-dashicons"></span>Kuwait
+                                        <span class="dashicons dashicons-location thjmf-dashicons"></span>{{$jop->country->title ?? ''}}
                                     </div>
                                     <div class="thjmf-inline-tags">
-                                        <span class="dashicons dashicons-portfolio thjmf-dashicons"></span>Full Time
+                                        <span class="dashicons dashicons-portfolio thjmf-dashicons"></span>
+                                        @isset($jop->types)
+                                        @foreach ($jop->types as $type )
+                                        {{$type->title }} @if ($jop->types->last()->id != $type->id) / @endif
+                                        @endforeach
+                                        @endisset
                                     </div>
                                 </div>
-                                <ul>
-                                    <li>Ability to work under pressure.<br />
-                                        Age not older than 40 years<br />
-                                        Can speak English and Arabic</li>
-                                    <li>with Valid Kuwaiti driving license<br />
-                                        Work on Van vehicle</li>
-                                </ul>
+
+                                <div>
+                                    {!!$jop->description!!}
+                                </div>
                                 <div class="wpforms-container wpforms-container-full">
-                                    <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="#">
+                                    <form class="wpforms-validate wpforms-form " method="post" action="{{route('front.apply')}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('post')
+                                        <input type="hidden" name="jop_id" value="{{$jop->id}}" />
                                         <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
 
                                         <div class="wpforms-field-container">
@@ -77,12 +83,22 @@
                                                 <label class="wpforms-field-label" for="wpforms-1759-field_0">Name <span class="wpforms-required-label">*</span></label>
                                                 <div class="wpforms-field-row wpforms-field-large">
                                                     <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
-                                                        <input type="text" class="wpforms-field-name-first wpforms-field-required" name="" required>
+                                                        <input type="text" class="wpforms-field-name-first wpforms-field-required" name="firstname" value="{{old('firstname')}}"  required>
                                                         <label for="wpforms-1759-field_0" class="wpforms-field-sublabel after ">First</label>
+                                                        @error('firstname')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
                                                     </div>
                                                     <div class="wpforms-field-row-block wpforms-one-half">
-                                                        <input type="text" class="wpforms-field-name-last wpforms-field-required" name="" required>
+                                                        <input type="text" class="wpforms-field-name-last wpforms-field-required" name="lastname" value="{{old('lastname')}}" required>
                                                         <label for="wpforms-1759-field_0-last" class="wpforms-field-sublabel after ">Last</label>
+                                                        @error('lastname')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,14 +106,31 @@
 
                                             <div id="wpforms-1759-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
                                                 <label class="wpforms-field-label" for="wpforms-1759-field_1">Email <span class="wpforms-required-label">*</span></label>
-                                                <input type="email" class="wpforms-field-large wpforms-field-required" name="" required>
+                                                <input type="email" class="wpforms-field-large wpforms-field-required" name="email" value="{{old('email')}}" required>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
                                             </div>
                                             <div id="wpforms-1759-field_5-container" class="wpforms-field wpforms-field-text" data-field-id="5">
                                                 <label class="wpforms-field-label" for="wpforms-1759-field_5">Phone <span class="wpforms-required-label">*</span></label>
-                                                <input type="text" class="wpforms-field-large wpforms-field-required" name="" required>
+                                                <input type="text" class="wpforms-field-large wpforms-field-required" name="phone" value="{{old('phone')}}" required>
+                                                @error('phone')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
                                             </div>
                                             <div class="wpforms-field wpforms-field-file-upload" data-field-id="4">
                                                 <label class="wpforms-field-label" for="wpforms-1759-field_4">Resume <span class="wpforms-required-label">*</span></label>
+                                                <input type="file" name="resume" class="custom-file-input" id="resume">
+
+                                                @error('resume')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="wpforms-field wpforms-field-hp">
@@ -120,7 +153,7 @@
 
                             <span class="post-user">
                                 <i class="fa fa-user"></i>
-                                <a href="#" title="Posts by admin" rel="author">admin</a></span>
+                                <a href="#" title="Posts by admin" rel="author">{{$jop->user->name??''}}</a></span>
                             <div class="share-holder">
                                 <h4>Share:</h4>
                                 <div class="social-links rounded-share-icons">
@@ -138,10 +171,21 @@
                     <nav class="navigation post-navigation" role="navigation" aria-label="Posts">
                         <h2 class="screen-reader-text">Post navigation</h2>
                         <div class="nav-links">
-                            <div class="nav-next">
-                                <a href="#" rel="next">
-                                    <span class="post-title"><em>Newer Post</em><strong>Outdoor Sales Person</strong></span></a>
+                            @isset($previous_jop)
+                            <div class="nav-previous">
+                                <a href="{{route('front.job-openings.show',$previous_jop->id)}}" rel="prev">
+                                    <span class="post-title"><em>Older Post</em><strong>{{$previous_jop->title}}</strong>
+                                    </span>
+                                </a>
                             </div>
+
+                            @endisset
+                            @isset($next_jop)
+                            <div class="nav-next">
+                                <a href="{{route('front.job-openings.show',$next_jop->id)}}" rel="next">
+                                    <span class="post-title"><em>Newer Post</em><strong> {{$next_jop->title}} </strong></span></a>
+                            </div>
+                            @endisset
                         </div>
                     </nav>
                 </div>

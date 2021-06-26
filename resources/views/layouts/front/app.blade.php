@@ -56,6 +56,10 @@
      <script type='text/javascript' src='{{ asset("front")}}/js/maplace.js'></script>
      <script type='text/javascript' src='{{ asset("front")}}/js/new.js'></script>
 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.css" integrity="sha256-p+PhKJEDqN9f5n04H+wNtGonV2pTXGmB4Zr7PZ3lJ/w=" crossorigin="anonymous" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.js" integrity="sha256-xzc5zu2WQtJgvCwRGTXiHny3T+KQZa6tQF24RVDRlL0=" crossorigin="anonymous"></script>
+
+
  </head>
 
 
@@ -241,6 +245,34 @@
      <script type='text/javascript' src='{{ asset("front")}}/js/wpforms.js'></script>
      <script type='text/javascript' src='{{ asset("front")}}/js/form.js'></script>
      <script type='text/javascript' src='{{ asset("front")}}/js/jquery.prettyPhoto.min.js'></script>
+     @if (session('success'))
+
+     <script>
+         new Noty({
+             type: 'success',
+             layout: 'topRight',
+             text: "{{ session('success') }}",
+             timeout: 2000,
+             killer: true
+         }).show();
+     </script>
+
+     @endif
+
+     @if($errors->any())
+     <script>
+         new Noty({
+
+             theme: 'metroui',
+             type: 'error',
+             layout: 'topRight',
+             text: "{{ $errors->first() }}",
+             timeout: 2500,
+             killer: true
+
+         }).show();
+     </script>
+     @endif
  </body>
 
  </html>

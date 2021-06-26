@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Apply;
 use App\Country;
 use App\Http\Controllers\Controller;
 use App\Jop;
@@ -15,10 +16,22 @@ class JopController extends Controller
     public function index(Request $request)
     {
         $jops = Jop::when($request->search, function ($q) use ($request) {
-            return $q->where('title', '%' . $request->search . '%')->orWhere('description', '%' . $request->search . '%');
-        })->latest()->paginate(3);
+            return $q->where('title','like', '%' . $request->search . '%')->orWhere('description','like', '%' . $request->search . '%');
+        })->latest()->paginate(10);
 
         return view('dashboard.jops.index', compact(['jops']));
+    }
+
+    public function applies(Request $request , $id)
+    {
+        $applies = Apply::whereJopId($id)->when($request->search, function ($q) use ($request) {
+            return $q->where('firstname', 'like','%' . $request->search . '%')
+                ->orWhere('lastname', 'like','%' . $request->search . '%')
+                ->orWhere('email', 'like','%' . $request->search . '%')
+                ->orWhere('phone', 'like','%' . $request->search . '%');
+        })->latest()->paginate(10);
+
+        return view('dashboard.jops.applies', compact(['applies']));
     }
     public function create()
     {
@@ -36,7 +49,7 @@ class JopController extends Controller
             'featured' => 'in:0,1',
             'country_id' => 'required|exists:countries,id',
             'type_id.*' => 'required|min:1|exists:types,id',
-            
+
         ];
         $jop_date = $request->validate($rules);
         $jop_date['user_id'] = auth()->user()->id;
@@ -51,7 +64,7 @@ class JopController extends Controller
     {
         $countries = Country::all();
         $types = Type::all();
-        return view('dashboard.jops.edit', compact(['countries', 'types','jop']));
+        return view('dashboard.jops.edit', compact(['countries', 'types', 'jop']));
     }
 
     /**
@@ -63,7 +76,7 @@ class JopController extends Controller
      */
     public function update(Request $request, Jop $jop)
     {
-       
+
 
         $rules = [
             'title' => 'required|min:3',
@@ -74,7 +87,7 @@ class JopController extends Controller
         ];
         $jop_date = $request->validate($rules);
         $jop_date['user_id'] = auth()->user()->id;
-        $jop_date['featured'] =   $request->featured ?? 0 ;
+        $jop_date['featured'] =   $request->featured ?? 0;
         $jop->types()->sync($request->type_id);
         $jop->update($jop_date);
 

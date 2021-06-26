@@ -13,7 +13,7 @@ class TypeController extends Controller
     public function index(Request $request)
     {
         $types = Type::when($request->search, function ($q) use ($request) {
-            return $q->where('title', '%' . $request->search . '%');
+            return $q->where('title','like', '%' . $request->search . '%');
         })->latest()->paginate(3);
         return view('dashboard.types.index', compact(['types']));
     }

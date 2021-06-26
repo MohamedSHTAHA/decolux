@@ -50,15 +50,18 @@
                                                         <td colspan="2">
                                                             <div class="thjmf-listing-title" style="overflow: hidden;">
                                                                 <h3>{{$jop->title}}</h3>
+                                                                @if ($jop->featured == 1)
                                                                 <div class="thjmf-featured-post">
                                                                     <img class="thjm-featured-icon" src="https://decolux-kw.com/wp-content/plugins/job-manager-career/assets/images/bookmark.svg" title="Featured Job">
                                                                 </div>
+                                                                @endif
+
                                                             </div>
                                                             <div class="thjmf-job-list-single-tags">
                                                                 <div class="thjmf-inline-tags">
                                                                     <span class="dashicons dashicons-clock thjmf-dashicons"></span>
 
-                                                                    8 months ago
+                                                                    {{Carbon\Carbon::parse($jop->created_at)->diffInMonths(Carbon\Carbon::parse(now()), false)}} months ago
                                                                 </div>
                                                                 <div class="thjmf-inline-tags">
                                                                     <span class="dashicons dashicons-location thjmf-dashicons"></span>{{$jop->country->title}}
@@ -93,51 +96,6 @@
                                         @endforeach
                                         @endisset
 
-                                        <div class="thjmf-job-listings-list thjmf-listing-loop-content list-wrapper">
-                                            <table class="thjmf-listing-solo-table" border="0" cellspacing="0" cellpadding="0">
-                                                <thead>
-                                                    <tr class="thjmf-listing-header">
-                                                        <td colspan="2">
-                                                            <div class="thjmf-listing-title" style="overflow: hidden;">
-                                                                <h3>
-                                                                    Drivers </h3>
-                                                                <div class="thjmf-featured-post">
-                                                                    <img class="thjm-featured-icon" src="https://decolux-kw.com/wp-content/plugins/job-manager-career/assets/images/bookmark.svg" title="Featured Job">
-                                                                </div>
-                                                            </div>
-                                                            <div class="thjmf-job-list-single-tags">
-                                                                <div class="thjmf-inline-tags">
-                                                                    <span class="dashicons dashicons-clock thjmf-dashicons"></span>
-                                                                    9 months ago
-                                                                </div>
-                                                                <div class="thjmf-inline-tags">
-                                                                    <span class="dashicons dashicons-location thjmf-dashicons"></span>Kuwait
-                                                                </div>
-                                                                <div class="thjmf-inline-tags">
-                                                                    <span class="dashicons dashicons-portfolio thjmf-dashicons"></span>Full
-                                                                    Time
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="thjmf-listing-body">
-                                                        <td class="thjmf-job-single-excerpt">
-                                                            <div class="thjmf-listing-single-content">
-                                                                <p>Ability to work under pressure. Age not older
-                                                                    than 40 years Can speak English and Arabic
-                                                                    with Valid Kuwaiti driving license Work on
-                                                                    Van vehicle</p>
-                                                            </div>
-                                                        </td>
-                                                        <td class="thjmf-job-single-more">
-                                                            <button type="button"><a href="web-administration.html">
-                                                                    Details</a>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                </thead>
-                                            </table>
-                                        </div>
                                     </div>
                                     <div class="thjmf-load-more-section">
                                     </div>

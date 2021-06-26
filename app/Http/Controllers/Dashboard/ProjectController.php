@@ -13,7 +13,7 @@ class ProjectController extends Controller
     public function index(Request $request)
     {
         $projects = Project::when($request->search, function ($q) use ($request) {
-            return $q->where('name', '%' . $request->search . '%')
+            return $q->where('name', 'like','%' . $request->search . '%')
                 ->orWhere('description', 'like', '%' . $request->search . '%');
         })->latest()->paginate(3);
         return view('dashboard.projects.index', compact(['projects']));

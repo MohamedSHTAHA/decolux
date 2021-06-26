@@ -32,6 +32,7 @@ Route::get('about-us', function () {
 
 Route::name('front.')->namespace('Front')->group(function () {
     Route::resource('job-openings', 'JopController');
+    Route::post('apply', 'JopController@apply')->name('apply');
     Route::resource('blog', 'NewsController');
     Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
 });
@@ -40,7 +41,7 @@ Route::name('front.')->namespace('Front')->group(function () {
 ///////////////////////////////////////////////////////////////////////
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -52,6 +53,7 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
     Route::resource('countries', 'CountryController');
     Route::resource('types', 'TypeController');
     Route::resource('jops', 'JopController');
+    Route::get('applies/{id}', 'JopController@applies')->name('applies');
 
     //news routes
     Route::resource('news', 'NewsController')->except(['show']);

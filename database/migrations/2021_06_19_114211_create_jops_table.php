@@ -16,7 +16,7 @@ class CreateJopsTable extends Migration
         Schema::create('jops', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->integer('featured')->default(0);
 
             $table->bigInteger('user_id')->unsigned();

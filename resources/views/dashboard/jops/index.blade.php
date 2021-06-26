@@ -78,6 +78,10 @@
                             Featured
                         </th>
 
+                        <th style="width: 20%">
+                            Applies
+                        </th>
+                        
 
                         <th style="width: 20%">
                         </th>
@@ -118,6 +122,16 @@
                             {{$jop->featured ? 'Featured' : 'Not featured'}}
 
                         </td>
+
+                        <td>
+                            @if ($jop->applies->count() > 0)
+                                <a href="{{route('dashboard.applies',$jop->id)}}" class="btn btn-sm btn-success">Applies</a>
+                            @else
+                                No Applies Yet
+                            @endif
+
+                        </td>
+                        
                         <td class="jop-actions text-right">
                             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-jop{{$jop->id}}">
                                 <i class="fas fa-folder">

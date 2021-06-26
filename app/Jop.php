@@ -16,7 +16,10 @@ class Jop extends Model
     {
         return $this->belongsTo('App\Country');
     }
-
+    public function applies()
+    {
+        return $this->hasMany('App\Apply');
+    }
     public function types()
     {
         return $this->belongsToMany('App\Type');

@@ -74,6 +74,9 @@
                         <th style="width: 20%">
                             Types
                         </th>
+                        <th style="width: 20%">
+                            Featured
+                        </th>
 
 
                         <th style="width: 20%">
@@ -111,7 +114,10 @@
                             @endforeach
                             @endisset
                         </td>
+                        <td>
+                            {{$jop->featured ? 'Featured' : 'Not featured'}}
 
+                        </td>
                         <td class="jop-actions text-right">
                             <a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-jop{{$jop->id}}">
                                 <i class="fas fa-folder">

@@ -66,7 +66,13 @@
                             </select>
                         </div>
 
+                        <div class="form-check">
+                            <input type="checkbox" name="featured" value="1" class="form-check-input" id="featured" {{$jop->featured ? 'checked' : ''}}>
+                            <label class="form-check-label" for="featured">Featured</label>
+                        </div>
+
                     </div>
+
                     <!-- /.card-body -->
 
                     <div class="card-footer">

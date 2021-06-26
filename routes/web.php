@@ -41,7 +41,8 @@ Route::name('front.')->namespace('Front')->group(function () {
 ///////////////////////////////////////////////////////////////////////
 
 
-Auth::routes(['register' => false]);
+//Auth::routes(['register' => false]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 

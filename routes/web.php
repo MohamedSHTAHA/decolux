@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('front.index');
-});
+});*/
 
 
 Route::get('about-us', function () {
@@ -25,6 +25,7 @@ Route::get('about-us', function () {
 });
 
 
+Route::get('/', 'HomeController@index')->name('home');
 
 
 
@@ -35,6 +36,12 @@ Route::name('front.')->namespace('Front')->group(function () {
     Route::post('apply', 'JopController@apply')->name('apply');
     Route::resource('blog', 'NewsController');
     Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
+
+    Route::resource('services', 'ServicesController');
+    Route::get('showservice/{name}','ServicesController@showservice')->name('showservice');
+
+    Route::resource('allfaqs', 'FaqsController');
+
 });
 
 

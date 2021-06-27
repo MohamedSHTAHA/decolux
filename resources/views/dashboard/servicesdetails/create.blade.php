@@ -54,6 +54,26 @@
                             <label>image</label>
                             <input type="file" name="image" class="form-control image">
                         </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                              <legend class="col-form-label col-sm-2 pt-0">Fade Types</legend>
+                              <div class="col-sm-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="fadetype" id="gridRadios1" value="fadeInRight" checked>
+                                  <label class="form-check-label" for="gridRadios1">
+                                    fade In Right
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="fadetype" id="gridRadios2" value="fadeInLeft">
+                                  <label class="form-check-label" for="gridRadios2">
+                                    fade In Left
+                                  </label>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
 
                     </div>
                     <!-- /.card-body -->

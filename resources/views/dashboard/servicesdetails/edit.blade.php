@@ -58,6 +58,28 @@
                         <div class="form-group">
                             <img src="{{ asset('uploads/servicesdetails_images/'.$servicesdetails->image) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
                         </div>
+                        <fieldset class="form-group">
+                            <div class="row">
+                              <legend class="col-form-label col-sm-2 pt-0">Fade Types</legend>
+                              <div class="col-sm-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="fadetype" id="gridRadios1" @if($servicesdetails->fadetype=='fadeInRight') {{'checked'}}@endif value="fadeInRight" >
+                                  <label class="form-check-label" for="gridRadios1">
+                                    fade In Right
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="fadetype" id="gridRadios2"  @if($servicesdetails->fadetype=='fadeInLeft') {{'checked'}}@endif value="fadeInLeft">
+                                  <label class="form-check-label" for="gridRadios2">
+                                    fade In Lef
+                                  </label>
+                                </div>
+
+                              </div>
+                            </div>
+                          </fieldset>
+
+
                     </div>
                     <!-- /.card-body -->
 

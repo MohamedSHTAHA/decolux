@@ -69,7 +69,7 @@ class ServicesDetailsController extends Controller
             $request_data['image'] = $request->image->hashName();
 
         }//end of if
-
+    $request_data['fadetype']=$request->fadetype;
         ServicesDetails::create($request_data);
         session()->flash('success','added successfully');
         return redirect()->route('dashboard.servicesdetails.index');
@@ -130,7 +130,7 @@ class ServicesDetailsController extends Controller
             $request_data['image'] = $request->image->hashName();
 
         }//end of if
-
+        $request_data['fadetype']=$request->fadetype;
         ServicesDetails::where('id',$id)->update($request_data);
         session()->flash('success','updated successfully');
         return redirect()->route('dashboard.servicesdetails.index');

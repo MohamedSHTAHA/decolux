@@ -75,11 +75,15 @@
                             <a title="Our Services" href="#">Our Services </a>
 
                             <ul role="menu" class=" sub-menu">
-                                <li class="menu-item ">
-                                    <a title="DecoSol" href="decosol.html">DecoSol</a>
-                                </li>
+
+                                @foreach(\App\Services::all() as $row)
 
                                 <li class="menu-item ">
+                                    <a title="DecoSol" href="{{ route('front.showservice', $row->name) }}">{{$row->name}}</a>
+                                </li>
+                                @endforeach
+
+                            {{--    <li class="menu-item ">
                                     <a title="DecoFit" href="decosol.html">DecoFit</a>
                                 </li>
 
@@ -89,7 +93,7 @@
 
                                 <li class="menu-item ">
                                     <a title="DecoSteel" href="decosol.html">DecoSteel</a>
-                                </li>
+                                </li>--}}
                             </ul>
                         </li>
 
@@ -120,7 +124,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="FAQs" href="faqs.html">FAQs</a>
+                                    <a title="FAQs" href="/allfaqs">FAQs</a>
                                 </li>
                             </ul>
                         </li>

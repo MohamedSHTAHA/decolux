@@ -17,6 +17,7 @@ class CreateServicesDetailsTable extends Migration
             $table->increments('id');
             $table->integer('services_id')->unsigned();
             $table->string('description');
+             $table->string('fadetype');
             $table->string('image')->default('default.png');
             $table->foreign('services_id')->references('id')->on('services')->onDelete('cascade');
             $table->timestamps();

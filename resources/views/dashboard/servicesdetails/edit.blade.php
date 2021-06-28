@@ -71,7 +71,7 @@
                                 <div class="form-check">
                                   <input class="form-check-input" type="radio" name="fadetype" id="gridRadios2"  @if($servicesdetails->fadetype=='fadeInLeft') {{'checked'}}@endif value="fadeInLeft">
                                   <label class="form-check-label" for="gridRadios2">
-                                    fade In Lef
+                                    fade In Left
                                   </label>
                                 </div>
 

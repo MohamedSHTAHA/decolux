@@ -16,7 +16,7 @@ class CreateServicesDetailsTable extends Migration
         Schema::create('services_details', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('services_id')->unsigned();
-            $table->string('description');
+            $table->text('description');
              $table->string('fadetype');
             $table->string('image')->default('default.png');
             $table->foreign('services_id')->references('id')->on('services')->onDelete('cascade');

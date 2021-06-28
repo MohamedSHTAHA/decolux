@@ -11,9 +11,9 @@
                             <p>
                                 <img loading="lazy" class="alignnone wp-image-1857 size-full" src="{{ asset('front')}}/images/Untitled-1.png" alt="" width="251" height="50" />
                             </p>
-                            <p>We were founded in <b>1993</b> under Bayt Al Europi establishment in Hawally interior retail market as one of the main suppliers and installer of all types of interior decoration materials.</p>
+                            <p>{!!\App\Settings::orderBy('id', 'DESC')->first()->discpriton!!}.</p>
 
-                            <p>In 1994 the company started expanding in both retail and commercial sectors to have a major share in the market and to cover the largest numbers of clients.</p>
+
                         </div>
                     </div>
                 </div><!-- end col-lg-3 -->
@@ -24,15 +24,15 @@
                         <h3>Contact Us</h3>
                         <div class="textwidget custom-html-widget">
                             <address>
-                                <span>P.O.Box 6246 Hawally 32037Kuwait</span>
-                                <span><strong>Phone:</strong>+965 24610141</span>
+                                <span>{{\App\Settings::orderBy('id', 'DESC')->first()->address}}</span>
+                                <span><strong>Phone:</strong>{{\App\Settings::orderBy('id', 'DESC')->first()->phone}}</span>
                                 <span>
                                     <strong>Email:</strong>
-                                    <a href="mailto:info@domain.com">info@domain.com</a>
+                                    <a href="{{\App\Settings::orderBy('id', 'DESC')->first()->email}}">{{\App\Settings::orderBy('id', 'DESC')->first()->address}}email</a>
                                 </span>
                                 <span>
                                     <strong>Web:</strong>
-                                    <a target="_blank" href="#" rel="noopener">www.domain.com</a>
+                                    <a target="_blank" href="#" rel="noopener">{{\App\Settings::orderBy('id', 'DESC')->first()->website}}</a>
                                 </span>
 
                             </address>
@@ -61,17 +61,17 @@
                             </li>
 
                             <li>
-                                <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->twiter}}"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="#"><i class="fa fa-pinterest"></i></a>
+                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->binterest}}"><i class="fa fa-pinterest"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="#"><i class="fa fa-linkedin"></i></a>
+                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->linkedin}}"><i class="fa fa-linkedin"></i></a>
                             </li>
 
                             <li>
-                                <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->instgram}}"><i class="fa fa-instagram"></i></a>
                             </li>
 
                         </ul>

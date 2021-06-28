@@ -49,6 +49,10 @@
                             <input type="email" class="form-control" name="email" value="{{ $setting->email }}" id="email">
                         </div>
                         <div class="form-group">
+                            <label for="website">website</label>
+                            <input type="text" class="form-control" name="website" value="{{ $setting->website }}" id="website">
+                        </div>
+                        <div class="form-group">
                             <label for="address">Address</label>
                             <input type="text" class="form-control" name="address" value="{{ $setting->address }}" id="address">
                         </div>

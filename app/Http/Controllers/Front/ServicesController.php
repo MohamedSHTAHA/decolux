@@ -34,7 +34,7 @@ class ServicesController extends Controller
 
         $services=Services::all();
 
-        return view('front.services.index', compact(['servicesbyname','services']));
+        return view('front.services.index', compact(['servicesbyname','services','servicename']));
     }
 
 }

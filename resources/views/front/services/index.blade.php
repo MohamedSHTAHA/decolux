@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="title-wrap">
-                    <h1>DecoSol</h1>
+                    <h1>{{$servicename->name}}</h1>
                 </div>
                 <ul id="breadcrumbs" class="crumb">
-                    <li><a href="index.html">Home</a>
+                    <li><a href="/">Home</a>
                     </li>
-                    <li><a href="our-services.html">Our Services</a></li>
-                    <li class="active">DecoSol</li>
+                    <li><a href="">Our Services</a></li>
+                    <li class="active">{{$servicename->name}}</li>
                 </ul>
             </div>
         </div>
@@ -40,25 +40,17 @@
                         @foreach( $servicesbyname  as $row)
                         <div class="side-bg">
 
-                            <div class="image-container hidden-xs pull-left col-md-6" style="background-image:url(images/2-10.jpg); ?>" data-delay="0"></div>
+                            <div class="image-container hidden-xs @if($row->fadetype=='fadeInRight') pull-left @else pull-right right0 @endif col-md-6" style="background-image:url({{ asset('uploads/servicesdetails_images/'.$row->image) }}); ?>" data-delay="0"></div>
 
                             <!-- Added this code in 26/03/2019 -->
-                            <img class="visible-xs img-responsive" src="images/2-10.jpg" />
+                            <img class="visible-xs img-responsive" src="{{ asset('uploads/servicesdetails_images/'.$row->image) }}" />
 
                             <div class="container">
                                 <div class="row">
                                     <div class="inner-padding">
-                                        <div class="col-md-5 col-md-offset-7 wow {{$row->fadetype}}" data-wow-delay=".2s">
+                                        <div class="col-md-5   @if($row->fadetype=='fadeInRight') col-md-offset-7  @else  @endif wow {{$row->fadetype}}" data-wow-delay=".2s">
                                             <h2></h2><br/>
-                                            <p> In addition to large collection of all types of other window blind</p>
-                                            <p><strong>Cellular shade</strong></p>
-                                            <p><strong>Panel Track</strong></p>
-                                            <p><strong>Venetian blind</strong></p>
-                                            <p><strong>Wooden Blind</strong></p>
-                                            <p><strong>Draperies and Curtains</strong></p>
-                                            <p><strong>Home automation </strong>Our company goal is to provide its customer with a full solution for their comfort and <em>convenience</em> that can be a standalone smart system or communicate with
-                                                other Low Voltage protocols Like LON. KNX, RS485, bus and give the option for all audio-Visual controllers to communicate with our Blind, Light Screen or any other Electrical Device. With wide range
-                                                of switches, remote control, or touch screen.
+                                     {!! $row->description !!}
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>

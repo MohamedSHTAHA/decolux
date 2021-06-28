@@ -19,6 +19,7 @@ class CreateSettingsTable extends Migration
              $table->string('logo')->default('default.png');
             $table->string('email');
             $table->string('phone');
+            $table->string('website')->defalut(0);
             $table->integer('web')->defalut(0);
             $table->string('address');
             $table->string('facbook');

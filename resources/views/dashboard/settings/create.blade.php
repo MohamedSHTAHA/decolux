@@ -48,6 +48,11 @@
                             <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email">
                         </div>
                         <div class="form-group">
+                            <label for="website">website</label>
+                            <input type="text" class="form-control" name="website" value="{{ old('website') }}" id="website">
+                        </div>
+
+                        <div class="form-group">
                             <label for="address">Address</label>
                             <input type="text" class="form-control" name="address" value="{{ old('address') }}" id="address">
                         </div>

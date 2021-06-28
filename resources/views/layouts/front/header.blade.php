@@ -101,7 +101,7 @@
                             <a title="Gallery" href="#">Gallery </a>
                             <ul role="menu" class=" sub-menu">
                                 <li class="menu-item ">
-                                    <a title="General Gallery" href="general-gallery.html">General Gallery</a>
+                                    <a title="General Gallery" href="{{route('front.general-gallery')}}">General Gallery</a>
                                 </li>
 
                                 <li class="menu-item">

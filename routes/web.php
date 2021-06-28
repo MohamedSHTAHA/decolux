@@ -34,6 +34,11 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::name('front.')->namespace('Front')->group(function () {
     Route::resource('job-openings', 'JopController');
     Route::post('apply', 'JopController@apply')->name('apply');
+    Route::get('general-gallery', 'GalleryController@index')->name('general-gallery');
+
+
+
+
     Route::resource('blog', 'NewsController');
     Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
 

@@ -100,8 +100,9 @@
                             </h3>
 
                             <div class="wpforms-container wpforms-container-full" id="wpforms-1759">
-                                <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="#">
-
+                              <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="{{ route('front.savecomments', $new->id) }}">
+                                @csrf
+                                @method('POST')
                                     <div class="wpforms-field-container">
                                         <div class="wpforms-field wpforms-field-name" data-field-id="0">
                                             <label class="wpforms-field-label" for="wpforms-1759-field_0">Name <span
@@ -110,7 +111,7 @@
                                             <div class="wpforms-field-row wpforms-field-large">
                                                 <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
                                                     <input type="text"
-                                                        class="wpforms-field-name-first wpforms-field-required" name=""
+                                                        class="wpforms-field-name-first wpforms-field-required" name="first"
                                                         required>
                                                     <label for="wpforms-1759-field_0"
                                                         class="wpforms-field-sublabel after ">First</label>
@@ -118,7 +119,7 @@
 
                                                 <div class="wpforms-field-row-block wpforms-one-half">
                                                     <input type="text"
-                                                        class="wpforms-field-name-last wpforms-field-required" name=""
+                                                        class="wpforms-field-name-last wpforms-field-required" name="last"
                                                         required>
                                                     <label for="wpforms-1759-field_0-last"
                                                         class="wpforms-field-sublabel after ">Last</label>
@@ -130,7 +131,7 @@
                                             <label class="wpforms-field-label" for="wpforms-1759-field_1">Email <span
                                                     class="wpforms-required-label">*</span>
                                             </label>
-                                            <input type="email" class="wpforms-field-large wpforms-field-required" name=""
+                                            <input type="email" class="wpforms-field-large wpforms-field-required" name="email"
                                                 required>
                                         </div>
 
@@ -138,7 +139,7 @@
                                             <label class="wpforms-field-label" for="wpforms-1759-field_5">Phone <span
                                                     class="wpforms-required-label">*</span>
                                             </label>
-                                            <input type="text" class="wpforms-field-large wpforms-field-required" name=""
+                                            <input type="text" class="wpforms-field-large wpforms-field-required" name="phone"
                                                 required>
                                         </div>
 
@@ -156,9 +157,10 @@
                                             value="Send Message">
 
 
+
                                     </p>
 
-                                </form>
+                               </form>
                             </div>
 
 

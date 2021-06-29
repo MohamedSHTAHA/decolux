@@ -23,6 +23,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('about-us', function () {
     return view('front.about');
 });
+Route::get('our-vision', function () {
+    return view('front.our_vision_mission');
+});
+
+Route::get('our-partner-sister-companies', function () {
+    return view('front.our_partener');
+});
+Route::get('what-we-offer', function () {
+    return view('front.weoffer');
+});
 
 
 Route::get('/', 'HomeController@index')->name('home');
@@ -41,10 +51,11 @@ Route::name('front.')->namespace('Front')->group(function () {
 
     Route::resource('blog', 'NewsController');
     Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
-
+    Route::post('savecomments/{id}','NewsController@savecomments')->name('savecomments');
     Route::resource('services', 'ServicesController');
     Route::get('showservice/{name}','ServicesController@showservice')->name('showservice');
-
+    Route::resource('contact', 'ContactController');
+    Route::post('savecontact','ContactController@savecontact')->name('savecontact');
     Route::resource('allfaqs', 'FaqsController');
 
 });

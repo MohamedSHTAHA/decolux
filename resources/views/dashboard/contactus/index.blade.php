@@ -48,8 +48,8 @@
 
             <div class="card-tools">
 
-                    <a href="{{ route('dashboard.contactUs.create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Add news</a>
-
+                 {{--   <a href="{{ route('dashboard.contactUs.create') }}" class="btn btn-primary btn-xs"><i class="fa fa-plus"></i> Add news</a>
+--}}
                 <span class="badge badge-info right">{{$contactus->total()}}</span>
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                     <i class="fas fa-minus"></i>
@@ -75,7 +75,7 @@
                     <th>company name</th>
                     <th>company Address</th>
                     <th>comment message</th>
-                    <th>action</th>
+                  {{--  <th>action</th>--}}
                 </tr>
                 </thead>
 
@@ -89,7 +89,7 @@
                         <td>{{ $new->company_name }}</td>
                         <td>{{ $new->company_Address }}</td>
                         <td>{!! $new->comment_message !!}</td>
-                        <td>
+                       {{--  <td>
 
                                 <a href="{{ route('dashboard.contactUs.edit', $new->id) }}" class="btn btn-info btn-sm"><i class="fa fa-edit"></i> Edit</a>
 
@@ -100,7 +100,7 @@
                                     <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i> Delete</button>
                                 </form><!-- end of form -->
 
-                        </td>
+                        </td>--}}
                     </tr>
 
                 @endforeach

@@ -19,6 +19,7 @@ class CreateNewsCommentsTable extends Migration
             $table->string('comment');
             $table->string('name');
             $table->string('email');
+            $table->string('phone');
             $table->foreign('news_id')->references('id')->on('news')->onDelete('cascade');
             $table->timestamps();
         });

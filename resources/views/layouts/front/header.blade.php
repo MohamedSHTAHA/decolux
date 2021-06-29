@@ -53,15 +53,15 @@
                                 </li>
 
                                 <li class="menu-item ">
-                                    <a title="Our Vision &#038; Mission" href="our-vision-mission.html">Our Vision &#038; Mission</a>
+                                    <a title="Our Vision &#038; Mission" href="/our-vision">Our Vision &#038; Mission</a>
                                 </li>
 
                                 <li class="menu-item ">
-                                    <a title="Our Partner &#038; Sister Companies" href="our-partner-sister-companies.html">Our Partner &#038; Sister Companies</a>
+                                    <a title="Our Partner &#038; Sister Companies" href="/our-partner-sister-companies">Our Partner &#038; Sister Companies</a>
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="What We Offer" href="what-we-offer.html">What We Offer</a>
+                                    <a title="What We Offer" href="/what-we-offer">What We Offer</a>
                                 </li>
 
                                 <li class="menu-item ">
@@ -116,7 +116,7 @@
                             <ul role="menu" class=" sub-menu">
 
                                 <li class="menu-item ">
-                                    <a title="Inquiry" href="contact.html">Inquiry</a>
+                                    <a title="Inquiry" href="/contact">Inquiry</a>
                                 </li>
 
                                 <li class="menu-item">

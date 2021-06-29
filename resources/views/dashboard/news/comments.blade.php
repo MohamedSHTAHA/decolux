@@ -57,6 +57,7 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Email</th>
+                    <th>Phone</th>
                     <th>Comment</th>
                     <th>News Title</th>
 
@@ -69,6 +70,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $comment->name }}</td>
                         <td>{{ $comment->email }}</td>
+                        <td>{{ $comment->phone }}</td>
                         <td>{{ $comment->comment }}</td>
                         <td>{{ $comment->news->title }}</td>
 

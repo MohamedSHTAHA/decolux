@@ -11,7 +11,9 @@
                             <p>
                                 <img loading="lazy" class="alignnone wp-image-1857 size-full" src="{{ asset('front')}}/images/Untitled-1.png" alt="" width="251" height="50" />
                             </p>
-                            <p>{!!\App\Settings::orderBy('id', 'DESC')->first()->discpriton!!}.</p>
+                            <p>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->discpriton)){!!\App\Settings::orderBy('id', 'DESC')->first()->discpriton!!}
+                            @endif
+                            </p>
 
 
                         </div>
@@ -24,15 +26,28 @@
                         <h3>Contact Us</h3>
                         <div class="textwidget custom-html-widget">
                             <address>
-                                <span>{{\App\Settings::orderBy('id', 'DESC')->first()->address}}</span>
-                                <span><strong>Phone:</strong>{{\App\Settings::orderBy('id', 'DESC')->first()->phone}}</span>
+                                <span>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address)){{\App\Settings::orderBy('id', 'DESC')->first()->address}}
+                                    @endif
+                                </span>
+                                <span><strong>Phone:</strong>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}@endif</span>
                                 <span>
                                     <strong>Email:</strong>
-                                    <a href="{{\App\Settings::orderBy('id', 'DESC')->first()->email}}">{{\App\Settings::orderBy('id', 'DESC')->first()->address}}email</a>
+                                    @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
+                                    <a href="{{\App\Settings::orderBy('id', 'DESC')->first()->email}}">
+
+                                        {{\App\Settings::orderBy('id', 'DESC')->first()->address}}
+
+                                    </a>
+                                    @endif
                                 </span>
                                 <span>
                                     <strong>Web:</strong>
-                                    <a target="_blank" href="#" rel="noopener">{{\App\Settings::orderBy('id', 'DESC')->first()->website}}</a>
+                                    @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->website))
+                                    <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->website}}" rel="noopener">
+
+                                        {{\App\Settings::orderBy('id', 'DESC')->first()->website}}</a>
+                                        @endif
                                 </span>
 
                             </address>
@@ -61,17 +76,33 @@
                             </li>
 
                             <li>
-                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->twiter}}"><i class="fa fa-twitter"></i></a>
+                                <a target="_blank" href="
+                                @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->twiter))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->twiter}}
+                                @endif
+                                "><i class="fa fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->binterest}}"><i class="fa fa-pinterest"></i></a>
+                                <a target="_blank" href="
+                                @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->binterest))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->binterest}}
+                                @endif
+                                "><i class="fa fa-pinterest"></i></a>
                             </li>
                             <li>
-                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->linkedin}}"><i class="fa fa-linkedin"></i></a>
+                                <a target="_blank" href="
+                                @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->linkedin))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->linkedin}}
+                                @endif
+                                "><i class="fa fa-linkedin"></i></a>
                             </li>
 
                             <li>
-                                <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->instgram}}"><i class="fa fa-instagram"></i></a>
+                                <a target="_blank" href="
+                                @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->instgram))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->instgram}}
+                                @endif
+                                "><i class="fa fa-instagram"></i></a>
                             </li>
 
                         </ul>

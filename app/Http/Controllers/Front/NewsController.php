@@ -30,4 +30,20 @@ class NewsController extends Controller
         return view('front.news.show', compact(['new','oldernew']));
     }
 
+    public function savecomments($id,Request $request)
+    {
+       // $request_data = $request->all();
+        $request_data['news_id']=$id;
+        $request_data['name']=$request->first .' ' . $request->last;
+        $request_data['phone']=$request->phone ;
+        $request_data['email']=$request->email;
+        $request_data['comment']=$request->comment;
+        NewsComments::create($request_data);
+
+
+        return redirect()->back();
+    }
+
+
+
 }

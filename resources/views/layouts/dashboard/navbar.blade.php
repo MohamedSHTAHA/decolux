@@ -25,6 +25,7 @@
       <form class="nav-link" href="#" role="button" id="logout-form" action="{{ route('logout') }}" method="POST">
         @csrf
         <input type="submit" class="btn btn-sm btn-danger" value="Logout" />
+        
       </form>
     </li>
 

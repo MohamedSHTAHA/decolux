@@ -13,7 +13,8 @@
                 <img src="{{ asset('dashboard')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">{{auth()->user()->name}}</a>
+                
             </div>
         </div>
 
@@ -451,7 +452,7 @@
                     <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.countries.index' || request()->route()->getName()== 'dashboard.countries.create')  active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                        countries
+                            countries
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -477,7 +478,7 @@
                     <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.types.index' || request()->route()->getName()== 'dashboard.types.create')  active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                        types
+                            types
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -504,7 +505,7 @@
                     <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                        jobs
+                            jobs
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -567,7 +568,7 @@
                         </li>
                     </ul>
                 </li>
-                  <li class="nav-item @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
                     <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
@@ -592,6 +593,3 @@
     </div>
     <!-- /.sidebar -->
 </aside>
-
-
-

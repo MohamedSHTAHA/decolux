@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->only('home');
     }
 
     /**
@@ -27,5 +27,10 @@ class HomeController extends Controller
         $services=Services::all();
 
         return view('front.index', compact(['services']));
+    }
+
+    public function home()
+    {
+        return view('home');
     }
 }

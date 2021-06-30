@@ -45,8 +45,9 @@ Route::name('front.')->namespace('Front')->group(function () {
     Route::resource('job-openings', 'JopController');
     Route::post('apply', 'JopController@apply')->name('apply');
     Route::get('general-gallery', 'GalleryController@index')->name('general-gallery');
+    Route::get('portfolios', 'ProjectController@index')->name('portfolios');
 
-
+    
 
 
     Route::resource('blog', 'NewsController');
@@ -67,7 +68,7 @@ Route::name('front.')->namespace('Front')->group(function () {
 //Auth::routes(['register' => false]);
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@home')->name('home');
 
 Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(function () {
 

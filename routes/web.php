@@ -35,7 +35,7 @@ Route::get('what-we-offer', function () {
 });
 
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
 
 
 

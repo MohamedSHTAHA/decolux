@@ -15,7 +15,7 @@
                     <h1>Jobs</h1>
                 </div>
                 <ul id="breadcrumbs" class="crumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/">Home</a></li>
                     <li class="active">Jobs</li>
                 </ul>
             </div>

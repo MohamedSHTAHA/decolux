@@ -38,26 +38,26 @@
                             <div class="post-content">
                                 <div class="post-image">
 
-                                    <img width="1200" height="806" src="{{ asset('uploads/\news_images/'.$new->image) }}"
+                                    <img width="1200" height="806" src="{{ asset('uploads/\news_images/' . $new->image) }}"
                                         class="attachment-full size-full wp-post-image" alt="" loading="lazy"
-                                        srcset="{{ asset('uploads/\news_images/'.$new->image) }}" sizes="(max-width: 1200px) 100vw, 1200px"
-                                        title="kuwait credit bank" />
+                                        srcset="{{ asset('uploads/\news_images/' . $new->image) }}"
+                                        sizes="(max-width: 1200px) 100vw, 1200px" title="kuwait credit bank" />
                                 </div>
 
                                 <div class="date-box">
-                                    <div class="day">{{$new->created_at->format('d')}}</div>
-                                    <div class="month">{{$new->created_at->format('M')}}</div>
+                                    <div class="day">{{ $new->created_at->format('d') }}</div>
+                                    <div class="month">{{ $new->created_at->format('M') }}</div>
                                 </div>
 
                                 <div class="post-text page-content entry-content">
-                                    <h3 class="single-title">{!!$new->description!!}</h3>
-                                    <p><span style="font-weight: 400;">{!!$new->description!!}</span></p>
+                                    <h3 class="single-title">{!! $new->description !!}</h3>
+                                    <p><span style="font-weight: 400;">{!! $new->description !!}</span></p>
                                 </div>
                             </div>
 
                             <div class="post-info">
                                 <span class="post-user"><i class="fa fa-user"></i><a href="#" title="Posts by admin"
-                                        rel="author">{{$new->users->name}}</a></span>
+                                        rel="author">{{ $new->users->name }}</a></span>
                                 <span class="post-category"><i class="fa fa-folder"></i><a href="/blog"
                                         rel="category tag">News</a></span>
                                 <div class="share-holder">
@@ -80,16 +80,42 @@
                                 <div class="nav-previous">
                                     <a href="#" rel="prev">
                                         <span class="post-title"><em>Older Post</em>
-                                            <strong>{!!$oldernew->description!!}</strong></span></a>
+                                            <strong>{!! $oldernew->description !!}</strong></span></a>
                                 </div>
                             </div>
                         </nav>
                     </div>
 
-                    <div class='comments-box'>
-                        <h4>{{count($new->newsComments)}} comments</h4>
-                    </div>
 
+                    <div class='comments-box'>
+                        <h4>{{ count($new->newsComments) }} comments</h4>
+                    </div>
+                    <ul class="single-comment ">
+                        @foreach ($new->newsComments as $comment )
+
+
+                        <li id="comment-116" class="post-content-comment grey-section">
+                            <div class="img"><img alt='' src='{{ asset("front")}}/images/user.jpg' srcset='{{ asset("front")}}/images/user.jpg'
+                                    class='avatar avatar-70 photo' height='70' width='70' loading='lazy' />
+                            </div>
+                            <div class="comment-content">
+                                <h6>{{$comment->name}}</h6>
+                            </div>
+                            <div class="date">
+                                <span class="c_date">{{$comment->created_at}}</span>
+                              {{--  <span class="c_reply">
+                                    <a rel='nofollow' class='comment-reply-link' href='#'>Reply</a></span>--}}
+                            </div>
+                            <div class="comment-content">
+                                <p><em>{{$comment->comment}}.</em></p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
+                        @endforeach
+
+
+                    </ul>
 
                     <div class="leave-reply grey-section form">
                         <div id="respond" class="comment-respond">
@@ -100,9 +126,10 @@
                             </h3>
 
                             <div class="wpforms-container wpforms-container-full" id="wpforms-1759">
-                              <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="{{ route('front.savecomments', $new->id) }}">
-                                @csrf
-                                @method('POST')
+                                <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post"
+                                    action="{{ route('front.savecomments', $new->id) }}">
+                                    @csrf
+                                    @method('POST')
                                     <div class="wpforms-field-container">
                                         <div class="wpforms-field wpforms-field-name" data-field-id="0">
                                             <label class="wpforms-field-label" for="wpforms-1759-field_0">Name <span
@@ -131,16 +158,16 @@
                                             <label class="wpforms-field-label" for="wpforms-1759-field_1">Email <span
                                                     class="wpforms-required-label">*</span>
                                             </label>
-                                            <input type="email" class="wpforms-field-large wpforms-field-required" name="email"
-                                                required>
+                                            <input type="email" class="wpforms-field-large wpforms-field-required"
+                                                name="email" required>
                                         </div>
 
                                         <div class="wpforms-field wpforms-field-text" data-field-id="5">
                                             <label class="wpforms-field-label" for="wpforms-1759-field_5">Phone <span
                                                     class="wpforms-required-label">*</span>
                                             </label>
-                                            <input type="text" class="wpforms-field-large wpforms-field-required" name="phone"
-                                                required>
+                                            <input type="text" class="wpforms-field-large wpforms-field-required"
+                                                name="phone" required>
                                         </div>
 
                                         <div class="wpforms-field wpforms-field-file-upload" data-field-id="4">
@@ -160,7 +187,7 @@
 
                                     </p>
 
-                               </form>
+                                </form>
                             </div>
 
 

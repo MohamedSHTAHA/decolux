@@ -327,7 +327,7 @@
 
             <div class="vc_column-inner">
                 <div class="wpb_wrapper ">
-                    <a href="contact.html" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
+                    <a href="/contact" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
 
                 </div>
             </div>

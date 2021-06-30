@@ -13,11 +13,41 @@
 
                     <ul class="social-list">
 
-                        <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                        
+                        <li><a target="_blank" href="#">
+                            <i class="fa fa-facebook"></i></a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="
+                        @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->twiter))
+                        {{\App\Settings::orderBy('id', 'DESC')->first()->twiter}}
+                        @endif
+                        "><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="
+                        @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->binterest))
+                        {{\App\Settings::orderBy('id', 'DESC')->first()->binterest}}
+                        @endif
+                        "><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="
+                        @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->linkedin))
+                        {{\App\Settings::orderBy('id', 'DESC')->first()->linkedin}}
+                        @endif
+                        "><i class="fa fa-linkedin"></i></a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="
+                        @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->instgram))
+                        {{\App\Settings::orderBy('id', 'DESC')->first()->instgram}}
+                        @endif
+                        "><i class="fa fa-instagram"></i></a>
+                    </li>
+
                     </ul>
 
                 </div>
@@ -30,7 +60,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img class="logo-static" src="{{ asset('front')}}/images/Untitled-1.png" alt="DECOLUX KUWAIT">
                         <img class="logo-scroll" src="{{ asset('front')}}/images/Untitled-1.png" alt="DECOLUX KUWAIT">
                     </a>

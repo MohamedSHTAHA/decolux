@@ -135,7 +135,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="Project gallery" href="portfolios.html">Project gallery</a>
+                                    <a title="Project gallery" href="{{route('front.portfolios')}}">Project gallery</a>
                                 </li>
                             </ul>
                         </li>
@@ -150,7 +150,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="Jobs" href="job-openings.html">Jobs</a>
+                                    <a title="Jobs" href="{{route('front.job-openings')}}">Jobs</a>
                                 </li>
 
                                 <li class="menu-item">

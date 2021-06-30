@@ -61,7 +61,7 @@
                                                                 <div class="thjmf-inline-tags">
                                                                     <span class="dashicons dashicons-clock thjmf-dashicons"></span>
 
-                                                                    {{Carbon\Carbon::parse($jop->created_at)->diffForHumans()}} months ago
+                                                                    {{Carbon\Carbon::parse($jop->created_at)->diffForHumans()}}
                                                                 </div>
                                                                 <div class="thjmf-inline-tags">
                                                                     <span class="dashicons dashicons-location thjmf-dashicons"></span>{{$jop->country->title}}

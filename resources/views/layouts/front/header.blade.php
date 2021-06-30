@@ -150,7 +150,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="Jobs" href="{{route('front.job-openings')}}">Jobs</a>
+                                    <a title="Jobs" href="{{route('front.job-openings.index')}}">Jobs</a>
                                 </li>
 
                                 <li class="menu-item">

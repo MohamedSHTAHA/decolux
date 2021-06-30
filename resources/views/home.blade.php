@@ -29,7 +29,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
                 <div class="inner">
-                    <h3>{{\Jop::count()}}</h3>
+                    <h3>{{\App\Jop::count()}}</h3>
 
                     <p>Jops</p>
                 </div>

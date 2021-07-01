@@ -90,7 +90,7 @@
                         <!-- team member -->
                         <div class="de-team-list team-box wow fadeInUp">
                             <div class="team-pic">
-                                <img width="400" height="400" src="{{ asset('front')}}/images/New-Project-5.jpg" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('front')}}/images/New-Project-5.jpg" sizes="(max-width: 400px) 100vw, 400px" title="New Project (5)" />
+                                <img width="400" height="400" src="{{$project->getFirstMediaUrl('projects')}}" sizes="(max-width: 400px) 100vw, 400px" title="{{$project->name}}" />
                             </div>
                             <div class="team-desc">
                                 <h3>{{$project->name}}</h3>

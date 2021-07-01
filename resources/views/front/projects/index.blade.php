@@ -45,7 +45,7 @@
                                         <img width="700" height="466" src="{{$project->getFirstMediaUrl('projects')}}" class="attachment-thumb-portfolio size-thumb-portfolio wp-post-image" alt="" loading="lazy" srcset="{{$project->getFirstMediaUrl('projects')}}" sizes="(max-width: 700px) 100vw, 700px" title="{{$project->name}}" />
                                     </div>
 
-                                    <a onclick="alert('{{$index-1}}'+'{{$index}}'+'{{$index+1}}')" class=" " href="#" id="myBtn" data-toggle="modal" data-target="#modal-project{{$project->id}}">
+                                    <a onclick="openProject('{{$index-1}}','{{$index}}','{{$index+1}}');alert('{{$index-1}}'+'{{$index}}'+'{{$index+1}}')" class=" " href="#" id="myBtn" data-toggle="modal" data-target="#modal-project{{$project->id}}">
                                         <span class="project-overlay">
                                             <span class="project-name id-color">{{$project->name}}</span>
                                         </span>
@@ -177,7 +177,14 @@
 </section>
 
 
-
+<script>
+    function openProject(priev, current, next) {
+        alert(priev + current + next);
+        $('#myModal').modal('toggle');
+        $('#myModal').modal('show');
+        $('#myModal').modal('hide');
+    }
+</script>
 
 
 

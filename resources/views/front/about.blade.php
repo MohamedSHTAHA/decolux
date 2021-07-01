@@ -96,7 +96,7 @@
                                 <h3>{{$project->name}}</h3>
                                 <p class="lead">{{$project->consultant}}</p>
                                 <div class="small-border"></div>
-                                <p>{{$project->description}}</p>
+                                <p>{!! $project->description  !!}</p>
                                 <div class="social">
                                 </div>
                             </div>

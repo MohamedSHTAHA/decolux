@@ -5,7 +5,7 @@
 @section('content')
 
 
-<section id="subheader" data-speed="8" data-type="background" style="background-image: url('images/deco-sol.jpg');">
+<section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('uploads/services_images/'.$servicename->image) }}');">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

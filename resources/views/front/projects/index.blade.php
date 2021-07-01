@@ -287,7 +287,7 @@
         alert(priev + current + next);
         $('#myModal').modal('toggle');
         $('#myModal').modal('show');
-        $('#myModal').modal('hide');
+        //$('#myModal').modal('hide');
     }
 </script>
 

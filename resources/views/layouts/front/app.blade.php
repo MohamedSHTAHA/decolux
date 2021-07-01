@@ -197,7 +197,8 @@
      </script>
 
      <script>
-         // Get the modal
+        /*
+        // Get the modal
          var modal = document.getElementById("myModal");
 
          // Get the button that opens the modal
@@ -221,7 +222,7 @@
              if (event.target == modal) {
                  modal.style.display = "none";
              }
-         }
+         }*/
      </script>
      <script type='text/javascript' id='contact-form-7-js-extra'>
          /* <![CDATA[ */

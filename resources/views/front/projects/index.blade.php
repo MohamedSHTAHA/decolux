@@ -283,12 +283,7 @@
 
 </div>
 <script type="text/javascript">
-    function openProject(priev, current, next) {
-        // alert(priev + current + next);
-        //$('#modal-project'+current).modal();
-        document.getElementById('#myModal').style.display = "block";
-        //$('#myModal').modal('hide');
-    }
+    
 </script>
 
 

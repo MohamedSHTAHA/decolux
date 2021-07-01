@@ -197,7 +197,7 @@
      </script>
 
      <script>
-        /*
+         /*
         // Get the modal
          var modal = document.getElementById("myModal");
 
@@ -223,6 +223,13 @@
                  modal.style.display = "none";
              }
          }*/
+
+         function openProject(priev, current, next) {
+             // alert(priev + current + next);
+             //$('#modal-project'+current).modal();
+             document.getElementById('#myModal').style.display = "block";
+             //$('#myModal').modal('hide');
+         }
      </script>
      <script type='text/javascript' id='contact-form-7-js-extra'>
          /* <![CDATA[ */

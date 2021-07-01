@@ -1,6 +1,7 @@
 <?php
 
 use App\Jop;
+use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('about-us', function () {
-    return view('front.about');
+    $projects = Project::latest()->paginate();
+    return view('front.about',compact('projects'));
 });
 Route::get('our-vision', function () {
     return view('front.our_vision_mission');

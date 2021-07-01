@@ -84,72 +84,29 @@
             <div class="container-4 wpb_column vc_column_container vc_col-sm-12">
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper wow fadeInUp">
-
+                        @isset($projects)
+                        @empty(!$projects)
+                        @foreach ( $projects as $index=>$project)
                         <!-- team member -->
                         <div class="de-team-list team-box wow fadeInUp">
                             <div class="team-pic">
                                 <img width="400" height="400" src="{{ asset('front')}}/images/New-Project-5.jpg" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('front')}}/images/New-Project-5.jpg" sizes="(max-width: 400px) 100vw, 400px" title="New Project (5)" />
                             </div>
                             <div class="team-desc">
-                                <h3>Hotel Missoni</h3>
-                                <p class="lead">Symphony Style Hotel</p>
+                                <h3>{{$project->name}}</h3>
+                                <p class="lead">{{$project->consultant}}</p>
                                 <div class="small-border"></div>
-                                <p>Turnkey 200 luxury room hotel designed by Rosita Missoni with top quality
-                                    finishes and furniture manufactured with more than 100 items custom made by
-                                    our professional team.</p>
+                                <p>{{$project->description}}</p>
                                 <div class="social">
                                 </div>
                             </div>
                         </div>
                         <!-- team close -->
+                        @endforeach
+                        @endempty
 
-                        <!-- team member -->
-                        <div class="de-team-list team-box wow fadeInUp">
-                            <div class="team-pic">
-                                <img width="400" height="400" src="{{ asset('front')}}/images/New-Project-6.jpg" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('front')}}/images/New-Project-6.jpg" sizes="(max-width: 400px) 100vw, 400px" title="New Project (6)" />
-                            </div>
-                            <div class="team-desc">
-                                <h3>College of Science</h3>
-                                <p class="lead">Kuwait University</p>
-                                <div class="small-border"></div>
-                                <p>Ornamental Railings & Metal, Metal Mesh Curtain & Window Shade systems.</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team close -->
-
-
-                        <!-- team member -->
-                        <div class="de-team-list team-box wow fadeInUp">
-                            <div class="team-pic">
-                                <img width="400" height="400" src="{{ asset('front')}}/images/New-Project-7.jpg" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('front')}}/images/New-Project-7.jpg" sizes="(max-width: 400px) 100vw, 400px" title="New Project (7)" />
-                            </div>
-                            <div class="team-desc">
-                                <h3>Dasman Center</h3>
-                                <p class="lead">Research & Treatment of Diabetes</p>
-                                <div class="small-border"></div>
-                                <p>Curved curtain, Motorized smart system.</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- team close -->
-
-
-                        <div class="de-team-list team-box wow fadeInUp">
-                            <div class="team-pic">
-                                <img width="400" height="400" src="{{ asset('front')}}/images/New-Project-8.jpg" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('front')}}/images/New-Project-8.jpg" sizes="(max-width: 400px) 100vw, 400px" title="New Project (8)" />
-                            </div>
-                            <div class="team-desc">
-                                <h3>Al Seef</h3>
-                                <p class="lead">Hospital</p>
-                                <div class="small-border"></div>
-                                <p>Motorized Roller Blind, Cubicle Vinyl flooring and Wall Covering.</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
+                        @endisset
+                      
 
                     </div>
                 </div>

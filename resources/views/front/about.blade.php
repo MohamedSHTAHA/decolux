@@ -88,7 +88,7 @@
                         @empty(!$projects)
                         @foreach ( $projects as $index=>$project)
                         <!-- team member -->
-                        <div style="width: 400px;height: 400px;" class="de-team-list team-box wow fadeInUp">
+                        <div class="de-team-list team-box wow fadeInUp">
                             <div class="team-pic">
                                 <img width="400" height="400" src="{{$project->getFirstMediaUrl('projects')}}" sizes="(max-width: 400px) 100vw, 400px" title="{{$project->name}}" />
                             </div>

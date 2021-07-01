@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('about-us', function () {
-    $projects = Project::latest()->paginate();
+    $projects = Project::latest()->paginate(4);
     return view('front.about',compact('projects'));
 });
 Route::get('our-vision', function () {

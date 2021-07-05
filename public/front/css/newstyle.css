@@ -358,7 +358,7 @@ img.emoji {
     display:block;
   }
   .hero_one{
-      display:none;
+     /* display:none;*/
   }
 }
 .container-4 .de-team-list{
@@ -426,20 +426,6 @@ img.emoji {
     width: 100%;
 }
 
-
-.modal1 {
-    display: none;
-    position: fixed;
-    z-index: 1043;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; 
-    background-color: rgb(255 251 251 / 94%);
-}
-
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -454,18 +440,6 @@ img.emoji {
   text-decoration: none;
   cursor: pointer;
 }
-
-
-
- 
-
-
-
-
-
-
-
-
  
    .has-topbar #subheader {
     padding-top: 130px;

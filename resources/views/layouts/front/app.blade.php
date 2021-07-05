@@ -224,12 +224,7 @@
              }
          }*/
 
-         function openProject(priev, current, next) {
-             // alert(priev + current + next);
-             //$('#modal-project'+current).modal();
-             document.getElementById('#modal-project'+current).style.display = "block";
-             //$('#myModal').modal('hide');
-         }
+      
      </script>
      <script type='text/javascript' id='contact-form-7-js-extra'>
          /* <![CDATA[ */

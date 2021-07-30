@@ -296,7 +296,7 @@
 
                             <div class="de_tab_content">
                                 <div class="de_tab_content_inner">
-                                    <p>We provide expertise in <b>Interior Solutions</b>, Interior Construction, Painting and Finishing for Commercial, Residential, Hospitality and Retail Projects. Our services are rendered with professionalism and complete responsibility, ensuring that all Clients’ requirements and expectations are met.</p>
+                                    <p>We shared our experience in Aluminium composite panels cladding with you for commercial <b>, residential, hospitality and retail projects. </b> Our services are rendered with professionalism and complete responsibility ensuring that all clients requirements and expectation are met.</p>
                                 </div>
                                 <div class="de_tab_content_inner">
                                     <p><strong>DECOLUX</strong> is committed to provide you with the highest level of personal attention, guidance for every step of the way. Consistency, quality, attention to detail and communication are assured at every stage.</p>

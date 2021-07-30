@@ -156,10 +156,15 @@
 
 <div class="wpb_text_column wpb_content_element " >
     <div class="wpb_wrapper">
-        <address>P.O.Box 6246 Hawally 32037 Kuwait</address>
-<address><strong>Phone:  </strong>+965 24610141</address>
-<address><strong>Email:   </strong><a href="mailto:info@domain.com">info@domain.com</a></address>
-<address><strong>Web:     </strong><a href="#" target="_blank" rel="noopener noreferrer">website company</a></address>
+        <address><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address)){{\App\Settings::orderBy('id', 'DESC')->first()->address}}
+                                    @endif">Address</a></address>
+<address><strong>Phone:  </strong>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}@endif</address>
+<address><strong>Email:   </strong><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->email}}@endif">@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->email}}@endif</a></address>
+<address><strong>Web:     </strong><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->website))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->website}}@endif" target="_blank" rel="noopener noreferrer">website company</a></address>
 
     </div>
 </div>

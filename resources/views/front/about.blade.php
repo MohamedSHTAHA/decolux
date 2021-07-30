@@ -38,32 +38,15 @@
                                 <div class="inner-padding">
                                     <div class="col-md-6 col-md-offset-6 wow fadeInRight" data-wow-delay=".2s">
                                         <h2>ABOUT US</h2><br />
-                                        We were founded in <b>1993</b> under Bayt Al Europi establishment in
-                                        Hawally interior retail market as one of the main suppliers and
-                                        installer of all types of interior decoration materials.</p>
-                                        <p>In <strong>1994</strong> the company started expanding in both retail
-                                            and commercial sectors to have a major share in the market and to
-                                            cover the largest numbers of clients.</p>
-                                        <p>In <b>2004</b> our company had moved to the new HQ at Kuwait Free
-                                            Trade Zone with a vision to dominate the Mega projects in Kuwait and
-                                            GCC. with a hi-tech, well-equipped Window treatment, furniture
-                                            factory and store facility for other out-sourcing materials.</p>
-                                        <p>During our company journey we have launched several brands such as
-                                            Fai & shade, Louvolux, Adeco Home, Steel Frames and Walls boutique,
-                                            which reflect our vision and experience in the finishing and
-                                            furnishing Market which suits the local market needs.</p>
-                                        <p>In <b>2018</b> Bahatco Group one of Kuwait well established group and
-                                            multinational investment around the globe had taken over all the
-                                            major shares of our company and provide us with sufficient
-                                            investment to re-develop and re-establish the company Assist and its
-                                            facilities.</p>
-                                        <p>Accordingly, we decided to start a fresh new look for the company
-                                            with a young look with younger generation supported by our long
-                                            experience to follow the new market trends and requirements.</p>
-                                        <p>Now we become <b>Decolux</b> Kuwait General Trading and Contracting
-                                            Co. W.L.L, where we are aiming to be leaders in Window treatment,
-                                            Wall Covering, Floor Covering, office furniture, Ornamental
-                                            Cladding, Handrail and all types of sport Flooring and Equipment.
+                                     	We were Founded in  <b>2021 </b> 2021 in Jordan the heart of the middle east as one of the main suppliers 
+                                         of all types of buildings and walls cladding from ACP.</p>
+                                        <p> We’re looking forwards to cooperate with you in order to give you the chance to seek the right information and solutions for the best products you can use for cladding.
+                                        </p>
+                                        <p>
+                                        We have launched several brands such as green bond circle, FAAL which reflect our vision and experience in the finishing in constructions market which suits the local market needs. Accordingly, we decided to start with a fresh new look for the company with a young look with younger generation supported by our long experience to follow the new market trends and requirements.
+                                        </p>
+                                        
+                                      
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>

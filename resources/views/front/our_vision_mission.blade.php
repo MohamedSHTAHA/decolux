@@ -40,8 +40,11 @@
             <div class="inner-padding">
                 <div class="col-md-6 col-md-offset-6 wow fadeInRight" data-wow-delay=".2s">
                     <h2>Mission & Vision</h2><br/>
-                    <b>DECOLUX</b> is committed to provide the best possible interior designing, furnishing, fit-out solutions and best <p> service that surpass clients’ expectations.</p>
-<p>Our vision is to be one of the Leading interior and fit-out company by providing a full Interior Finishing solutions with high quality standard.                    </div>
+                    <b>Mission</b> Green Bond Circle company is committed to provide the best possible cladding, designing and fixing. Fit-out solutions and best service that surpass client expectations.                  
+                   <br/> <b>Vision</b> Our vision is to be one of the leading companies in the middle east .
+                      </div>
+                
+                 
                 <div class="clearfix"></div>
             </div>
         </div>

@@ -948,6 +948,7 @@
 }
 .fa-circle:before {
   content: "\f111";
+  color: #18191b;
 }
 .fa-mail-reply:before,
 .fa-reply:before {

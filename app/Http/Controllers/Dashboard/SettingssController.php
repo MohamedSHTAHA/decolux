@@ -52,7 +52,7 @@ class SettingssController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
+       /* $rules = [
             'title' => 'required',
             'discpriton' => 'required',
             'email' => 'required',
@@ -67,7 +67,7 @@ class SettingssController extends Controller
             'lat' => 'required',
             'long' => 'required',
         ];
-        $request->validate($rules);
+        $request->validate($rules);*/
         $request_data = $request->all();
         if ($request->logo) {
 
@@ -119,7 +119,7 @@ class SettingssController extends Controller
      */
     public function update(Request $request, $id)
     {$setting=Settings::where('id',$id)->first();
-        $rules = [
+       /* $rules = [
             'title' => 'required',
             'discpriton' => 'required',
             'email' => 'required',
@@ -134,7 +134,7 @@ class SettingssController extends Controller
             'lat' => 'required',
             'long' => 'required',
         ];
-        $request->validate($rules);
+        $request->validate($rules);*/
         $request_data = $request->except(['_token', '_method']);
         if ($request->logo) {
 

@@ -123,7 +123,7 @@
             <div class="team-desc">
         <h3></h3>
                     <div class="small-border"></div>
-        <p>DecoSol covers All types of window treatment manufactured under one roof with professional teams that carry out the work from procurement of high quality raw material and a quality control during procurement, manufacturing and installation. DecoSol provides a wide variety of window treatments that are designed to.</p>           
+        <p>a.	GBC (Green Bond Circle) Covers all outdoor and indoor wall accallingwith Aluminium composite panels for all types of buildings (commercial, residential, hotels and hospitals) to provide luxury and safe buildings</p>           
                 <div class="social">
                       </div>
     </div>
@@ -138,7 +138,7 @@
             <div class="team-desc">
         <h3></h3>
                     <div class="small-border"></div>
-        <p>DecoFit covers all interiors works with a wide range of Wall Covering, Floor covering, Acoustic cladding & ceiling, Office Furniture and provides a Fit-out services for all types of commercial and residential units with high quality products well tested to provide luxury and safe space.</p>            <div class="social">
+        <p>Da.	GBC (Green Bond Circle) Covers all outdoor and indoor wall accallingwith Aluminium composite panels for all types of buildings (commercial, residential, hotels and hospitals) to provide luxury and safe buildings</p>            <div class="social">
                                                                         </div>
     </div>
 </div>
@@ -152,7 +152,7 @@
             <div class="team-desc">
         <h3></h3>
                     <div class="small-border"></div>
-        <p>DecoSport with it’s well-known international suppliers, manufacturers and the support of it’s professional installers, our company offers full solutions for all types of sport and fitness spaces including finishes, flooring, furniture, equipment and certifications for all international federations.</p>          
+        <p>a.	GBC (Green Bond Circle) Covers all outdoor and indoor wall accallingwith Aluminium composite panels for all types of buildings (commercial, residential, hotels and hospitals) to provide luxury and safe buildings</p>          
                 <div class="social">
                                                                         </div>
     </div>
@@ -167,7 +167,7 @@
             <div class="team-desc">
         <h3></h3>
                     <div class="small-border"></div>
-        <p>Deco Steel covers a large range of stylish designs made of various types of Metal such as Steel, Aluminium and Stainless-Steel to form a unique Wall and Ceiling Cladding system, Mesh and Handrails for both interior and exterior. Where our first priority is to consider details such as material performance to determine project suitability.</p>          
+        <p>a.	GBC (Green Bond Circle) Covers all outdoor and indoor wall accallingwith Aluminium composite panels for all types of buildings (commercial, residential, hotels and hospitals) to provide luxury and safe buildings</p>          
                 <div class="social">
                                                                         </div>
     </div>

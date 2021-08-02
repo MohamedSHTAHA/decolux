@@ -23,19 +23,7 @@
 @section('content')
 <section class="content">
 
-    <form action="@if($applies->first()) {{route('dashboard.applies',$applies->first()->jop->id)}} @endif" method="get">
-
-        <div class="form-group">
-            <div class="input-group input-group-lg">
-                <input type="search" name="search" class="form-control form-control-lg" placeholder="Type your keywords here" value="{{ request()->search }}">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-lg btn-default">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </form>
+  
     <!-- Default box -->
     <div class="card">
         <div class="card-header">

@@ -62,9 +62,9 @@
                                         rel="category tag">News</a></span>
                                 <div class="share-holder">
                                     <h4>Share:</h4>
-                                    <div class="social-links rounded-share-icons">
-                                        <a target="_blank" href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-                                        <a target="_blank" href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                    <div class="social-links rounded-share-icons"> 
+                                        <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.greenbondcircle.com/blogdetails/{{$new->id}}&display=popup" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                        <a target="_blank" href="http://twitter.com/intent/tweet?&url=http://www.greenbondcircle.com/blogdetails/{{$new->id}}" title="Twitter"><i class="fa fa-twitter"></i></a>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
@@ -201,15 +201,15 @@
 
                 <div class="col-md-4">
                     <div id="sidebar" class="sidebar">
-                        <div id="search-2" class="widget widget_search">
-                            <form role="search" method="get" action="#">
+                    {{-- <div id="search-2" class="widget widget_search">
+                           <form role="search" method="get" action="#">
                                 <input type="search" id="search" class="search-field form-control" value="" name="s"
                                     placeholder="type to search&hellip;" />
                                 <button id="btn-search" type="submit">
                                 </button>
                                 <div class="clearfix"></div>
-                            </form>
-                        </div>
+                            </form> 
+                        </div>--}}
                     </div>
                 </div>
 

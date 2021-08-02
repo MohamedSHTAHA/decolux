@@ -2,6 +2,7 @@
 
 use App\Jop;
 use App\Project;
+use App\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,11 +30,13 @@ Route::get('our-vision', function () {
     return view('front.our_vision_mission');
 });
 
-Route::get('our-partner-sister-companies', function () {
+Route::get('Our_vendors_brands', function () {
     return view('front.our_partener');
 });
 Route::get('what-we-offer', function () {
-    return view('front.weoffer');
+    $services = Services::with('servicesDetails')->get();
+    return view('front.weoffer',compact('services'));
+   
 });
 
 

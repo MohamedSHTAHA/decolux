@@ -87,7 +87,7 @@
                                 </li>
 
                                 <li class="menu-item ">
-                                    <a title="Our Vendors &#038; Brands" href="/our-partner-sister-companies">Our Vendors &#038;Brands</a>
+                                    <a title="Our Vendors &#038; Brands" href="/Our_vendors_brands">Our Vendors &#038;Brands</a>
                                 </li>
 
                                 <li class="menu-item">

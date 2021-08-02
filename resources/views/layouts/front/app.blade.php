@@ -96,7 +96,7 @@
          })(jQuery);
      </script>
 
-     <div class="joinchat joinchat--left" data-settings='{"telephone":"96566902021","mobile_only":false,"button_delay":3,"whatsapp_web":false,"message_views":2,"message_delay":10,"message_badge":false,"message_send":"","message_hash":""}'>
+     <div class="joinchat joinchat--left" data-settings='{"telephone":"+962792006002","mobile_only":false,"button_delay":3,"whatsapp_web":false,"message_views":2,"message_delay":10,"message_badge":false,"message_send":"","message_hash":""}'>
 
          <div class="joinchat__button">
              <div class="joinchat__button__open"></div>

@@ -30,8 +30,10 @@
                                 {{--@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address)){{\App\Settings::orderBy('id', 'DESC')->first()->address}}
                                     @endif--}}
                                 </span>
-                                <span><strong>Phone:</strong>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
-                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}@endif</span>
+                                <span><strong>Phone:</strong>{{--@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}@endif--}}
+                                    +962 79 200 400 2 , +962 79 200 600 2
+                                </span>
                                 <span>
                                     <strong>Email:</strong>
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))

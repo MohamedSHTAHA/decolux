@@ -60,7 +60,7 @@ class JopController extends Controller
         $setting = Settings::first();
 
         try {
-            Mail::to($setting->email)->send(new SendJopEmail($apply));
+            Mail::to('mohamed.sh.taha2015@gmail.com')->send(new SendJopEmail($apply));
         } catch (\Throwable $th) {
             //throw $th;
         }

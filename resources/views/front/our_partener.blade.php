@@ -11,11 +11,11 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="title-wrap">
-                    <h1>Our Partner &#038; Sister Companies</h1>
+                    <h1>Our vendors and brands</h1>
                                         </div>               
                 <ul id="breadcrumbs" class="crumb"><li><a href="index.html">Home</a></li>
                     <li><a href="introduction.html">Introduction</a></li>
-                    <li class="active">Our Partner &#038; Sister Companies</li></ul> 
+                    <li class="active">Our vendors and brands</li></ul> 
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
         <div class="row">
             <div class="inner-padding">
                 <div class="col-md-6 col-md-offset-6 wow fadeInRight" data-wow-delay=".2s">
-                    <h2>OUR PARTNER AND SISTER COMPANIES</h2><br/>
+                    <h2>Our vendors and brands</h2><br/>
                    <p> As we are part of Bahatco group we are supported by a chain of sister companies (Bahman General Trading and Contracting Co. LTD, AL Omraniya Co. LTD, Arab Building Material Company LTD, Hadidco Co. LTD, Creative Design Center) providing us with big support in terms of sales and procurement of raw material with competitive price which give our company the ability to build a competitive offers that will be executed in the shortest time frame and excellent service.</p>
 <p>Our wide choose of international suppliers that we have been dealing with them for over 25 years  provide us the possibility to offer you a wide choice of products in the best value.                    </div>
                 <div class="clearfix"></div>

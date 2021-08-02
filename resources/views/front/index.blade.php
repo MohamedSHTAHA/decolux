@@ -20,12 +20,12 @@
                                     <img src="{{ asset('front')}}/images/Slider-2.jpg" title="Slider 2" width="1920" height="1280" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
                                     <!--
 							-->
-                                    <rs-layer id="slider-1-slide-1-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,1px;y:m;yo:0,0,0,-40px;" data-text="s:20,20,28,25;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">INTERIOR SOLUCTIONS
+                                    <rs-layer id="slider-1-slide-1-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,1px;y:m;yo:0,0,0,-40px;" data-text="s:20,20,28,25;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">GREEN BOND CIRCLE
                                     </rs-layer>
                                     <!--
 
 							-->
-                                    <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,14px;yo:335px,335px,335px,296px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{route('front.portfolios')}}" class="btn-slider">Our Portfolio</a>
+                                    <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,14px;yo:335px,335px,335px,296px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ url('/') }}/GBC.pdf" class="btn-slider">Our Color char</a>
                                     </rs-layer>
                                     <!--
 -->
@@ -34,12 +34,12 @@
                                     <img src="{{ asset('front')}}/images/slider-1.jpg" title="slider 1" width="1106" height="728" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
                                     <!--
 							-->
-                                    <rs-layer id="slider-1-slide-2-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="y:m;" data-text="s:20,20,30,30;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">SOLAR PROTECTIONS
+                                    <rs-layer id="slider-1-slide-2-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="y:m;" data-text="s:20,20,30,30;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">GREEN BOND CIRCLE
                                     </rs-layer>
                                     <!--
 
 							-->
-                                    <rs-layer id="slider-1-slide-2-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="yo:335px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="#" class="btn-slider">Our Portfolio</a>
+                                    <rs-layer id="slider-1-slide-2-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="yo:335px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ url('/') }}/GBC.pdf" class="btn-slider">Our Color char</a>
                                     </rs-layer>
                                     <!--
 -->
@@ -277,7 +277,7 @@
                                 <li class=" wow fadeIn " data-wow-delay="1.6s">
                                     <span class="content-mid">
                                         <div class="inner">
-                                            QUALITY CONTROL
+                                            Quality Assurance
                                         </div>
                                     </span>
                                     <div class="v-border"></div>
@@ -286,7 +286,7 @@
                                 <li class=" wow fadeIn " data-wow-delay="2s">
                                     <span class="content-mid">
                                         <div class="inner">
-                                            INNOVATIVE IDEAS
+                                            Innovation theory
                                         </div>
                                     </span>
                                     <div class="v-border"></div>
@@ -299,16 +299,16 @@
                                     <p>We shared our experience in Aluminium composite panels cladding with you for commercial <b>, residential, hospitality and retail projects. </b> Our services are rendered with professionalism and complete responsibility ensuring that all clients requirements and expectation are met.</p>
                                 </div>
                                 <div class="de_tab_content_inner">
-                                    <p><strong>DECOLUX</strong> is committed to provide you with the highest level of personal attention, guidance for every step of the way. Consistency, quality, attention to detail and communication are assured at every stage.</p>
+                                    <p><strong>GBC</strong> is committed to provide you with the highest level of personal attention, guidance for every step of the way. Consistency, quality, attention to detail and communication are assured at every stage.</p>
                                 </div>
                                 <div class="de_tab_content_inner">
-                                    <p>Client satisfaction is our venture; our target is to meet our client’s needs and expectations.</p>
+                                    <p>Customer satisfaction information, including surveys and ratings, can help a company determine how to best improve or changes its products and services.</p>
                                 </div>
                                 <div id="tab-618" class="de_tab_content_inner">
-                                    <p>Our team carries out quality control process through every step starting from Engineering, Procurement, Manufacturing to Installation to provide a safe, certified, high performance and quality products.</p>
+                                    <p>Our team carries out quality control process through every step starting from receiving the orders, manufacturing and delivery the order to the client with a professionalism way.</p>
                                 </div>
                                 <div class="de_tab_content_inner">
-                                    <p>Our young generation with the experience of seniors for over than 25 years generate an innovative and unique interior solution ideas that will inspire you to get the most out of your project.</p>
+                                    <p>We’re aiming to share our long experience in the Aluminum composite panel filed with our respective clients to reach the maximum Creativity.</p>
                                 </div>
                             </div>
                         </div>

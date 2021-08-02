@@ -32,7 +32,7 @@
         </div>
 
         <div class="card-body p-0">
-            @if($appl)
+            @if($apply)
 
             <table class="table table-striped applies">
                 <thead>

@@ -6,9 +6,12 @@ use App\Apply;
 use App\Country;
 use App\Http\Controllers\Controller;
 use App\Jop;
+use App\Mail\SendJopEmail;
+use App\Settings;
 use App\Type;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
@@ -53,6 +56,13 @@ class JopController extends Controller
 
         if ($request->file('resume')) {
             $apply->addMedia($request->resume)->toMediaCollection('applies');
+        }
+        $setting = Settings::first();
+
+        try {
+            Mail::to($setting->email)->send(new SendJopEmail($apply));
+        } catch (\Throwable $th) {
+            //throw $th;
         }
         session()->flash('success', 'Apply successfully');
         return redirect()->route('front.job-openings.index');

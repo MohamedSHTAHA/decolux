@@ -56,8 +56,8 @@
                             </div>
 
                             <div class="post-info">
-                                <span class="post-user"><i class="fa fa-user"></i><a href="#" title="Posts by admin"
-                                        rel="author">{{ $new->users->name }}</a></span>
+                                <!-- <span class="post-user"><i class="fa fa-user"></i><a href="#" title="Posts by admin"
+                                        rel="author">{{ $new->users->name }}</a></span> -->
                                 <span class="post-category"><i class="fa fa-folder"></i><a href="/blog"
                                         rel="category tag">News</a></span>
                                 <div class="share-holder">

@@ -151,9 +151,9 @@
                         <div class="post-info">
 
 
-                            <span class="post-user">
+                            <!-- <span class="post-user">
                                 <i class="fa fa-user"></i>
-                                <a href="#" title="Posts by admin" rel="author">{{$jop->user->name??''}}</a></span>
+                                <a href="#" title="Posts by admin" rel="author">{{$jop->user->name??''}}</a></span> -->
                             <div class="share-holder">
                                 <h4>Share:</h4>
                                 <div class="social-links rounded-share-icons">

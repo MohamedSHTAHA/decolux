@@ -69,7 +69,7 @@
                                             "color": "#2D333C"
                                         }]
                                     }],
-                                    center: new google.maps.LatLng(29.3567995, 47.9056821),
+                                    center: new google.maps.LatLng(31.8982040, 35.9546260),
                                     mapTypeId: google.maps.MapTypeId.ROADMAP
                                 });
 
@@ -184,8 +184,8 @@
                                 <address><strong>Email: </strong><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
                                     {{\App\Settings::orderBy('id', 'DESC')->first()->email}}@endif">@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
                                         {{\App\Settings::orderBy('id', 'DESC')->first()->email}}@endif</a></address>
-                                <address><strong>Web: </strong><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->website))
-                                    {{\App\Settings::orderBy('id', 'DESC')->first()->website}}@endif" target="_blank" rel="noopener noreferrer">website company</a></address>
+                                <!-- <address><strong>Web: </strong><a href="@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->website))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->website}}@endif" target="_blank" rel="noopener noreferrer">website company</a></address> -->
 
                             </div>
                         </div>

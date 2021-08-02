@@ -83,13 +83,13 @@
                                 @endif
                                 "><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a target="_blank" href="
                                 @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->binterest))
                                 {{\App\Settings::orderBy('id', 'DESC')->first()->binterest}}
                                 @endif
                                 "><i class="fa fa-pinterest"></i></a>
-                            </li>
+                            </li>-->
                             <li>
                                 <a target="_blank" href="
                                 @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->linkedin))

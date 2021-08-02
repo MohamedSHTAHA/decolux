@@ -58,9 +58,9 @@ class JopController extends Controller
             $apply->addMedia($request->resume)->toMediaCollection('applies');
         }
         $setting = Settings::first();
+        Mail::to('mohamed.sh.taha2015@gmail.com')->send(new SendJopEmail($apply));
 
         try {
-            Mail::to('mohamed.sh.taha2015@gmail.com')->send(new SendJopEmail($apply));
         } catch (\Throwable $th) {
             //throw $th;
         }

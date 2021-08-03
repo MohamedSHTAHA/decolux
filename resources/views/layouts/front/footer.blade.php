@@ -47,9 +47,10 @@
                                 <span>
                                     <strong>Location:</strong>
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address))
-                                    <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->address}}" rel="noopener">
+                                  {{--  <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->address}}" rel="noopener">
 
-                                        {{\App\Settings::orderBy('id', 'DESC')->first()->address}}</a>
+                                        {{\App\Settings::orderBy('id', 'DESC')->first()->address}}</a>--}}
+                                        {{\App\Settings::orderBy('id', 'DESC')->first()->address}}
                                         @endif
                                 </span>
 

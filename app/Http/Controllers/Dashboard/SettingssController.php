@@ -80,6 +80,15 @@ class SettingssController extends Controller
             $request_data['logo'] = $request->logo->hashName();
 
         }//end of if
+        if ($request->pdf) {
+            $file = $request->file('pdf');
+            $filename = time() . '.' . $request->file('pdf')->extension();
+            $filePath = public_path('uploads/logo/');
+            $file->move($filePath, $filename);
+          
+            $request_data['pdf'] = $filename;
+        }
+
         if($request->web=="on"){
             $request_data['web'] =1;
         }else{
@@ -153,6 +162,19 @@ class SettingssController extends Controller
             $request_data['logo'] = $request->logo->hashName();
 
         }//end of if
+
+       
+
+   
+
+            if ($request->pdf) {
+                $file = $request->file('pdf');
+                $filename = time() . '.' . $request->file('pdf')->extension();
+                $filePath = public_path('uploads/archives/');
+                $file->move($filePath, $filename);
+              
+                $data['pdf'] = $filename;
+            }
         if($request->web=="on"){
             $request_data['web'] =1;
         }else{

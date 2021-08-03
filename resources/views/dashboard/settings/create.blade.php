@@ -99,6 +99,16 @@
 
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="pdf">Color Charts Pdf</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="pdf" class="form-control">
+
+
+                            </div>
+                        </div>
+
                         <div class="form-check">
                             <input type="checkbox" name="web" class="form-check-input" id="web">
                             <label class="form-check-label" for="web">Web</label>

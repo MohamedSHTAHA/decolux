@@ -101,6 +101,15 @@
                             <img src="{{ asset('uploads/logo/'.$setting->logo) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
 
                         </div>
+
+                        <div class="form-group">
+                            <label for="images">Pdf</label>
+                            <div class="input-group">
+                                    <input type="file" name="pdf" value="{{ $setting->pdf }}" class="form-control">
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="form-check">
                         <input type="checkbox" name="web" class="form-check-input" id="web"

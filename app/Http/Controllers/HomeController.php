@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services;
+use App\Settings;
 use App\ServicesDetails;
 class HomeController extends Controller
 {
@@ -25,8 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         $services=Services::all();
-
-        return view('front.index', compact(['services']));
+        $settings=Settings::orderBy('id','desc')->first();
+        if(!empty($settings)){
+            $pdf=  $settings->pdf;
+        }else{
+            $pdf=  '';
+        }
+        return view('front.index', compact(['services','pdf']));
     }
 
     public function home()

@@ -109,7 +109,7 @@
                                 @foreach(\App\Services::all() as $row)
 
                                 <li class="menu-item ">
-                                    <a title="DecoSol" href="{{ route('front.showservice', $row->name) }}">{{$row->name}}</a>
+                                    <a title="DecoSol" href="{{ route('front.showservice', $row->name) }}">{{$row->menue_name}}</a>
                                 </li>
                                 @endforeach
 

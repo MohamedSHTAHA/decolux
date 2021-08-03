@@ -70,7 +70,8 @@
                 <tr>
                     <th>#</th>
                     <th>user</th>
-                    <th>Name</th>
+                    <th>Menue Name</th>
+                    <th>Title</th>
                     <th>Image</th>
                     <th>action</th>
                 </tr>
@@ -81,6 +82,7 @@
                     <tr>
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $service->users->name }}</td>
+                        <td>{{ $service->menue_name }}</td>
                         <td>{{ $service->name }}</td>
 
                         <td><img src="{{ asset('uploads/services_images/'.$service->image) }}" style="width: 100px"  class="img-thumbnail" alt=""></td>

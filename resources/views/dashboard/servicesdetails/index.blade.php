@@ -80,7 +80,7 @@
                 @foreach ($servicesdetails as $index=>$service)
                     <tr>
                         <td>{{ $index + 1 }}</td>
-                        <td>{{ $service->services->name }}</td>
+                        <td>@if(!empty($service->services)) {{ $service->services->name }}@endif</td>
                         <td>{!! $service->description !!}</td>
 
                         <td><img src="{{ asset('uploads/servicesdetails_images/'.$service->image) }}" style="width: 100px"  class="img-thumbnail" alt=""></td>

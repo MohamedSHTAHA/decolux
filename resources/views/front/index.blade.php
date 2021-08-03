@@ -25,7 +25,7 @@
                                     <!--
 
 							-->
-                                    <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,14px;yo:335px,335px,335px,296px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ url('/') }}/GBC.pdf" class="btn-slider">Our Color char</a>
+                                    <rs-layer id="slider-1-slide-1-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,14px;yo:335px,335px,335px,296px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ asset('uploads/logo/'.$pdf) }}" class="btn-slider">Our Color Charts</a>
                                     </rs-layer>
                                     <!--
 -->
@@ -39,7 +39,7 @@
                                     <!--
 
 							-->
-                                    <rs-layer id="slider-1-slide-2-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="yo:335px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ url('/') }}/GBC.pdf" class="btn-slider">Our Color char</a>
+                                    <rs-layer id="slider-1-slide-2-layer-3" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="yo:335px;" data-text="l:22;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:800;sp:400;sR:800;" data-frame_999="y:50px;o:0;tp:600;e:nothing;st:w;sp:450;sR:4800;" style="z-index:7;font-family:Roboto;"><a target="_blank" href="{{ asset('uploads/logo/'.$pdf) }}" class="btn-slider">Our Color Charts</a>
                                     </rs-layer>
                                     <!--
 -->
@@ -124,7 +124,7 @@
                             <div class="team-desc">
                                 <h3></h3>
                                 <div class="small-border"></div>
-                                <p>{!! $service->servicesDetails[0]->description !!}</p>
+                                <p>@if(!empty($service->servicesDetails[0])) {!! $service->servicesDetails[0]->description !!} @endif</p>
                                 <div class="social">
                                 </div>
                             </div>

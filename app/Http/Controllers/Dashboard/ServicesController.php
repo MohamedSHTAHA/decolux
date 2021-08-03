@@ -52,6 +52,7 @@ class ServicesController extends Controller
     {
         $rules = [
             'name' => 'required',
+            'menue_name' => 'required',
 
         ];
         $request->validate($rules);
@@ -104,6 +105,7 @@ class ServicesController extends Controller
 
         $rules = [
             'name' => 'required',
+            'menue_name' => 'required',
 
         ];
         $services=Services::where('id',$id)->first();

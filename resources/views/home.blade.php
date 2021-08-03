@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.app')
 
-@section('title', 'Decolux')
+@section('title', 'GreenBond')
 
 @section('content-header')
 <div class="content-header">

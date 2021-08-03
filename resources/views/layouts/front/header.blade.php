@@ -61,8 +61,8 @@
             <div class="col-md-12">
                 <div id="logo">
                     <a href="/">
-                        <img class="logo-static" src="{{ asset('front')}}/images/Untitled-1.png" alt="DECOLUX KUWAIT">
-                        <img class="logo-scroll" src="{{ asset('front')}}/images/Untitled-1.png" alt="DECOLUX KUWAIT">
+                        <img class="logo-static" src="{{ asset('front')}}/images/Untitled-1.png" alt="Green Bond">
+                        <img class="logo-scroll" src="{{ asset('front')}}/images/Untitled-1.png" alt="Green Bond">
                     </a>
                 </div>
                 <span id="menu-btn"></span>

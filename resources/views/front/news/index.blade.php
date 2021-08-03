@@ -72,12 +72,12 @@
                 <div class="col-md-4">
                     <div id="sidebar" class="sidebar">
                         <div id="search-2" class="widget widget_search">
-                            <form role="search" method="get" action="#">
+                            {{--<form role="search" method="get" action="#">
                                 <input type="search" id="search" class="search-field form-control" value="" name="s"
                                     placeholder="type to search&hellip;" />
                                 <button id="btn-search" type="submit"></button>
                                 <div class="clearfix"></div>
-                            </form>
+                            </form> --}}
                         </div>
                     </div>
                 </div>

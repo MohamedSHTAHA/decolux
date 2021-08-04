@@ -9,6 +9,7 @@
                     <div id="text-2" class="widget widget_text">
                         <div class="textwidget">
                             <p>
+                                
                                 <img loading="lazy" class="alignnone wp-image-1857 size-full" src="{{ asset('front')}}/images/footeer.png" alt="" width="251" height="50" />
                             </p>
                             <p>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->discpriton)){!!\App\Settings::orderBy('id', 'DESC')->first()->discpriton!!}
@@ -30,18 +31,20 @@
                                 {{--@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address)){{\App\Settings::orderBy('id', 'DESC')->first()->address}}
                                     @endif--}}
                                 </span>
-                                <span><strong>Phone:</strong>{{--@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
-                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}@endif--}}
-                                    +962 79 200 400 2 , +962 79 200 600 2
+                                <span><strong>Phone:</strong>@if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}
+                                    @endif
+                                    <br>
+                                 <span style="padding-left: 52px;">   &nbsp;&nbsp;&nbsp;&nbsp;,
+                                    @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone1))
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->phone1}}
+                                    @endif </span>
+                                   {{-- +962 79 200 400 2 , +962 79 200 600 2 --}}
                                 </span>
                                 <span>
                                     <strong>Email:</strong>
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->email))
-                                    <a href="{{\App\Settings::orderBy('id', 'DESC')->first()->email}}">
-
-                                        {{\App\Settings::orderBy('id', 'DESC')->first()->email}}
-
-                                    </a>
+                                    {{\App\Settings::orderBy('id', 'DESC')->first()->email}} 
                                     @endif
                                 </span>
                                 <span>

@@ -40,8 +40,22 @@
             <div class="inner-padding">
                 <div class="col-md-6 col-md-offset-6 wow fadeInRight" data-wow-delay=".2s">
                     <h2>Mission & Vision</h2><br/>
-                    <b>Mission</b> Green Bond Circle company is committed to provide the best possible cladding, designing and fixing. Fit-out solutions and best service that surpass client expectations.                  
+                    @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->ourvision ))
+                    <b>{!! $row->ourvision !!}<b>
+                    @else
+                 <b>Mission</b> Green Bond Circle company is committed to provide the best possible cladding, designing and fixing. Fit-out solutions and best service that surpass client expectations.                  
                    <br/> <b>Vision</b> Our vision is to be one of the leading companies in the middle east .
+                   
+                    @endif
+                        @endforeach
+                    @else
+                 <b>Mission</b> Green Bond Circle company is committed to provide the best possible cladding, designing and fixing. Fit-out solutions and best service that surpass client expectations.                  
+                   <br/> <b>Vision</b> Our vision is to be one of the leading companies in the middle east .
+                   
+                    @endif
+                 
                       </div>
                 
                  

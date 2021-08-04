@@ -19,7 +19,7 @@ class CreateSettingsTable extends Migration
              $table->string('logo')->default('default.png');
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->string('phone2')->nullable();
+            $table->string('phone1')->nullable();
             $table->string('website')->defalut(0);
             $table->integer('web')->defalut(0);
             $table->string('address')->nullable();

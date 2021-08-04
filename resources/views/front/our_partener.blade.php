@@ -38,9 +38,22 @@
             <div class="inner-padding">
                 <div class="col-md-6 col-md-offset-6 wow fadeInRight" data-wow-delay=".2s">
                     <h2>Our vendors and brands</h2><br/>
+                    @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->Ourvendorsbrands ))
+                    <b>{!! $row->Ourvendorsbrands !!}<b>
+                    @else
+
                    <p> As we are part of Bahatco group we are supported by a chain of sister companies (Bahman General Trading and Contracting Co. LTD, AL Omraniya Co. LTD, Arab Building Material Company LTD, Hadidco Co. LTD, Creative Design Center) providing us with big support in terms of sales and procurement of raw material with competitive price which give our company the ability to build a competitive offers that will be executed in the shortest time frame and excellent service.</p>
 <p>Our wide choose of international suppliers that we have been dealing with them for over 25 years  provide us the possibility to offer you a wide choice of products in the best value.                    </div>
-                <div class="clearfix"></div>
+@endif
+                        @endforeach
+
+                        @else
+                        <p> As we are part of Bahatco group we are supported by a chain of sister companies (Bahman General Trading and Contracting Co. LTD, AL Omraniya Co. LTD, Arab Building Material Company LTD, Hadidco Co. LTD, Creative Design Center) providing us with big support in terms of sales and procurement of raw material with competitive price which give our company the ability to build a competitive offers that will be executed in the shortest time frame and excellent service.</p>
+<p>Our wide choose of international suppliers that we have been dealing with them for over 25 years  provide us the possibility to offer you a wide choice of products in the best value.                    </div>
+@endif
+<div class="clearfix"></div>
             </div>
         </div>
     </div>

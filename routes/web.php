@@ -3,6 +3,7 @@
 use App\Jop;
 use App\Project;
 use App\Services;
+use App\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,10 +25,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('about-us', function () {
     $projects = Project::latest()->paginate(4);
-    return view('front.about',compact('projects'));
+    $aboutus = AboutUs::all();
+    return view('front.about',compact('projects','aboutus'));
 });
 Route::get('our-vision', function () {
-    return view('front.our_vision_mission');
+    $Settings = Settings::all();
+    return view('front.our_vision_mission',compact('Settings'));
 });
 
 Route::get('Our_vendors_brands', function () {

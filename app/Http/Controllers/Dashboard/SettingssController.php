@@ -86,7 +86,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->sliderimg1->hashName()));
+                ->save(public_path('front/logo/' . $request->sliderimg1->hashName()));
 
             $request_data['sliderimg1'] = $request->sliderimg1->hashName();
 
@@ -97,7 +97,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->sliderimg2->hashName()));
+                ->save(public_path('front/logo/' . $request->sliderimg2->hashName()));
 
             $request_data['sliderimg2'] = $request->sliderimg2->hashName();
 
@@ -108,7 +108,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->footerimg->hashName()));
+                ->save(public_path('front/logo/' . $request->footerimg->hashName()));
 
             $request_data['footerimg'] = $request->footerimg->hashName();
 
@@ -208,7 +208,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->sliderimg1->hashName()));
+                ->save(public_path('front/logo/' . $request->sliderimg1->hashName()));
 
             $request_data['sliderimg1'] = $request->sliderimg1->hashName();
 
@@ -225,7 +225,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->sliderimg2->hashName()));
+                ->save(public_path('front/logo/' . $request->sliderimg2->hashName()));
 
             $request_data['sliderimg2'] = $request->sliderimg2->hashName();
 
@@ -242,7 +242,7 @@ class SettingssController extends Controller
                 ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
                 })
-                ->save(public_path('uploads/logo/' . $request->footerimg->hashName()));
+                ->save(public_path('front/logo/' . $request->footerimg->hashName()));
 
             $request_data['footerimg'] = $request->footerimg->hashName();
 

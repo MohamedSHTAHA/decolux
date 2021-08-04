@@ -16,8 +16,8 @@
                     <rs-module-wrap id="rev_slider_1_2_wrapper" data-source="gallery" style="background:#E9E9E9;padding:0;">
                         <rs-module id="rev_slider_1_2" style="" data-version="6.3.5">
                             <rs-slides>
-                                <rs-slide data-key="rs-1" data-title="Slide 1" data-thumb="images/Slider-2.jpg" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
-                                    <img src="{{ asset('front')}}/images/Slider-2.jpg" title="Slider 2" width="1920" height="1280" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
+                                <rs-slide data-key="rs-1" data-title="Slide 1" data-thumb="{{ asset($slider1) }}" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
+                                    <img src="{{ asset($slider1) }}" title="Slider 2" width="1920" height="1280" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
                                     <!--
 							-->
                                     <rs-layer id="slider-1-slide-1-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="xo:0,0,0,1px;y:m;yo:0,0,0,-40px;" data-text="s:20,20,28,25;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">GREEN BOND CIRCLE
@@ -30,8 +30,8 @@
                                     <!--
 -->
                                 </rs-slide>
-                                <rs-slide data-key="rs-2" data-title="Slide 2" data-thumb="images/slider-1.jpg" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
-                                    <img src="{{ asset('front')}}/images/slider-1.jpg" title="slider 1" width="1106" height="728" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
+                                <rs-slide data-key="rs-2" data-title="Slide 2" data-thumb="{{ asset($slider2) }}" data-anim="ei:d;eo:d;s:500;r:0;t:fade;sl:10;">
+                                    <img src="{{ asset($slider2) }}" title="slider 1" width="1106" height="728" data-bg="p:center top;" class="rev-slidebg" data-no-retina>
                                     <!--
 							-->
                                     <rs-layer id="slider-1-slide-2-layer-2" class="big-text" data-type="text" data-color="rgba(255, 255, 255, 1)" data-rsp_ch="on" data-xy="y:m;" data-text="s:20,20,30,30;l:22;" data-frame_0="sX:2;sY:2;tp:600;" data-frame_1="tp:600;e:easeInOutExpo;st:400;sp:800;sR:400;" data-frame_999="x:0;y:0;z:-50;sX:0.85;sY:0.85;o:0;rX:0;rY:0;rZ:0;skX:0;skY:0;tp:600;e:nothing;st:w;sp:400;sR:4800;" style="z-index:6;font-family:Roboto;">GREEN BOND CIRCLE

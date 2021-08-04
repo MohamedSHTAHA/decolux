@@ -30,7 +30,7 @@
 
 
 
-<section class="wpb_row vc_row-fluid vc_custom_1495530476030">
+<section class="wpb_row vc_row-fluid vc_custom_1495530476030 margg">
     <div class="container">
         <div class="row">
             <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<section class="wpb_row vc_row-fluid offer vc_custom_1589297574087">
+<section class="wpb_row vc_row-fluid offer vc_custom_1589297574087 margg">
     <div class="container">
         <div class="row">
         @foreach($services as $service)

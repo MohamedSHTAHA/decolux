@@ -122,7 +122,6 @@
                                     <form class="wpforms-validate wpforms-form " method="post" action="{{route('front.apply')}}" enctype="multipart/form-data">
                                         @csrf
                                         @method('post')
-                                        <input type="hidden" name="jop_id" value="{{$jop->id}}" />
                                         <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
 
                                         <div class="wpforms-field-container">

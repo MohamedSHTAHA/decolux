@@ -41,8 +41,12 @@
                             <input type="text" class="form-control" name="title" value="{{ $setting->title }}" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="phone">phone</label>
+                            <label for="phone">phone 1</label>
                             <input type="text" class="form-control" name="phone" value="{{ $setting->phone }}" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone 2</label>
+                            <input type="text" class="form-control" name="phone1" value="{{ $setting->phone1 }}" id="phone">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -92,7 +96,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="images">Images</label>
+                            <label for="images">logo</label>
                             <div class="input-group">
                                     <input type="file" name="logo" class="form-control">
                             </div>
@@ -103,13 +107,63 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="pdf">Color Charts Pdf</label>
+                            <div class="input-group">
+
+                                    <input type="file" value='{{ $setting->pdf }}' name="pdf" class="form-control">
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ourvision">our vision</label>
+                            <textarea name="ourvision" class="form-control ckeditor">{{ $setting->ourvision }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="Ourvendorsbrands">Our vendors brands</label>
+                            <textarea name="Ourvendorsbrands" class="form-control ckeditor">{{ $setting->Ourvendorsbrands }}</textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label for="images">Pdf</label>
                             <div class="input-group">
                                     <input type="file" name="pdf" value="{{ $setting->pdf }}" class="form-control">
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="images">sliderimg1</label>
+                            <div class="input-group">
+                                    <input type="file" name="sliderimg1" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->sliderimg1) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
 
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="images">slider img2</label>
+                            <div class="input-group">
+                                    <input type="file" name="sliderimg2" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->sliderimg2) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="images">footer img</label>
+                            <div class="input-group">
+                                    <input type="file" name="footerimg" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->footerimg) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
                     </div>
                     <div class="form-check">
                         <input type="checkbox" name="web" class="form-check-input" id="web"

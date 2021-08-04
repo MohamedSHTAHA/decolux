@@ -40,8 +40,12 @@
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="phone">phone</label>
+                            <label for="phone">phone 1</label>
                             <input type="text" class="form-control" name="phone" value="{{ old('phone') }}" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">phone 2</label>
+                            <input type="text" class="form-control" name="phone1" value="{{ old('phone') }}" id="phone1">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
@@ -108,7 +112,42 @@
 
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="ourvision">our vision</label>
+                            <textarea name="ourvision" class="form-control ckeditor">{{ old('ourvision') }}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="Ourvendorsbrands">Our vendors brands</label>
+                            <textarea name="Ourvendorsbrands" class="form-control ckeditor">{{ old('Ourvendorsbrands') }}</textarea>
+                        </div>
+                  
+                        <div class="form-group">
+                            <label for="sliderimg1">slider image1</label>
+                            <div class="input-group">
 
+                                    <input type="file" name="sliderimg1" class="form-control">
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sliderimg2">slider image2</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="sliderimg2" class="form-control">
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="footerimg">footer image</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="footerimg" class="form-control">
+
+
+                            </div>
+                        </div>
                         <div class="form-check">
                             <input type="checkbox" name="web" class="form-check-input" id="web">
                             <label class="form-check-label" for="web">Web</label>

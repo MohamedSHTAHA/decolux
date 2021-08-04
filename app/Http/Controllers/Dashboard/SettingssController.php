@@ -80,6 +80,39 @@ class SettingssController extends Controller
             $request_data['logo'] = $request->logo->hashName();
 
         }//end of if
+        if ($request->sliderimg1) {
+
+            Image::make($request->sliderimg1)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->sliderimg1->hashName()));
+
+            $request_data['sliderimg1'] = $request->sliderimg1->hashName();
+
+        }//end of if
+        if ($request->sliderimg2) {
+
+            Image::make($request->sliderimg2)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->sliderimg2->hashName()));
+
+            $request_data['sliderimg2'] = $request->sliderimg2->hashName();
+
+        }//end of if
+        if ($request->footerimg) {
+
+            Image::make($request->footerimg)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->footerimg->hashName()));
+
+            $request_data['footerimg'] = $request->footerimg->hashName();
+
+        }//end of if
         if ($request->pdf) {
             $file = $request->file('pdf');
             $filename = time() . '.' . $request->file('pdf')->extension();
@@ -163,6 +196,57 @@ class SettingssController extends Controller
 
         }//end of if
 
+        if ($request->sliderimg1) {
+
+            if ($setting->sliderimg1 != '') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->sliderimg1);
+
+            }//end of if
+
+            Image::make($request->sliderimg1)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->sliderimg1->hashName()));
+
+            $request_data['sliderimg1'] = $request->sliderimg1->hashName();
+
+        }//end of if
+        if ($request->sliderimg2) {
+
+            if ($setting->sliderimg2 != '') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->sliderimg2);
+
+            }//end of if
+
+            Image::make($request->sliderimg2)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->sliderimg2->hashName()));
+
+            $request_data['sliderimg2'] = $request->sliderimg2->hashName();
+
+        }//end of if
+        if ($request->footerimg) {
+
+            if ($setting->footerimg != '') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->footerimg);
+
+            }//end of if
+
+            Image::make($request->footerimg)
+                ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save(public_path('uploads/logo/' . $request->footerimg->hashName()));
+
+            $request_data['footerimg'] = $request->footerimg->hashName();
+
+        }//end of if
        
 
    

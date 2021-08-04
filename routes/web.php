@@ -98,7 +98,8 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
      Route::resource('contactUs', 'ContactUsController')->except(['show']);
           //services settings
      Route::resource('settings', 'SettingssController')->except(['show']);
-
+      //services aboutus
+      Route::resource('aboutus', 'AboutusController')->except(['show']);
       //services faqs
       Route::resource('faqs', 'FaqsController')->except(['show']);
 });

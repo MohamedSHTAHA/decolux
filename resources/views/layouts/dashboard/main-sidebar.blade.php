@@ -19,7 +19,7 @@
         </div>
 
         <!-- SidebarSearch Form -->
-        <div class="form-inline">
+      {{--  <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
@@ -28,7 +28,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div>--}}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -593,6 +593,24 @@
                     </ul>
                 </li>
 
+
+                <li class="nav-item @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            About us Settings
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  menu-open @endif">
+                            <a href="{{ route('dashboard.aboutus.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add About us Settings</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </nav>

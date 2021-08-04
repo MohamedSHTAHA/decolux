@@ -34,7 +34,7 @@ class JopController extends Controller
         return view('dashboard.jops.applies', compact(['applies']));
     }
 
-    public function appliesFree(Request $request , $id)
+    public function appliesFree(Request $request )
     {
         $applies = Apply::whereJopId(null)->when($request->search, function ($q) use ($request) {
             return $q->where('firstname', 'like','%' . $request->search . '%')

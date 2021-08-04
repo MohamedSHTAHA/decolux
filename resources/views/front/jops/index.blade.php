@@ -80,7 +80,7 @@
                                                     <tr class="thjmf-listing-body">
                                                         <td class="thjmf-job-single-excerpt">
                                                             <div class="thjmf-listing-single-content">
-                                                                <p>{!! $jop->description !!}
+                                                                <p>{!! str_split(strip_tags($jop->description),50) !!}
                                                                 </p>
                                                             </div>
                                                         </td>

@@ -95,7 +95,7 @@
                                 </li>
 
                                 <li class="menu-item ">
-                                    <a title="News" href="/blog">News</a>
+                                    <a title="News" href="/allnews">News</a>
                                 </li>
                             </ul>
                         </li>
@@ -106,7 +106,7 @@
 
                             <ul role="menu" class=" sub-menu">
 
-                                @foreach(\App\Services::all() as $row)
+                                @foreach(\App\Services::orderBy('id', 'asc')->get() as $row)
 
                                 <li class="menu-item ">
                                     <a title="DecoSol" href="{{ route('front.showservice', $row->name) }}">{{$row->menue_name}}</a>
@@ -135,7 +135,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="Project gallery" href="{{route('front.portfolios')}}">Project gallery</a>
+                                    <a title="Project gallery" href="{{route('front.project-gallery')}}">Project gallery</a>
                                 </li>
                             </ul>
                         </li>
@@ -146,11 +146,11 @@
                             <ul role="menu" class=" sub-menu">
 
                                 <li class="menu-item ">
-                                    <a title="Inquiry" href="/contact">Inquiry</a>
+                                    <a title="Inquiry" href="/inquiry">Inquiry</a>
                                 </li>
 
                                 <li class="menu-item">
-                                    <a title="Jobs" href="{{route('front.job-openings.index')}}">Jobs</a>
+                                    <a title="Jobs" href="{{route('front.jobs.index')}}">Jobs</a>
                                 </li>
 
                                 <li class="menu-item">

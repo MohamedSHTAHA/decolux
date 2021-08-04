@@ -47,20 +47,20 @@ Route::get('/', 'HomeController@index');
 
 
 Route::name('front.')->namespace('Front')->group(function () {
-    Route::resource('job-openings', 'JopController');
+    Route::resource('jobs', 'JopController');
     Route::post('apply', 'JopController@apply')->name('apply');
     Route::get('general-gallery', 'GalleryController@index')->name('general-gallery');
-    Route::get('portfolios', 'ProjectController@index')->name('portfolios');
+    Route::get('project-gallery', 'ProjectController@index')->name('project-gallery');
 
     
 
 
-    Route::resource('blog', 'NewsController');
+    Route::resource('allnews', 'NewsController');
     Route::get('blogdetails/{id}','NewsController@blogdetails')->name('blogdetails');
     Route::post('savecomments/{id}','NewsController@savecomments')->name('savecomments');
     Route::resource('services', 'ServicesController');
     Route::get('showservice/{name}','ServicesController@showservice')->name('showservice');
-    Route::resource('contact', 'ContactController');
+    Route::resource('inquiry', 'ContactController');
     Route::post('savecontact','ContactController@savecontact')->name('savecontact');
     Route::resource('allfaqs', 'FaqsController');
 

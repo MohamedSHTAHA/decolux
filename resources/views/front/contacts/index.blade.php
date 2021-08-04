@@ -40,7 +40,7 @@
                             $(document).ready(function() {
 
                                 var locations = [
-                                    ['<div class="infobox"><span><span></div>', 29.3567995, 47.9056821, 2]
+                                    ['<div class="infobox"><span><span></div>', 31.89829, 35.95461, 2]
                                 ];
 
                                 var map = new google.maps.Map(document.getElementById('gmap-60c4c5d5d0ca7'), {

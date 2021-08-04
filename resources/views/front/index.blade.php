@@ -82,7 +82,7 @@
     </div>
 </section>
 
-<section class="wpb_row vc_row-fluid offer vc_custom_1589297574087">
+<section class="wpb_row vc_row-fluid offer vc_custom_1589297574087 margg">
     <div class="container">
         <div class="row">
        
@@ -108,7 +108,7 @@
 </section>
 
 
-<section class="wpb_row vc_row-fluid team vc_custom_1589297749150 vc_row-has-fill">
+<section class="wpb_row vc_row-fluid team vc_custom_1589297749150 vc_row-has-fill margg">
     <div class="container">
         <div class="row">
             <div class="container-4 wpb_column vc_column_container vc_col-sm-12">
@@ -244,7 +244,7 @@
 
             <div class="vc_column-inner">
                 <div class="wpb_wrapper ">
-                    <a href="/contact" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
+                    <a href="/inquiry" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
 
                 </div>
             </div>

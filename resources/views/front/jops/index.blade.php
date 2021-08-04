@@ -85,7 +85,7 @@
                                                             </div>
                                                         </td>
                                                         <td class="thjmf-job-single-more">
-                                                            <button type="button"><a href="{{route('front.job-openings.show',$jop->id)}}">
+                                                            <button type="button"><a href="{{route('front.jobs.show',$jop->id)}}">
                                                                     Details</a>
                                                             </button>
                                                         </td>

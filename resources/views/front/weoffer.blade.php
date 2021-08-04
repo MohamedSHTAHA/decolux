@@ -125,7 +125,7 @@
             <div class="wpb_column vc_column_container vc_col-sm-12">
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper ">
-                        <a href="/contact" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
+                        <a href="/inquiry" target="_self" class="btn btn-line-black btn-big  ">CONTACT US</a>
 
                     </div>
                 </div>

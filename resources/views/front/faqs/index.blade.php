@@ -70,7 +70,7 @@
     <div class="wpb_column vc_column_container vc_col-sm-4">
     <div class="vc_column-inner">
         <div class="wpb_wrapper "  >
-         <a href="contact.html" target="_self" class="btn btn-line-black btn-big  mt20">Ask Us</a>
+         <a href="/inquiry" target="_self" class="btn btn-line-black btn-big  mt20">Ask Us</a>
 
 </div>
     </div>

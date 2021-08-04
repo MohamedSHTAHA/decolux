@@ -340,7 +340,7 @@ img.emoji {
 
 
  	
-
+.margg{margin: 0 15% 0 15%;}
  	
  
 #hide{
@@ -354,8 +354,12 @@ img.emoji {
   }
 @media only screen and (max-width: 667px) {
   .offer {
-    display:none;
+   /* display:none;*/
+    margin: 0 1% 0 1%;
   }
+   .margg {
+    margin: 0 1% 0 1%;
+}
   .team .logo {
     display:block;
   }
@@ -384,8 +388,13 @@ img.emoji {
   }
 @media only screen and (max-width: 667px) {
   .offer {
-    display:none;
+     /* display:none;*/
+    margin: 0 1% 0 1%;
   }
+  
+  .margg {
+    margin: 0 1% 0 1%;
+}
   .team .logo {
     display:block;
   }

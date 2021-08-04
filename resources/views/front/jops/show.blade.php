@@ -173,7 +173,7 @@
                         <div class="nav-links">
                             @isset($previous_jop)
                             <div class="nav-previous">
-                                <a href="{{route('front.job-openings.show',$previous_jop->id)}}" rel="prev">
+                                <a href="{{route('front.jobs.show',$previous_jop->id)}}" rel="prev">
                                     <span class="post-title"><em>Older Post</em><strong>{{$previous_jop->title}}</strong>
                                     </span>
                                 </a>
@@ -182,7 +182,7 @@
                             @endisset
                             @isset($next_jop)
                             <div class="nav-next">
-                                <a href="{{route('front.job-openings.show',$next_jop->id)}}" rel="next">
+                                <a href="{{route('front.jobs.show',$next_jop->id)}}" rel="next">
                                     <span class="post-title"><em>Newer Post</em><strong> {{$next_jop->title}} </strong></span></a>
                             </div>
                             @endisset

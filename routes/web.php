@@ -84,7 +84,7 @@ Route::name('dashboard.')->middleware(['auth'])->namespace('Dashboard')->group(f
     Route::resource('types', 'TypeController');
     Route::resource('jops', 'JopController');
     Route::get('applies/{id}', 'JopController@applies')->name('applies');
-    Route::get('appliesFree', 'JopController@applies')->name('appliesFree');
+    Route::get('appliesFree', 'JopController@appliesFree')->name('appliesFree');
     
     //news routes
     Route::resource('news', 'NewsController')->except(['show']);

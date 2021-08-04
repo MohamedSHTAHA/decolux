@@ -64,11 +64,11 @@
                         </td>
                         <td>
                             <a>
-                                {{$apply->jop->title}}
+                                {{$apply->jop->title ?? ''}}
                             </a>
                             <br>
                             <small>
-                                {{$apply->jop->created_at}}
+                                {{$apply->jop->created_at ?? ''}}
                             </small>
 
                         </td>

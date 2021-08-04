@@ -27,7 +27,6 @@ class ContactController extends Controller
 
         $contactUs = ContactUs::create($request_data);
         $setting = Settings::first();
-        Mail::to('mohamed.sh.taha2015@gmail.com')->send(new SendContactEmail($contactUs));
 
         try {
             // Mail::to('mohamed.sh.taha2015@gmail.com')->send(new SendJopEmail($apply));

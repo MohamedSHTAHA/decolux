@@ -4,6 +4,7 @@ use App\Jop;
 use App\Project;
 use App\Services;
 use App\Settings;
+use App\AboutUs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

@@ -196,9 +196,16 @@
             <div class="vc_column-inner">
 
                 <div class="wpb_wrapper ">
+                @if(!empty($aboutus ))
+                    @foreach($aboutus  as $row)
+                    <a href=" {{ asset('uploads/aboutus/'.$row->pdf) }}" target="_blank" class="btn btn-line-black btn-big  ">PDF Download</a>
 
+                                            @endforeach
+                                            @else
+
+               
                     <a href="https://decolux-kw.com/wp-content/uploads/2020/06/company-profile-..pdf" target="_blank" class="btn btn-line-black btn-big  ">PDF Download</a>
-
+@endif
                 </div>
             </div>
         </div>

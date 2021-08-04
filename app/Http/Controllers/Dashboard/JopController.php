@@ -36,7 +36,7 @@ class JopController extends Controller
 
     public function appliesFree(Request $request )
     {
-        $applies = Apply::whereJopId(null)->when($request->search, function ($q) use ($request) {
+        $applies = Apply::whereNull('jop_id')->when($request->search, function ($q) use ($request) {
             return $q->where('firstname', 'like','%' . $request->search . '%')
                 ->orWhere('lastname', 'like','%' . $request->search . '%')
                 ->orWhere('email', 'like','%' . $request->search . '%')

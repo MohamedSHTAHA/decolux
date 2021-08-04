@@ -44,8 +44,8 @@ class JopController extends Controller
             'firstname' => 'required|min:3',
             'email' => 'required|email',
             'phone' => 'required',
-            'jop_id' => 'required|exists:jops,id',
-            "resume" => "required|file|mimes:doc,docx,pdf|max:10000"
+            'jop_id' => 'exists:jops,id',
+            "resume" => "required|file|mimes:doc,docx,pdf|max:5000"
 
         ];
 

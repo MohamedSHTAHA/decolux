@@ -524,6 +524,13 @@
                             </a>
                         </li>
 
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.appliesFree') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.appliesFree') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>applies with out Jops</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 

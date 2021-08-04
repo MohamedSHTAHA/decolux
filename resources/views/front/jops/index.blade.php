@@ -119,7 +119,78 @@
 
 
                                 <div class="wpforms-container wpforms-container-full" id="wpforms-1759">
-                                    <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="#">
+                                    <form class="wpforms-validate wpforms-form " method="post" action="{{route('front.apply')}}" enctype="multipart/form-data">
+                                        @csrf
+                                        @method('post')
+                                        <input type="hidden" name="jop_id" value="{{$jop->id}}" />
+                                        <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
+
+                                        <div class="wpforms-field-container">
+                                            <div id="wpforms-1759-field_0-container" class="wpforms-field wpforms-field-name" data-field-id="0">
+                                                <label class="wpforms-field-label" for="wpforms-1759-field_0">Name <span class="wpforms-required-label">*</span></label>
+                                                <div class="wpforms-field-row wpforms-field-large">
+                                                    <div class="wpforms-field-row-block wpforms-first wpforms-one-half">
+                                                        <input type="text" class="wpforms-field-name-first wpforms-field-required" name="firstname" value="{{old('firstname')}}"  required>
+                                                        <label for="wpforms-1759-field_0" class="wpforms-field-sublabel after ">First</label>
+                                                        @error('firstname')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="wpforms-field-row-block wpforms-one-half">
+                                                        <input type="text" class="wpforms-field-name-last wpforms-field-required" name="lastname" value="{{old('lastname')}}" required>
+                                                        <label for="wpforms-1759-field_0-last" class="wpforms-field-sublabel after ">Last</label>
+                                                        @error('lastname')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="wpforms-1759-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1">
+                                                <label class="wpforms-field-label" for="wpforms-1759-field_1">Email <span class="wpforms-required-label">*</span></label>
+                                                <input type="email" class="wpforms-field-large wpforms-field-required" name="email" value="{{old('email')}}" required>
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div id="wpforms-1759-field_5-container" class="wpforms-field wpforms-field-text" data-field-id="5">
+                                                <label class="wpforms-field-label" for="wpforms-1759-field_5">Phone <span class="wpforms-required-label">*</span></label>
+                                                <input type="text" class="wpforms-field-large wpforms-field-required" name="phone" value="{{old('phone')}}" required>
+                                                @error('phone')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                            <div class="wpforms-field wpforms-field-file-upload" data-field-id="4">
+                                                <label class="wpforms-field-label" for="wpforms-1759-field_4">Resume <span class="wpforms-required-label">*</span></label>
+                                                <input type="file" name="resume" class="custom-file-input" id="resume">
+
+                                                @error('resume')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="wpforms-field wpforms-field-hp">
+                                            <label for="wpforms-1759-field-hp" class="wpforms-field-label">Name</label>
+                                            <input type="text" name="" class="wpforms-field-medium">
+                                        </div>
+                                        <div class="wpforms-submit-container">
+
+                                            <button type="submit" class="wpforms-submit ">Apply</button>
+
+                                        </div>
+                                    </form>
+                                    {{-- <form class="wpforms-validate wpforms-form wpforms-ajax-form" method="post" action="#">
 
                                         <div class="wpforms-field-container">
                                             <div class="wpforms-field wpforms-field-name" data-field-id="0">
@@ -164,7 +235,7 @@
 
                                         </div>
 
-                                    </form>
+                                    </form> --}}
                                 </div>
 
                             </div>

@@ -33,6 +33,18 @@ class JopController extends Controller
 
         return view('dashboard.jops.applies', compact(['applies']));
     }
+
+    public function appliesFree(Request $request , $id)
+    {
+        $applies = Apply::whereJopId(null)->when($request->search, function ($q) use ($request) {
+            return $q->where('firstname', 'like','%' . $request->search . '%')
+                ->orWhere('lastname', 'like','%' . $request->search . '%')
+                ->orWhere('email', 'like','%' . $request->search . '%')
+                ->orWhere('phone', 'like','%' . $request->search . '%');
+        })->latest()->paginate(10);
+
+        return view('dashboard.jops.appliesFree', compact(['applies']));
+    }
     public function create()
     {
         $countries = Country::all();

@@ -371,7 +371,7 @@
                         <li class="nav-item ">
                             <a href="{{ route('dashboard.users.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.users.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add country</p>
+                                <p>Add user</p>
                             </a>
                         </li>
 

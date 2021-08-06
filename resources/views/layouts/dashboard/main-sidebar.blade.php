@@ -348,6 +348,15 @@
                         </li>
                     </ul>
                 </li> --}}
+                <li class="nav-item  @if (request()->route()->getName() ==
+                    'home') menu-open @endif">
+                    <a href="{{ route('home') }}" class="nav-link">
+                        <i class="nav-icon far fa-image"></i>
+                        <p>
+                            Dashboard
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item @if (request()->route()->getName() ==
                     'dashboard.users.index' ||
                     request()->route()->getName() == 'dashboard.users.create') menu-open @endif">

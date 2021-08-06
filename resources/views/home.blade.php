@@ -74,7 +74,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
                 <div class="inner">
-                    <h3>{{\App\New::count()}}</h3>
+                    <h3>{{\App\News::count()}}</h3>
 
                     <p>News</p>
                 </div>

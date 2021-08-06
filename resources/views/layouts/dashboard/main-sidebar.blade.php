@@ -1,7 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-        <img src="{{ asset('front')}}/images/Untitled-1.png" alt="AdminLTE Logo" class="brand-image  elevation-3" style="opacity: .8">
+        <img src="{{ asset('front') }}/images/Untitled-1.png" alt="AdminLTE Logo" class="brand-image  elevation-3"
+            style="opacity: .8">
         <span class="brand-text font-weight-light">-GB</span>
     </a>
 
@@ -10,16 +11,17 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('dashboard')}}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('dashboard') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                    alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{auth()->user()->name}}</a>
-                
+                <a href="#" class="d-block">{{ auth()->user()->name }}</a>
+
             </div>
         </div>
 
         <!-- SidebarSearch Form -->
-      {{--  <div class="form-inline">
+        {{-- <div class="form-inline">
             <div class="input-group" data-widget="sidebar-search">
                 <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
@@ -28,7 +30,7 @@
                     </button>
                 </div>
             </div>
-        </div>--}}
+        </div> --}}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -345,9 +347,46 @@
                             </a>
                         </li>
                     </ul>
-                </li>--}}
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create'|| request()->route()->getName()== 'dashboard.comments'|| request()->route()->getName()== 'dashboard.comments.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create'|| request()->route()->getName()== 'dashboard.comments'|| request()->route()->getName()== 'dashboard.comments.create')  active @endif">
+                </li> --}}
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.users.index' ||
+                    request()->route()->getName() == 'dashboard.users.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.users.index' ||
+                        request()->route()->getName() == 'dashboard.users.create') active @endif">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>
+                            users
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.users.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.users.index') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>users</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="{{ route('dashboard.users.create') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.users.create') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add country</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item @if (request()->route()->getName() == 'dashboard.news.index'
+                    ||
+                    request()->route()->getName() == 'dashboard.news.create' ||
+                    request()->route()->getName() == 'dashboard.comments' ||
+                    request()->route()->getName() == 'dashboard.comments.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.news.index' ||
+                        request()->route()->getName() == 'dashboard.news.create' ||
+                        request()->route()->getName() == 'dashboard.comments' ||
+                        request()->route()->getName() == 'dashboard.comments.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             News
@@ -355,15 +394,21 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.news.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.news.index' || request()->route()->getName()== 'dashboard.news.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.news.index' ||
+                            request()->route()->getName() == 'dashboard.news.create') menu-open @endif">
+                            <a href="{{ route('dashboard.news.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.news.index' ||
+                                request()->route()->getName() == 'dashboard.news.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add News</p>
                             </a>
                         </li>
 
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  menu-open @endif">
-                            <a href="{{ route('dashboard.comments') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.comments' || request()->route()->getName()== 'dashboard.comments')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.comments' ||
+                            request()->route()->getName() == 'dashboard.comments') menu-open @endif">
+                            <a href="{{ route('dashboard.comments') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.comments' ||
+                                request()->route()->getName() == 'dashboard.comments') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Comments</p>
                             </a>
@@ -371,8 +416,16 @@
 
                     </ul>
                 </li>
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.services.index' || request()->route()->getName()== 'dashboard.services.create'|| request()->route()->getName()== 'dashboard.servicesdetails.index'|| request()->route()->getName()== 'dashboard.servicesdetails.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.services.index' || request()->route()->getName()== 'dashboard.services.create'|| request()->route()->getName()== 'dashboard.servicesdetails.index'|| request()->route()->getName()== 'dashboard.servicesdetails.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.services.index' ||
+                    request()->route()->getName() == 'dashboard.services.create' ||
+                    request()->route()->getName() == 'dashboard.servicesdetails.index' ||
+                    request()->route()->getName() == 'dashboard.servicesdetails.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.services.index' ||
+                        request()->route()->getName() == 'dashboard.services.create' ||
+                        request()->route()->getName() == 'dashboard.servicesdetails.index' ||
+                        request()->route()->getName() == 'dashboard.servicesdetails.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             services
@@ -380,14 +433,20 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.services.index' || request()->route()->getName()== 'dashboard.services.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.services.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.services.index' || request()->route()->getName()== 'dashboard.services.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.services.index' ||
+                            request()->route()->getName() == 'dashboard.services.create') menu-open @endif">
+                            <a href="{{ route('dashboard.services.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.services.index' ||
+                                request()->route()->getName() == 'dashboard.services.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add services</p>
                             </a>
                         </li>
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.servicesdetails.index' || request()->route()->getName()== 'dashboard.servicesdetails.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.servicesdetails.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.servicesdetails.index' || request()->route()->getName()== 'dashboard.servicesdetails.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.servicesdetails.index' ||
+                            request()->route()->getName() == 'dashboard.servicesdetails.create') menu-open @endif">
+                            <a href="{{ route('dashboard.servicesdetails.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.servicesdetails.index' ||
+                                request()->route()->getName() == 'dashboard.servicesdetails.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add service Details</p>
                             </a>
@@ -396,8 +455,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.projects.index' || request()->route()->getName()== 'dashboard.projects.create')  menu-open @endif">
-                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.projects.index' || request()->route()->getName()== 'dashboard.projects.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.projects.index' ||
+                    request()->route()->getName() == 'dashboard.projects.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.projects.index' ||
+                        request()->route()->getName() == 'dashboard.projects.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Projects
@@ -406,7 +469,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="{{ route('dashboard.projects.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.projects.index') active @endif">
+                            <a href="{{ route('dashboard.projects.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.projects.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Projects</p>
                             </a>
@@ -422,8 +485,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.galleries.index' || request()->route()->getName()== 'dashboard.galleries.create')  menu-open @endif">
-                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.galleries.index' || request()->route()->getName()== 'dashboard.galleries.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.galleries.index' ||
+                    request()->route()->getName() == 'dashboard.galleries.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.galleries.index' ||
+                        request()->route()->getName() == 'dashboard.galleries.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             galleries
@@ -432,7 +499,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="{{ route('dashboard.galleries.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.galleries.index') active @endif">
+                            <a href="{{ route('dashboard.galleries.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.galleries.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>galleries</p>
                             </a>
@@ -448,8 +515,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.countries.index' || request()->route()->getName()== 'dashboard.countries.create')  menu-open @endif">
-                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.countries.index' || request()->route()->getName()== 'dashboard.countries.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.countries.index' ||
+                    request()->route()->getName() == 'dashboard.countries.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.countries.index' ||
+                        request()->route()->getName() == 'dashboard.countries.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             countries
@@ -458,7 +529,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="{{ route('dashboard.countries.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.countries.index') active @endif">
+                            <a href="{{ route('dashboard.countries.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.countries.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>countries</p>
                             </a>
@@ -474,8 +545,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.types.index' || request()->route()->getName()== 'dashboard.types.create')  menu-open @endif">
-                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.types.index' || request()->route()->getName()== 'dashboard.types.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() == 'dashboard.types.index'
+                    ||
+                    request()->route()->getName() == 'dashboard.types.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.types.index' ||
+                        request()->route()->getName() == 'dashboard.types.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             types
@@ -484,7 +559,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="{{ route('dashboard.types.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.types.index') active @endif">
+                            <a href="{{ route('dashboard.types.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.types.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>types</p>
                             </a>
@@ -501,8 +576,12 @@
                 </li>
 
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  menu-open @endif">
-                    <a href="#" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index' || request()->route()->getName()== 'dashboard.jops.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() == 'dashboard.jops.index'
+                    ||
+                    request()->route()->getName() == 'dashboard.jops.create') menu-open @endif">
+                    <a href="#" class="nav-link @if (request()->route()->getName() ==
+                        'dashboard.jops.index' ||
+                        request()->route()->getName() == 'dashboard.jops.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             jobs
@@ -511,7 +590,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item ">
-                            <a href="{{ route('dashboard.jops.index') }}" class="nav-link @if (request()->route()->getName()== 'dashboard.jops.index') active @endif">
+                            <a href="{{ route('dashboard.jops.index') }}" class="nav-link @if (request()->route()->getName() == 'dashboard.jops.index') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>jobs</p>
                             </a>
@@ -534,8 +613,12 @@
                     </ul>
                 </li>
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.contactUs.index' ||
+                    request()->route()->getName() == 'dashboard.contactUs.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.contactUs.index' ||
+                        request()->route()->getName() == 'dashboard.contactUs.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Contact Us
@@ -543,8 +626,11 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.contactUs.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.contactUs.index' || request()->route()->getName()== 'dashboard.contactUs.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.contactUs.index' ||
+                            request()->route()->getName() == 'dashboard.contactUs.create') menu-open @endif">
+                            <a href="{{ route('dashboard.contactUs.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.contactUs.index' ||
+                                request()->route()->getName() == 'dashboard.contactUs.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Contact Us</p>
                             </a>
@@ -558,8 +644,12 @@
 
 
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() == 'dashboard.faqs.index'
+                    ||
+                    request()->route()->getName() == 'dashboard.faqs.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.faqs.index' ||
+                        request()->route()->getName() == 'dashboard.faqs.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Faqs
@@ -567,16 +657,23 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.faqs.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.faqs.index' || request()->route()->getName()== 'dashboard.faqs.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.faqs.index' ||
+                            request()->route()->getName() == 'dashboard.faqs.create') menu-open @endif">
+                            <a href="{{ route('dashboard.faqs.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.faqs.index' ||
+                                request()->route()->getName() == 'dashboard.faqs.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add faqs</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.settings.index' ||
+                    request()->route()->getName() == 'dashboard.settings.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.settings.index' ||
+                        request()->route()->getName() == 'dashboard.settings.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Settings
@@ -584,8 +681,11 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.settings.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.settings.index' || request()->route()->getName()== 'dashboard.settings.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.settings.index' ||
+                            request()->route()->getName() == 'dashboard.settings.create') menu-open @endif">
+                            <a href="{{ route('dashboard.settings.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.settings.index' ||
+                                request()->route()->getName() == 'dashboard.settings.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add Settings</p>
                             </a>
@@ -594,8 +694,12 @@
                 </li>
 
 
-                <li class="nav-item @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  menu-open @endif">
-                    <a href="#" class="nav-link  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  active @endif">
+                <li class="nav-item @if (request()->route()->getName() ==
+                    'dashboard.aboutus.index' ||
+                    request()->route()->getName() == 'dashboard.aboutus.create') menu-open @endif">
+                    <a href="#" class="nav-link  @if (request()->route()->getName() ==
+                        'dashboard.aboutus.index' ||
+                        request()->route()->getName() == 'dashboard.aboutus.create') active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             About us Settings
@@ -603,8 +707,11 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  menu-open @endif">
-                            <a href="{{ route('dashboard.aboutus.index') }}" class="nav-link  @if (request()->route()->getName()== 'dashboard.aboutus.index' || request()->route()->getName()== 'dashboard.aboutus.create')  active @endif">
+                        <li class="nav-item  @if (request()->route()->getName() ==
+                            'dashboard.aboutus.index' ||
+                            request()->route()->getName() == 'dashboard.aboutus.create') menu-open @endif">
+                            <a href="{{ route('dashboard.aboutus.index') }}" class="nav-link  @if (request()->route()->getName() == 'dashboard.aboutus.index' ||
+                                request()->route()->getName() == 'dashboard.aboutus.create') active @endif">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add About us Settings</p>
                             </a>

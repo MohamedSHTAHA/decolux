@@ -48,7 +48,7 @@ class UserController extends Controller
 
     public function edit(User  $user)
     {
-        return view('dashboard.users.edit');
+        return view('dashboard.users.edit',compact('user'));
     }
 
     /**

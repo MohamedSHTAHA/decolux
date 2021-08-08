@@ -64,7 +64,9 @@
             @if ($settings->count() > 0)
 
 
-            <table class="table table-striped">
+            <table class="table table-striped" style="display: block;
+    overflow-x: auto;
+    white-space: nowrap;">
 
                 <thead>
                 <tr>

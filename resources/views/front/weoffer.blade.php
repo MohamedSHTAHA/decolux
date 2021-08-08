@@ -30,7 +30,7 @@
 
 
 
-<section class="wpb_row vc_row-fluid vc_custom_1495530476030 margg">
+<section class="wpb_row vc_row-fluid vc_custom_1495530476030 ">
     <div class="container">
         <div class="row">
             <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -51,10 +51,10 @@
 </section>
 
 <section class="wpb_row vc_row-fluid offer vc_custom_1589297574087 margg">
-    <div class="container">
+    <div class="container ">
         <div class="row">
         @foreach($services as $service)
-            <div class="wpb_column vc_column_container vc_col-sm-3">
+            <div class="wpb_column vc_column_container vc_col-sm-3 ">
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper ">
                         <div class="wpb_single_image wpb_content_element vc_align_left">
@@ -74,7 +74,7 @@
     </div>
 </section>
 
-<section class="wpb_row vc_row-fluid team vc_custom_1589297749150 vc_row-has-fill">
+<section class="wpb_row vc_row-fluid team vc_custom_1589297749150 vc_row-has-fill margg">
     <div class="container">
         <div class="row">
             <div class="container-4 wpb_column vc_column_container vc_col-sm-12">

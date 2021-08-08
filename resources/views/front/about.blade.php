@@ -45,7 +45,7 @@
                                         @if(!empty($aboutus ))
                     @foreach($aboutus  as $row)
                
-                    <b>{!! $row->ourvision !!}<b>
+                    <b>{!! $row->text !!}<b>
                         @endforeach
                     @else
                                      	We were Founded in  <b>2021 </b> 2021 in Jordan the heart of the middle east as one of the main suppliers 

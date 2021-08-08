@@ -35,7 +35,7 @@
                                     {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}
                                     @endif
                                     <br>
-                                 <span style="padding-left: 52px;">   &nbsp;&nbsp;&nbsp;&nbsp;,
+                                 <span style="padding-left: 52px;">   &nbsp;&nbsp;&nbsp;&nbsp;
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone1))
                                     {{\App\Settings::orderBy('id', 'DESC')->first()->phone1}}
                                     @endif </span>
@@ -50,9 +50,9 @@
                                 <span>
                                     <strong>Location:</strong>
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->address))
-                                   <a target="_blank" href="{{\App\Settings::orderBy('id', 'DESC')->first()->address}}" rel="noopener">
+                                   <a target="_blank" href="https://goo.gl/maps/tMYFCRDMaDAD5ujx8" rel="noopener">
 
-                         Ibn Al Romeieh Amman, Amman Governorate Juwaida Qweismeh Jordan </a>
+                                   {{\App\Settings::orderBy('id', 'DESC')->first()->address}} </a>
                                        
                                         @endif
                                 </span>

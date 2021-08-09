@@ -29,11 +29,20 @@
     <div class="row">
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
+            
+            
+            
+            
+            
+            
                 <div class="wpb_wrapper ">
-                    <div id="gmap-60c4c5d5d0ca7" style="height: 500px;">
+                
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=31.89829,%2035.95461&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://yt2.org">youtube to mp3</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:100%;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:100%;}</style></div></div>
+                
+                  <!--  <div id="gmap-60c4c5d5d0ca7" style="height: 500px;">
 
                     </div>
-
+-->
                     <script type="text/javascript">
                         (function($) {
                             "use strict"
@@ -45,10 +54,10 @@
 
                                 var map = new google.maps.Map(document.getElementById('gmap-60c4c5d5d0ca7'), {
                                     zoom: 15,
-                                    scrollwheel: false,
+                                    scrollwheel: true,
                                     navigationControl: true,
-                                    mapTypeControl: false,
-                                    scaleControl: false,
+                                    mapTypeControl: true,
+                                    scaleControl: true,
                                     draggable: true,
                                     styles: [{
                                         "stylers": [{
@@ -69,7 +78,7 @@
                                             "color": "#2D333C"
                                         }]
                                     }],
-                                    center: new google.maps.LatLng(31.8982040, 35.9546260),
+                                    center: new google.maps.LatLng(31.89829, 35.95461),
                                     mapTypeId: google.maps.MapTypeId.ROADMAP
                                 });
 
@@ -82,7 +91,7 @@
                                         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                                         map: map,
                                         icon: 'images/map-marker.png',
-                                        title: ''
+                                        title: ' Ibn Al Romeieh Amman, Amman Governorate Juwaida Qweismeh Jordan'
                                     });
                                     google.maps.event.addListener(marker, (function(marker, i) {
                                         return function() {

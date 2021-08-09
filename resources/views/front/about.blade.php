@@ -147,7 +147,7 @@
 
 
                                             <div>
-                                                Salim Al Kourani, Manager
+                                            
                                             </div>
 
                                         </div>
@@ -175,7 +175,7 @@
 
 
                                             <div>
-                                                Mohamed Hemdan, HR
+                                             
                                             </div>
 
                                         </div>

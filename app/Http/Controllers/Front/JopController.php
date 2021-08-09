@@ -67,6 +67,6 @@ class JopController extends Controller
             //throw $th;
         }
         session()->flash('success', 'Apply successfully');
-        return redirect()->route('front.job-openings.index');
+        return redirect()->route('front.jobs.index');
     }
 }

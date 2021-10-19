@@ -35,11 +35,13 @@ Route::get('our-vision', function () {
 });
 
 Route::get('Our_vendors_brands', function () {
-    return view('front.our_partener');
+     $Settings = Settings::all();
+    return view('front.our_partener',compact('Settings'));
 });
 Route::get('what-we-offer', function () {
-    $services = Services::with('servicesDetails')->get();
-    return view('front.weoffer',compact('services'));
+    $services = Services::with('servicesDetails')->orderBy('id', 'asc')->get();
+     $Settings = Settings::all();
+    return view('front.weoffer',compact('services','Settings'));
    
 });
 

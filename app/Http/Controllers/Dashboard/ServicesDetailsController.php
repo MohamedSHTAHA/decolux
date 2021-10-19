@@ -61,9 +61,9 @@ class ServicesDetailsController extends Controller
         if ($request->image) {
 
             Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
+               /* ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/servicesdetails_images/' . $request->image->hashName()));
 
             $request_data['image'] = $request->image->hashName();
@@ -122,9 +122,9 @@ class ServicesDetailsController extends Controller
             }//end of if
 
             Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/servicesdetails_images/' . $request->image->hashName()));
 
             $request_data['image'] = $request->image->hashName();

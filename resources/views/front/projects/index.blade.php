@@ -105,7 +105,7 @@
                                                                             <div class="info-text"><span class="title">Client: {!! $project->client !!}</span></div>
                                                                             <div class="info-text"><span class="title">Consultant: {!! $project->consultant !!}</span></div>
                                                                             <div class="info-text"><span class="title">Contractor: {!! $project->contractor !!}</span></div>
-                                                                            <div class="info-text"><span class="title">Value: KWD {!! $project->value !!}</span><span class="val"><br>
+                                                                            <div class="info-text"><span class="title">Value: Jordanian Dinars (JOD) {!! $project->value !!}</span><span class="val"><br>
                                                                                 </span></div>
                                                                             <div class="info-text"><span class="title">Project Period: From
                                                                                     {{Carbon\Carbon::parse($project->from)->formatLocalized('%b %Y')}} to {{Carbon\Carbon::parse($project->to)->formatLocalized('%b %Y')}}</span></div>

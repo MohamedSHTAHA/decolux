@@ -86,7 +86,7 @@
     <div class="container">
         <div class="row">
        
-        @foreach(\App\Services::with('servicesDetails')->get() as $service)
+        @foreach(\App\Services::with('servicesDetails')->orderBy('id', 'asc')->get() as $service)
             <div class="wpb_column vc_column_container vc_col-sm-3">
                 <div class="vc_column-inner">
                     <div class="wpb_wrapper ">
@@ -116,7 +116,7 @@
                     <div class="wpb_wrapper wow fadeInUp">
 
                         <!-- team member -->
-                        @foreach(\App\Services::with('servicesDetails')->get() as $service)
+                        @foreach(\App\Services::with('servicesDetails')->orderBy('id', 'asc')->get() as $service)
                         <div class="de-team-list team-box wow fadeInUp">
                             <div class="team-pic">
                                 <img width="500" height="500" src="{{ asset('uploads/services_images/'.$service->image) }}" class="img-responsive" alt="" loading="lazy" srcset="{{ asset('uploads/services_images/'.$service->image) }}" sizes="(max-width: 500px) 100vw, 500px" title="{{ $service->name }}" />

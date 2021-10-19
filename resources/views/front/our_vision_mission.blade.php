@@ -4,6 +4,39 @@
 
 @section('content')
 <!-- subheader begin -->
+
+  @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->Ourvisionlogo ))
+                    
+                    
+                    
+                    
+                    <section id="subheader" data-speed="8" data-type="background"
+          
+   style="background-image: url('{{ asset('uploads/logo/'.$row->Ourvisionlogo) }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>Our Vision &#038; Mission</h1>
+                                        </div>               
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
+                    <li><a href="https://decolux-kw.com/introduction/">Introduction</a></li>
+                    <li class="active">Our Vision &#038; Mission</li></ul> 
+            </div>
+        </div>
+    </div>
+</section>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                      @else
 <section id="subheader" data-speed="8" data-type="background"
           
    style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
@@ -13,13 +46,37 @@
                 <div class="title-wrap">
                     <h1>Our Vision &#038; Mission</h1>
                                         </div>               
-                <ul id="breadcrumbs" class="crumb"><li><a href="index.html">Home</a></li>
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
                     <li><a href="https://decolux-kw.com/introduction/">Introduction</a></li>
                     <li class="active">Our Vision &#038; Mission</li></ul> 
             </div>
         </div>
     </div>
 </section>
+ @endif
+      @endforeach
+@else
+<section id="subheader" data-speed="8" data-type="background"
+          
+   style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>Our Vision &#038; Mission</h1>
+                                        </div>               
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
+                    <li><a href="https://decolux-kw.com/introduction/">Introduction</a></li>
+                    <li class="active">Our Vision &#038; Mission</li></ul> 
+            </div>
+        </div>
+    </div>
+</section>
+
+ @endif
+
+
+
 <!-- subheader close -->
 
 
@@ -29,12 +86,32 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper "  >
  <div class="side-bg">
+  @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->Ourvisionimage ))
+                    
+                    
+                      <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('uploads/logo/'.$row->Ourvisionimage) }});" data-delay="0"></div>
 
+    <!-- Added this code in 26/03/2019 -->
+    <img class="visible-xs img-responsive" src="{{ asset('uploads/logo/'.$row->Ourvisionimage) }}" />
+    
+    
+                    @else
     <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front') }}/images/mission-and-vission-1.jpg);" data-delay="0"></div>
 
     <!-- Added this code in 26/03/2019 -->
     <img class="visible-xs img-responsive" src="{{ asset('front') }}/images/mission-and-vission-1.jpg" />
 
+ @endif
+      @endforeach
+@else
+  <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front') }}/images/mission-and-vission-1.jpg);" data-delay="0"></div>
+
+    <!-- Added this code in 26/03/2019 -->
+    <img class="visible-xs img-responsive" src="{{ asset('front') }}/images/mission-and-vission-1.jpg" />
+
+ @endif
     <div class="container">
         <div class="row">
             <div class="inner-padding">

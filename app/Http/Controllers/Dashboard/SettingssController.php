@@ -72,9 +72,9 @@ class SettingssController extends Controller
         if ($request->logo) {
 
             Image::make($request->logo)
-                ->resize(300, null, function ($constraint) {
+                /* ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/logo/' . $request->logo->hashName()));
 
             $request_data['logo'] = $request->logo->hashName();
@@ -83,9 +83,9 @@ class SettingssController extends Controller
         if ($request->sliderimg1) {
 
             Image::make($request->sliderimg1)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->sliderimg1->hashName()));
 
             $request_data['sliderimg1'] = $request->sliderimg1->hashName();
@@ -94,9 +94,9 @@ class SettingssController extends Controller
         if ($request->sliderimg2) {
 
             Image::make($request->sliderimg2)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->sliderimg2->hashName()));
 
             $request_data['sliderimg2'] = $request->sliderimg2->hashName();
@@ -105,14 +105,77 @@ class SettingssController extends Controller
         if ($request->footerimg) {
 
             Image::make($request->footerimg)
-                ->resize(300, null, function ($constraint) {
+               /* ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->footerimg->hashName()));
 
             $request_data['footerimg'] = $request->footerimg->hashName();
 
         }//end of if
+         if ($request->Ourvendorsbrandslogo) {
+
+            Image::make($request->Ourvendorsbrandslogo)
+               /* ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('front/logo/' . $request->Ourvendorsbrandslogo->hashName()));
+
+            $request_data['Ourvendorsbrandslogo'] = $request->Ourvendorsbrandslogo->hashName();
+
+        }
+         if ($request->Ourvendorsbrandsimage) {
+ 
+            Image::make($request->Ourvendorsbrandsimage)
+               /* ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('front/logo/' . $request->Ourvendorsbrandsimage->hashName()));
+
+            $request_data['Ourvendorsbrandsimage'] = $request->Ourvendorsbrandsimage->hashName();
+
+        }
+        
+              if ($request->Ourvisionlogo) {
+
+            Image::make($request->Ourvisionlogo)
+               /* ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('front/logo/' . $request->Ourvisionlogo->hashName()));
+
+            $request_data['Ourvisionlogo'] = $request->Ourvisionlogo->hashName();
+
+        }
+         if ($request->Ourvisionimage) {
+ 
+            Image::make($request->Ourvisionimage)
+               /* ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('front/logo/' . $request->Ourvisionimage->hashName()));
+
+            $request_data['Ourvisionimage'] = $request->Ourvisionimage->hashName();
+
+        }
+        
+        
+           if ($request->WhatWeOfferlogo) {
+
+            Image::make($request->WhatWeOfferlogo)
+               /* ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('front/logo/' . $request->WhatWeOfferlogo->hashName()));
+
+            $request_data['WhatWeOfferlogo'] = $request->WhatWeOfferlogo->hashName();
+
+        }
+        
+        
+        
+        
+        
         if ($request->pdf) {
             $file = $request->file('pdf');
             $filename = time() . '.' . $request->file('pdf')->extension();
@@ -187,14 +250,119 @@ class SettingssController extends Controller
             }//end of if
 
             Image::make($request->logo)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/logo/' . $request->logo->hashName()));
 
             $request_data['logo'] = $request->logo->hashName();
 
         }//end of if
+
+
+   if ($request->Ourvendorsbrandslogo) {
+
+            if ($setting->Ourvendorsbrandslogo != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->Ourvendorsbrandslogo);
+
+            }//end of if
+
+            Image::make($request->Ourvendorsbrandslogo)
+              /*  ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/logo/' . $request->Ourvendorsbrandslogo->hashName()));
+
+            $request_data['Ourvendorsbrandslogo'] = $request->Ourvendorsbrandslogo->hashName();
+
+        }//end of if
+        
+        
+           if ($request->Ourvendorsbrandsimage) {
+
+            if ($setting->Ourvendorsbrandsimage != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->Ourvendorsbrandsimage);
+
+            }//end of if
+
+            Image::make($request->Ourvendorsbrandsimage)
+              /*  ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/logo/' . $request->Ourvendorsbrandsimage->hashName()));
+
+            $request_data['Ourvendorsbrandsimage'] = $request->Ourvendorsbrandsimage->hashName();
+
+        }//end of if
+        
+
+
+
+
+   if ($request->Ourvisionlogo) {
+
+            if ($setting->Ourvisionlogo != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->Ourvisionlogo);
+
+            }//end of if
+
+            Image::make($request->Ourvisionlogo)
+              /*  ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/logo/' . $request->Ourvisionlogo->hashName()));
+
+            $request_data['Ourvisionlogo'] = $request->Ourvisionlogo->hashName();
+
+        }//end of if
+        
+        
+           if ($request->Ourvisionimage) {
+
+            if ($setting->Ourvisionimage != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->Ourvisionimage);
+
+            }//end of if
+
+            Image::make($request->Ourvisionimage)
+              /*  ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/logo/' . $request->Ourvisionimage->hashName()));
+
+            $request_data['Ourvisionimage'] = $request->Ourvisionimage->hashName();
+
+        }//end of if
+        
+        
+          if ($request->WhatWeOfferlogo) {
+
+            if ($setting->WhatWeOfferlogo != 'default.png') {
+
+                Storage::disk('public_uploads')->delete('/logo/' . $setting->WhatWeOfferlogo);
+
+            }//end of if
+
+            Image::make($request->WhatWeOfferlogo)
+              /*  ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/logo/' . $request->WhatWeOfferlogo->hashName()));
+
+            $request_data['WhatWeOfferlogo'] = $request->WhatWeOfferlogo->hashName();
+
+        }//end of if
+        
+        
+        
+        
+
+
+
 
         if ($request->sliderimg1) {
 
@@ -205,9 +373,9 @@ class SettingssController extends Controller
             }//end of if
 
             Image::make($request->sliderimg1)
-                ->resize(300, null, function ($constraint) {
+               /* ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->sliderimg1->hashName()));
 
             $request_data['sliderimg1'] = $request->sliderimg1->hashName();
@@ -222,9 +390,9 @@ class SettingssController extends Controller
             }//end of if
 
             Image::make($request->sliderimg2)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->sliderimg2->hashName()));
 
             $request_data['sliderimg2'] = $request->sliderimg2->hashName();
@@ -239,9 +407,9 @@ class SettingssController extends Controller
             }//end of if
 
             Image::make($request->footerimg)
-                ->resize(300, null, function ($constraint) {
+              /*  ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('front/logo/' . $request->footerimg->hashName()));
 
             $request_data['footerimg'] = $request->footerimg->hashName();

@@ -52,6 +52,21 @@
                             <img src="{{ asset('uploads/aboutus/'.$aboutus->image) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
 
                         </div>
+                        
+                        
+                           <div class="form-group">
+                            <label for="images">About Us Logo</label>
+                            <div class="input-group">
+                                    <input type="file" name="aboutuslogo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/aboutus/'.$aboutus->aboutuslogo) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                        
+                        
 
                         <div class="form-group">
                             <label for="pdf">About Us Pdf</label>

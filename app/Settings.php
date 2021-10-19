@@ -8,5 +8,5 @@ class Settings extends Model
 {
     protected $fillable = ['title','logo','email','phone','web','address','website','facbook','twiter',
                            'linkedin','instgram','binterest','lat','long','discpriton','pdf','ourvision',
-                           'Ourvendorsbrands','sliderimg1','sliderimg2','footerimg','phone2'];
+                           'Ourvendorsbrands','sliderimg1','sliderimg2','footerimg','phone2','Ourvendorsbrandslogo','Ourvendorsbrandsimage','Ourvisionlogo','Ourvisionimage','WhatWeOfferlogo'];
 }

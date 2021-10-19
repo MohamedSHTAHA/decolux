@@ -50,6 +50,18 @@
                             </div>
                         </div>
                         
+                         <div class="form-group">
+                            <label for="logo">About Us Logo</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="aboutuslogo" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
+                        
+                        
                         <div class="form-group">
                             <label for="message1">Message 1</label>
                             <textarea name="message1" class="form-control ckeditor">{{ old('message1') }}</textarea>

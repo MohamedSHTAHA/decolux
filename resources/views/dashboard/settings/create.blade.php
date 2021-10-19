@@ -116,10 +116,63 @@
                             <label for="ourvision">our vision</label>
                             <textarea name="ourvision" class="form-control ckeditor">{{ old('ourvision') }}</textarea>
                         </div>
+                           <div class="form-group">
+                            <label for="logo">Ourvision Logo</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="Ourvisionlogo" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
+                           <div class="form-group">
+                            <label for="logo">Ourvision image</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="Ourvisionimage" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
                         <div class="form-group">
                             <label for="Ourvendorsbrands">Our vendors brands</label>
                             <textarea name="Ourvendorsbrands" class="form-control ckeditor">{{ old('Ourvendorsbrands') }}</textarea>
                         </div>
+                        
+                          <div class="form-group">
+                            <label for="logo">Ourvendorsbrands Logo</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="Ourvendorsbrandslogo" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
+                           <div class="form-group">
+                            <label for="logo">Ourvendorsbrands image</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="Ourvendorsbrandsimage" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
+                        
+                           <div class="form-group">
+                            <label for="logo">What We Offer Logo</label>
+                            <div class="input-group">
+
+                                    <input type="file" name="WhatWeOfferlogo" class="form-control">
+
+
+                            </div>
+                        </div>
+                        
+                        
                   
                         <div class="form-group">
                             <label for="sliderimg1">slider image1</label>

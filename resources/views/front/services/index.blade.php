@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="title-wrap">
-                    <h1>{{$servicename->name}}</h1>
+                    <h1 style='font-size:212%'>{{$servicename->name}}</h1>
                 </div>
                 <ul id="breadcrumbs" class="crumb">
                     <li><a href="/">Home</a>

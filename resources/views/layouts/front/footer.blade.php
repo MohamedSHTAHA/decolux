@@ -35,7 +35,7 @@
                                     {{\App\Settings::orderBy('id', 'DESC')->first()->phone}}
                                     @endif
                                     <br>
-                                 <span style="padding-left: 52px;">   &nbsp;&nbsp;&nbsp;&nbsp;
+                                 <span style="padding-left: 53px;">   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->phone1))
                                     {{\App\Settings::orderBy('id', 'DESC')->first()->phone1}}
                                     @endif </span>
@@ -78,7 +78,12 @@
                     <div class="social-icons">
                         <ul>
 
-                            <li><a target="_blank" href="#">
+                            <li><a target="_blank" href="
+                                     @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->facbook))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->facbook}}
+                                @endif
+                            
+                            ">
                                     <i class="fa fa-facebook"></i></a>
                             </li>
 

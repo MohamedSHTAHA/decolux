@@ -3,6 +3,31 @@
 
 
 @section('content')
+
+@if(!empty($aboutus ))
+                    @foreach($aboutus  as $row)
+                    
+                     @if(!empty($row->aboutuslogo ))
+                
+<section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('uploads/aboutus/'.$row->aboutuslogo) }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>About Us</h1>
+                </div>
+                <ul id="breadcrumbs" class="crumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="active">About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+@else
 <section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('front')}}/images/WHAT-WE-OFFER.jpg');">
     <div class="container">
         <div class="row">
@@ -22,14 +47,46 @@
     </div>
 </section>
 
+@endif
+@endforeach
+@else
+<section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('front')}}/images/WHAT-WE-OFFER.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>About Us</h1>
+                </div>
+                <ul id="breadcrumbs" class="crumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li><a href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="active">About Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
 <section class="wpb_row vc_row-fluid side-bg no-padding vc_custom_1474447018555 vc_row-has-fill no-padding">
     <div class="row">
         <div class="wpb_column vc_column_container vc_col-sm-12">
             <div class="vc_column-inner">
                 <div class="wpb_wrapper ">
                     <div class="side-bg">
-
+@if(!empty($aboutus ))
+                    @foreach($aboutus  as $row)
+                    
+                    
+                    
+                        <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('uploads/aboutus/'.$row->image) }}); ?>" data-delay="0"></div>
+                    @endforeach
+                    @else
                         <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front')}}/images/ABOUT-us.jpg); ?>" data-delay="0"></div>
+                        
+                        @endif
                         @if(!empty($aboutus ))
                     @foreach($aboutus  as $row)
                     <img class="{{ asset('uploads/aboutus/'.$row->image) }}" />

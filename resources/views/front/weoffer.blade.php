@@ -6,6 +6,31 @@
 
 
 <!-- subheader begin -->
+  @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->WhatWeOfferlogo ))
+                    
+                    <section id="subheader" data-speed="8" data-type="background"
+    style="background-image: url('{{ asset('uploads/logo/'.$row->WhatWeOfferlogo) }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>What We Offer</h1>
+                </div>
+                <ul id="breadcrumbs" class="crumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li class="active">What We Offer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    
+                    
+      @else               
 <section id="subheader" data-speed="8" data-type="background"
     style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
     <div class="container">
@@ -26,6 +51,28 @@
 <!-- subheader close -->
 
 
+ @endif
+      @endforeach
+@else
+
+<section id="subheader" data-speed="8" data-type="background"
+    style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>What We Offer</h1>
+                </div>
+                <ul id="breadcrumbs" class="crumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li class="active">What We Offer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+ @endif
 
 
 

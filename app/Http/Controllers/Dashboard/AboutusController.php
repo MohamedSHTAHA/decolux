@@ -51,15 +51,29 @@ class AboutusController extends Controller
         if ($request->image) {
 
             Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
+            /*    ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/aboutus/' . $request->image->hashName()));
 
             $request_data['image'] = $request->image->hashName();
 
         }//end of if
       
+      
+       if ($request->aboutuslogo) {
+
+            Image::make($request->aboutuslogo)
+            /*    ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/aboutus/' . $request->aboutuslogo->hashName()));
+
+            $request_data['aboutuslogo'] = $request->aboutuslogo->hashName();
+
+        }//end of if
+        
+        
   
        
         if ($request->pdf) {
@@ -117,9 +131,9 @@ class AboutusController extends Controller
             }//end of if
 
             Image::make($request->image)
-                ->resize(300, null, function ($constraint) {
+             /*   ->resize(300, null, function ($constraint) {
                     $constraint->aspectRatio();
-                })
+                })*/
                 ->save(public_path('uploads/aboutus/' . $request->image->hashName()));
 
             $request_data['image'] = $request->image->hashName();
@@ -127,6 +141,27 @@ class AboutusController extends Controller
         }//end of if
 
        
+       
+            if ($request->aboutuslogo) {
+
+            if ($setting->aboutuslogo != '') {
+
+                Storage::disk('public_uploads')->delete('/aboutus/' . $setting->aboutuslogo);
+
+            }//end of if
+
+            Image::make($request->aboutuslogo)
+             /*   ->resize(300, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })*/
+                ->save(public_path('uploads/aboutus/' . $request->aboutuslogo->hashName()));
+
+            $request_data['aboutuslogo'] = $request->aboutuslogo->hashName();
+
+        }//end of if
+        
+        
+        
  
    
 

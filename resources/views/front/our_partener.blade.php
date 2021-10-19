@@ -6,6 +6,29 @@
 
 
 <!-- subheader begin -->
+
+  @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->Ourvendorsbrandsimage ))
+                    
+                    <section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('uploads/logo/'.$row->Ourvendorsbrandslogo) }}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>Our vendors and brands</h1>
+                                        </div>               
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li class="active">Our vendors and brands</li></ul> 
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                    @else
+                    
 <section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
     <div class="container">
         <div class="row">
@@ -13,13 +36,35 @@
                 <div class="title-wrap">
                     <h1>Our vendors and brands</h1>
                                         </div>               
-                <ul id="breadcrumbs" class="crumb"><li><a href="index.html">Home</a></li>
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
                     <li><a href="introduction.html">Introduction</a></li>
                     <li class="active">Our vendors and brands</li></ul> 
             </div>
         </div>
     </div>
 </section>
+ @endif
+      @endforeach
+@else
+
+<section id="subheader" data-speed="8" data-type="background" style="background-image: url('{{ asset('front') }}/images/WHAT-WE-OFFER.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-wrap">
+                    <h1>Our vendors and brands</h1>
+                                        </div>               
+                <ul id="breadcrumbs" class="crumb"><li><a href="/home">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li class="active">Our vendors and brands</li></ul> 
+            </div>
+        </div>
+    </div>
+</section>
+
+ @endif
+      
+
 <!-- subheader close -->
 
 
@@ -29,10 +74,26 @@
                     <div class="wpb_wrapper "  >	
  <div class="side-bg">
 
-    <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front') }}/images/Partner-and-sister-companies.jpg); ?>" data-delay="0"></div>
 
+    
+         @if(!empty($Settings ))
+                    @foreach($Settings  as $row)
+                    @if(!empty($row->Ourvendorsbrandsimage ))
+                    
+                        <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('uploads/logo/'.$row->Ourvendorsbrandsimage) }}); ?>" data-delay="0"></div>
+                        
+                         <img class="visible-xs img-responsive" src="{{ asset('uploads/logo/'.$row->Ourvendorsbrandsimage) }}" />
+                     @else
+                         <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front') }}/images/Partner-and-sister-companies.jpg); ?>" data-delay="0"></div>
+                         
      <img class="visible-xs img-responsive" src="{{ asset('front') }}/images/Partner-and-sister-companies.jpg" />
+     @endif
+      @endforeach
 
+                        @else
+                            <div class="image-container hidden-xs pull-left col-md-5" style="background-image:url({{ asset('front') }}/images/Partner-and-sister-companies.jpg); ?>" data-delay="0"></div>
+                             <img class="visible-xs img-responsive" src="{{ asset('front') }}/images/Partner-and-sister-companies.jpg" />
+@endif
     <div class="container">
         <div class="row">
             <div class="inner-padding">

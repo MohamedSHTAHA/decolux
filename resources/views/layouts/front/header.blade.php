@@ -14,7 +14,12 @@
                     <ul class="social-list">
 
                         
-                        <li><a target="_blank" href="#">
+                        <li><a target="_blank" href="
+                        
+                        @if(!empty(\App\Settings::orderBy('id', 'DESC')->first()->facbook))
+                                {{\App\Settings::orderBy('id', 'DESC')->first()->facbook}}
+                                @endif
+                        ">
                             <i class="fa fa-facebook"></i></a>
                     </li>
 

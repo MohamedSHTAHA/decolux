@@ -119,10 +119,80 @@
                             <label for="ourvision">our vision</label>
                             <textarea name="ourvision" class="form-control ckeditor">{{ $setting->ourvision }}</textarea>
                         </div>
+                        
+                        
+                        
+                             <div class="form-group">
+                            <label for="images">Ourvision Logo</label>
+                            <div class="input-group">
+                                    <input type="file" name="Ourvisionlogo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->Ourvisionlogo) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                             <div class="form-group">
+                            <label for="images">Ourvision image</label>
+                            <div class="input-group">
+                                    <input type="file" name="Ourvisionimage" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->Ourvisionimage) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
                         <div class="form-group">
                             <label for="Ourvendorsbrands">Our vendors brands</label>
                             <textarea name="Ourvendorsbrands" class="form-control ckeditor">{{ $setting->Ourvendorsbrands }}</textarea>
                         </div>
+                        
+                        
+                        
+                             <div class="form-group">
+                            <label for="images">Ourvendorsbrands Logo</label>
+                            <div class="input-group">
+                                    <input type="file" name="Ourvendorsbrandslogo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->Ourvendorsbrandslogo) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                             <div class="form-group">
+                            <label for="images">Ourvendorsbrands image</label>
+                            <div class="input-group">
+                                    <input type="file" name="Ourvendorsbrandsimage" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->Ourvendorsbrandsimage) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                        
+                            <div class="form-group">
+                            <label for="images">What We Offer Logo </label>
+                            <div class="input-group">
+                                    <input type="file" name="WhatWeOfferlogo" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <img src="{{ asset('uploads/logo/'.$setting->WhatWeOfferlogo) }}" style="width: 100px" class="img-thumbnail image-preview" alt="">
+
+                        </div>
+                        
+                        
+                        
+                        
 
                         <div class="form-group">
                             <label for="images">Pdf</label>
